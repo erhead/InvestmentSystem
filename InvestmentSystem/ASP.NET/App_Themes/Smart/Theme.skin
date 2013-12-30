@@ -1,0 +1,73 @@
+﻿<%-- Site1.master --%>
+<asp:ImageButton runat="server" SkinID="headerButton" ImageUrl="images/theme/header-button.png" CssClass="header-button visible-phone" />
+
+<ac:IcsTreeView CssClass="ics-treeview" runat="server" SkinID="NavigateTreeView">
+    <RootNodeStyle CssClass="ics-treeview-node-root" />    
+    <ParentNodeStyle CssClass="ics-treeview-node-parent" />
+    <LeafNodeStyle CssClass="ics-treeview-node-leaf" />
+    <HoverNodeStyle CssClass="ics-treeview-node-hover" />
+    <SelectedNodeStyle CssClass="ics-treeview-node-selected" />
+    <NodeStyle Font-Bold="True" CssClass="ics-treeview-node" />
+</ac:IcsTreeView>
+
+<asp:CustomValidator runat="server" ForeColor="Red" CssClass="validator validator-custom" />
+<asp:RequiredFieldValidator runat="server" ForeColor="Red" CssClass="validator validator-field-required" />
+<asp:CompareValidator runat="server" ForeColor="Red" CssClass="validator validator-compare" />
+<asp:RangeValidator runat="server" ForeColor="Red" CssClass="validator validator-range" />
+<asp:RegularExpressionValidator runat="server" ForeColor="Red" CssClass="validator validator-regexp" />
+<asp:ValidationSummary runat="server" ForeColor="Red" CssClass="validator validator-summary" />
+
+<asp:Image runat="server" ImageUrl="images/loading.gif" SkinID="Loading" CssClass="pull-left"/>
+
+<asp:Image runat="server" Height="28px" SkinID="header-logo" CssClass="header-logo" />
+<%-- Site1.master --%>
+
+<%-- Page --%>
+    <asp:ImageButton SkinID="SaveBtn" runat="server" ImageUrl="images/save.gif"  />
+    <asp:ImageButton SkinID="SaveAndCloseBtn" runat="server" ImageUrl="images/saveandclose.gif"/>
+    <asp:ImageButton SkinID="CancelBtn" runat="server" ImageUrl="images/back.gif"/>
+<%-- Page --%>
+
+<%-- WebObjectListView --%>
+    <asp:ImageButton SkinID="EditBtnWOLV" runat="server" ImageUrl="images/wolv-edit.png"/>
+    <asp:ImageButton SkinID="ShowBtnWOLV" runat="server" ImageUrl="images/wolv-show.png"/>
+    <asp:ImageButton SkinID="DeleteBtnWOLV" runat="server" ImageUrl="images/wolv-remove.png"/>
+    <asp:Image SkinID="SmallFilterWOLV" ImageUrl="images/small-filter.png" runat="server" />
+<%-- WebObjectListView --%>
+
+<%-- MasterEditorAjaxLookUp --%>
+<asp:LinkButton runat="server"  CssClass="ics-lookup-btn ics-lookup-btn-lookup" SkinID="LookUpBtn" />
+<asp:LinkButton runat="server" CssClass="ics-lookup-btn ics-lookup-btn-clear" SkinID="LookUpClearBtn" />
+<asp:LinkButton runat="server" CssClass="ics-lookup-btn ics-lookup-btn-show" SkinID="LookUpShowObjectBtn" />
+<asp:LinkButton runat="server" CssClass="ics-lookup-btn ics-lookup-btn-show-empty" SkinID="LookUpShowObjectEmptyBtn" />
+<asp:ImageButton runat="server" ImageUrl="images/toolbar/new_by_small.gif" SkinID="NewByInRow" />
+<asp:Image runat="server" ImageUrl="images/indicator.gif" SkinID="AjaxIndicator" />
+<asp:TextBox runat="server" SkinID="PropertyToAutocomplete" />
+<%-- MasterEditorAjaxLookUp --%>
+
+<%-- MasterEditorAjaxDropDown --%>
+<asp:DropDownList runat="server" SkinID="MasterEditorDropDown" />
+<%-- MasterEditorAjaxDropDown --%>
+
+<%-- AjaxGroupEdit --%>
+        <asp:ImageButton runat="server" ImageUrl="images/toolbar/new_doc.gif" SkinID="WGEAddBtn" />
+        <asp:ImageButton runat="server" ImageUrl="images/toolbar/edit_doc.gif" SkinID="WGEEditBtn" />
+        <asp:ImageButton runat="server" ImageUrl="images/toolbar/del.gif" SkinID="WGEDeleteBtn" />
+        <asp:ImageButton runat="server" ImageUrl="images/toolbar/save.gif" SkinID="WGESaveInRow" />
+        <asp:ImageButton runat="server" ImageUrl="images/icons/plus.gif" SkinID="WGEPlusInRow" />
+        <asp:ImageButton runat="server" ImageUrl="images/toolbar/edit_doc_small.gif" SkinID="WGEEditInRow" />
+        <asp:ImageButton runat="server" ImageUrl="images/toolbar/edit_doc_small.gif" SkinID="WGEEditFormInRow" />
+        <asp:ImageButton runat="server" ImageUrl="/App_Themes/Smart/images/toolbar/delete_small.gif" SkinID="WGEDeleteInRow" />
+        <asp:ImageButton runat="server" ImageUrl="images/toolbar/move_up.png" SkinID="WGEMoveUp" />
+        <asp:ImageButton runat="server" ImageUrl="images/toolbar/move_down.png" SkinID="WGEMoveDown" />
+<%-- AjaxGroupEdit --%>
+
+<%-- Hinter --%>
+<ac:Hinter runat="server" ImageUrl="images/quest.gif" SkinID="HintImage" />
+<%-- Hinter --%>
+
+<asp:ImageButton runat="server" SkinID="PageHeaderImage" ImageUrl="images/app-logo.png" CssClass="page-header-image" />
+
+<asp:LinkButton runat="server" SkinID="PageHeaderCaption" CssClass="header-logo-block"></asp:LinkButton>
+
+<asp:Image runat="server" SkinID="404Image" ImageUrl="images/theme/404.png"/>

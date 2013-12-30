@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InvestmentSystem(Objects)</name>
+    </assembly>
+    <members>
+        <member name="T:IIS.InvestmentSystem.СтатусПроекта">
+            <summary>
+            Статус проекта
+            </summary>
+        </member>
+        <member name="F:IIS.InvestmentSystem.СтатусПроекта.Новый">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:IIS.InvestmentSystem.СтатусПроекта.Принят">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:IIS.InvestmentSystem.СтатусПроекта.Отклонен">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:IIS.InvestmentSystem.Проект">
+            <summary>
+            Проект
+            </summary>
+        </member>
+        <member name="P:IIS.InvestmentSystem.Проект.Название">
+            <summary>
+            Название
+            </summary>
+        </member>
+        <member name="P:IIS.InvestmentSystem.Проект.ДатаОкончания">
+            <summary>
+            ДатаОкончания
+            </summary>
+        </member>
+        <member name="P:IIS.InvestmentSystem.Проект.Статус">
+            <summary>
+            Статус
+            </summary>
+        </member>
+        <member name="P:IIS.InvestmentSystem.Проект.НачальнаяИнвестиция">
+            <summary>
+            НачальнаяИнвестиция
+            </summary>
+        </member>
+        <member name="P:IIS.InvestmentSystem.Проект.СтавкаДисконтирования">
+            <summary>
+            СтавкаДисконтирования
+            </summary>
+        </member>
+        <member name="P:IIS.InvestmentSystem.Проект.ДатаНачала">
+            <summary>
+            ДатаНачала
+            </summary>
+        </member>
+        <member name="P:IIS.InvestmentSystem.Проект.ЭлементДенежногоПотока">
+            <summary>
+            Проект
+            </summary>
+        </member>
+        <member name="T:IIS.InvestmentSystem.Проект.Views">
+            <summary>
+            Class views container
+            </summary>
+        </member>
+        <member name="P:IIS.InvestmentSystem.Проект.Views.ПроектE">
+            <summary>
+            "ПроектE" view
+            </summary>
+        </member>
+        <member name="P:IIS.InvestmentSystem.Проект.Views.ПроектL">
+            <summary>
+            "ПроектL" view
+            </summary>
+        </member>
+        <member name="T:IIS.InvestmentSystem.ЭлементДенежногоПотока">
+            <summary>
+            Элемент денежного потока
+            </summary>
+        </member>
+        <member name="P:IIS.InvestmentSystem.ЭлементДенежногоПотока.Дата">
+            <summary>
+            Дата
+            </summary>
+        </member>
+        <member name="P:IIS.InvestmentSystem.ЭлементДенежногоПотока.Сумма">
+            <summary>
+            Сумма
+            </summary>
+        </member>
+        <member name="P:IIS.InvestmentSystem.ЭлементДенежногоПотока.Тип">
+            <summary>
+            Тип
+            </summary>
+        </member>
+        <member name="P:IIS.InvestmentSystem.ЭлементДенежногоПотока.Проект">
+            <summary>
+            мастеровая ссылка на шапку IIS.InvestmentSystem.Проект
+            </summary>
+        </member>
+        <member name="T:IIS.InvestmentSystem.ЭлементДенежногоПотока.Views">
+            <summary>
+            Class views container
+            </summary>
+        </member>
+        <member name="P:IIS.InvestmentSystem.ЭлементДенежногоПотока.Views.ЭлементДенежногоПотокаD">
+            <summary>
+            "ЭлементДенежногоПотокаD" view
+            </summary>
+        </member>
+        <member name="T:IIS.InvestmentSystem.DetailArrayOfЭлементДенежногоПотока">
+            <summary>
+            Detail array of ЭлементДенежногоПотока
+            </summary>
+        </member>
+        <member name="M:IIS.InvestmentSystem.DetailArrayOfЭлементДенежногоПотока.#ctor(IIS.InvestmentSystem.Проект)">
+            <summary>
+            Construct detail array
+            </summary>
+        </member>
+        <member name="M:IIS.InvestmentSystem.DetailArrayOfЭлементДенежногоПотока.Add(IIS.InvestmentSystem.ЭлементДенежногоПотока)">
+            <summary>
+            Adds object with type ЭлементДенежногоПотока
+            </summary>
+        </member>
+        <member name="P:IIS.InvestmentSystem.DetailArrayOfЭлементДенежногоПотока.Item(System.Int32)">
+            <summary>
+            Returns object with type ЭлементДенежногоПотока by index
+            </summary>
+        </member>
+        <member name="T:IIS.InvestmentSystem.ТипЭлементаДенежногоПотока">
+            <summary>
+            Тип элемента денежного потока
+            </summary>
+        </member>
+        <member name="F:IIS.InvestmentSystem.ТипЭлементаДенежногоПотока.Приток">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:IIS.InvestmentSystem.ТипЭлементаДенежногоПотока.Отток">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

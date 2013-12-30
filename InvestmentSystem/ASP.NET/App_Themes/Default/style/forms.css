@@ -1,0 +1,597 @@
+﻿/* Кнопки */
+.ics-btn,
+.login-form-btn,
+.ics-wolv-toolbar-button, .ics-wolv-pager-navigation-button, .ics-wolv-pager-page,
+#popup_panel input[type="button"] {
+    color: #000;
+    border: 1px solid #cccccc;
+    padding: 2px 6px;
+    box-shadow: inset 0 0 1px 1px #fff;
+    text-align: center;
+    text-decoration: none;
+    line-height: 16px;
+    border-radius: 2px;
+    background: #e6e6e6;
+    background: -moz-linear-gradient(top, #e6e6e6 0, #ffffff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#e6e6e6), color-stop(100%,#ffffff));
+    background: -webkit-linear-gradient(top, #e6e6e6 0,#ffffff 100%);
+    background: -o-linear-gradient(top, #e6e6e6 0,#ffffff 100%);
+    background: -ms-linear-gradient(top, #e6e6e6 0,#ffffff 100%);
+    background: linear-gradient(to bottom, #e6e6e6 0,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e6e6', endColorstr='#ffffff',GradientType=0 );
+    cursor: pointer;
+}
+
+    .ics-btn:hover,
+    .login-form-btn:hover,
+    .ics-wolv-toolbar-button:hover, .ics-wolv-pager-navigation-button:hover, .ics-wolv-pager-page:hover,
+    #popup_panel input[type="button"]:hover {
+        color: #000;
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0, #e6e6e6 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#ffffff), color-stop(100%,#e6e6e6));
+        background: -webkit-linear-gradient(top, #ffffff 0,#e6e6e6 100%);
+        background: -o-linear-gradient(top, #ffffff 0,#e6e6e6 100%);
+        background: -ms-linear-gradient(top, #ffffff 0,#e6e6e6 100%);
+        background: linear-gradient(to bottom, #ffffff 0,#e6e6e6 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e6e6',GradientType=0 );
+    }
+
+    .ics-btn:active,
+    .login-form-btn:active,
+    .ics-wolv-toolbar-button:active, .ics-wolv-pager-navigation-button:active, .ics-wolv-pager-page:active,
+    .ics-wolv-pager-current-page, .ics-wolv-toolbar-button-active,
+    #popup_panel input[type="button"]:active {
+        color: #000;
+        box-shadow: inset 0 0 1px 1px #00bfff;
+    }
+
+    .ics-btn:focus,
+    .login-form-btn:focus,
+    .ics-wolv-toolbar-button:focus, .ics-wolv-pager-navigation-button:focus, .ics-wolv-pager-page:focus,
+    #popup_panel input[type="button"]:focus {
+        outline: none;
+        border-color: #00bfff;
+        position: relative;
+    }
+
+    .ics-btn.disabled,
+    .ics-btn[disabled] {
+        background: #ddd;
+        box-shadow: none;
+        cursor: not-allowed;
+    }
+
+    .ics-toolbar .ics-label {
+        padding-right: 8px;
+    }
+
+.ics-wolv-pager-current-page, .ics-wolv-toolbar-button-active {
+    color: #000;
+    box-shadow: inset 0 0 1px 1px #00bfff;
+}
+
+.ics-wolv-toolbar-button, .ics-wolv-pager-navigation-button, .ics-wolv-pager-page {
+    padding: 2px;
+}
+
+#popup_panel input[type="button"] {
+    min-width: 75px;
+}
+
+/* Текстовые поля */
+input[type="text"], input[type="password"] {
+    border: 1px solid #bbb;
+    background: #eee;
+    padding: 1px;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 22px;
+/* ReSharper disable InvalidValue */
+    min-height: 18px\0/; /* IE8 */
+/* ReSharper restore InvalidValue */
+    line-height: 16px;
+    border-radius: 2px;
+}
+
+    input[type="text"]:focus, input[type="password"]:focus, select:focus {
+        outline: none;
+        background-color: #8fbc8f;
+        border-color: #4d81de;
+    }
+
+/* Многострочные текстовые поля */
+textarea {
+    border: 1px solid #bbb;
+    background: #eee;
+    padding: 1px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 22px;
+    border-radius: 2px;
+    resize: vertical;
+}
+
+/* Выпадающие списки*/
+select {
+    border: 1px solid #bbb;
+    background: #eee;
+    padding: 1px;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 22px;
+/* ReSharper disable InvalidValue */
+    min-height: 18px\0/; /* IE8 */
+/* ReSharper restore InvalidValue */
+    border-radius: 2px;
+}
+
+.ics-form-toolbar {
+    background: #fff;
+}
+
+.ics-form select:focus {
+    outline: none;
+    background: #8fbc8f;
+}
+
+.ics-form-toolbar-edit {
+    margin: 8px 0;
+}
+
+/* Лукапы - начало */
+
+.ics-lookup {
+    border: 1px solid #bbb;
+    border-radius: 2px;
+    padding: 0;
+    background: #eee;
+}
+
+    .ics-lookup .lookup {
+        overflow: hidden;
+    }
+
+        .ics-lookup .lookup > input {
+            width: 100%;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border: 0;
+            background: #eee;
+            margin: 0;
+            padding: 0 2px;
+            min-height: 20px;
+        }
+
+    .ics-lookup .ics-lookup-btn {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url(../images/lookup.png) no-repeat 0 0;
+        float: right;
+        margin: 2px 2px 0 0;
+    }
+
+    .ics-lookup .ics-lookup-btn-disabled {
+        background-image: url(../images/lookup--disabled.png);
+    }
+
+    .ics-lookup .ics-lookup-btn-search {
+        background-position: 0 0;
+    }
+
+    .ics-lookup .ics-lookup-btn-clear {
+        background-position: -16px 0;
+    }
+
+    .ics-lookup .ics-lookup-btn-show-object {
+        background-position: -32px 0;
+    }
+/* Лукапы - конец */
+
+/* Datepicker - начало */
+.ics-form-controls .ics-datepicker {
+    max-width: 200px;
+    position: relative;
+}
+
+.ics-datepicker-input {
+    margin: 0;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-width: 80px;
+}
+
+.ics-datepicker .ui-datepicker-trigger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 3px;
+}
+
+.ui-datepicker-trigger {
+    float: right;
+    margin: 4px 2px;
+}
+/* Datepicker - конец */
+
+.clearfix {
+    clear: both;
+    overflow: hidden;
+    width: 100%;
+    margin: 8px 0;
+}
+
+.descLbl {
+    color: #3f75ac;
+    float: left;
+    width: 200px;
+    padding: 4px 8px;
+    margin: 0;
+    text-align: right;
+}
+
+.descTxt {
+    float: left;
+    width: 200px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* SHOW-HIDE DIV */
+.ics-show-hide-div {
+    display: block;
+    margin: 8px 0;
+}
+
+    .ics-show-hide-div > fieldset {
+        display: block;
+        border: solid #8da6c6;
+        border-width: 2px 1px;
+        padding: 0;
+        margin: 0;
+    }
+
+        .ics-show-hide-div > fieldset > legend {
+            width: 100%;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+.ics-show-hide-div-link {
+    margin: 0 -1px 0 -1px;
+    padding: 7px 14px;
+    display: block;
+    text-decoration: none !important;
+    background: transparent;
+    border: solid #8da6c6;
+    border-width: 2px 1px 0 1px;
+    vertical-align: middle;
+}
+
+    .ics-show-hide-div-link:hover {
+        background-color: #e2e8f5;
+    }
+
+.ics-show-hide-div-icon {
+    background: url(../images/icons/shd-toggle.png) no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 6px;
+}
+
+.ics-show-hide-div-collapsed .ics-show-hide-div-icon {
+    background-position: -16px 0;
+}
+
+/* Lookup Form - начало */
+html.lookup-form {
+    height: auto;
+}
+
+    html.lookup-form > body {
+        min-width: 256px;
+        margin: 8px;
+    }
+
+        html.lookup-form > body #LookUpFormCaption {
+            display: none;
+        }
+
+    html.lookup-form .ics-wolv-toolbar {
+        margin-top: 0;
+    }
+/* Lookup Form - конец */
+
+/* Прочие стили - начало */
+.ics-form-header {
+    font-weight: bold;
+}
+
+.unselectable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.LookUpF {
+    width: 720px;
+    height: 540px;
+    /*overflow:auto;*/
+}
+
+.toolbarcontainer {
+    border: solid 1px #A1C3D8;
+    background-color: #EDF8FF;
+}
+
+.toolbar {
+    border: 0;
+    width: 400px;
+    /*width: 1%;*/
+}
+
+.toolel {
+    height: 22px;
+    padding: 5px 6px;
+    padding-right: 0;
+}
+
+.toolbtn {
+    cursor: pointer;
+}
+
+.toolcmb {
+    font-family: Arial;
+    width: 268px;
+}
+
+.imgsep {
+    width: 1px;
+    height: 22px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+.elemOperation {
+    /*color:#FF6C00;*/
+    color: #4D81DE;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header2 {
+    color: #959595;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.centerContent {
+    text-align: center;
+}
+
+
+.divLook {
+    border: 2px solid #D7D7D7;
+    padding: 5px;
+    margin: 5px;
+}
+
+.legend {
+    color: #6F6F6F;
+}
+
+.tooltip {
+    font-size: 0.8em;
+    float: left;
+}
+
+.text {
+    margin: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 1em;
+    color: #333;
+    border-top: 1px solid #7c7c7c;
+    border-left: 1px solid #c3c3c3;
+    border-right: 1px solid #c3c3c3;
+    border-bottom: 1px solid #ddd;
+    background: #F1F1F1;
+}
+
+.boldLink {
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.maintable {
+    width: 100%;
+    height: 100%;
+}
+
+.tdplaceholder {
+    font-size: 11px;
+    font-style: normal;
+}
+
+.applyFilterText {
+    color: Red;
+}
+/* Прочие стили - конец */
+
+/* Форма входа - начало */
+.input-block-level {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.login-form-header {
+    color: #747474;
+    background: #e7ecf6;
+    background: -moz-linear-gradient(top, #e7ecf6 1%, #eff2f6 50%, #e2e8f5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#e7ecf6), color-stop(50%,#eff2f6), color-stop(100%,#e2e8f5));
+    background: -webkit-linear-gradient(top, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+    background: -o-linear-gradient(top, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+    background: -ms-linear-gradient(top, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+    background: linear-gradient(to bottom, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7ecf6', endColorstr='#e2e8f5',GradientType=0 );
+    padding: 8px;
+    display: block;
+    line-height: 16px;
+}
+
+    .login-form-header div {
+        color: #000074;
+        vertical-align: middle;
+        font-size: 24px;
+    }
+
+.login-form-inner {
+    overflow: visible;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 80px auto;
+    width: 281px;
+    background-color: #fff;
+}
+
+.login-form .failureNotification {
+    display: inline;
+    color: red;
+}
+
+.login-form-input {
+    min-height: 26px;
+}
+
+.login-form-label {
+    display: inline;
+}
+
+.login-form-btn {
+    clear: both;
+    margin-top: 16px;
+    padding-right: 44px;
+    padding-left: 44px;
+    height: 37px;
+    width: 136px !important;
+    font-size: 16px !important;
+}
+
+.login-form .failureNotification[style="color: red; visibility: hidden;"] {
+    display: none;
+}
+
+.login-form .failureNotification[style="color:Red;visibility:hidden;"] {
+    display: none;
+}
+
+.login-form-remember label {
+    display: inline;
+    margin: 0 4px;
+    vertical-align: middle;
+}
+
+.login-form-remember input[type="checkbox"] {
+    margin: 0;
+}
+
+.login-form-forgot {
+    float: right;
+    vertical-align: middle;
+}
+
+.login-from-failure-text {
+    position: absolute;
+    display: block;
+    margin-top: 20px;
+    margin-left: 325px;
+    padding: 10px;
+    max-width: 220px;
+    border: 1px solid #f54e37;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    color: #f54e37;
+}
+
+    .login-from-failure-text:after, .login-from-failure-text:before {
+        position: absolute;
+        right: 100%;
+        width: 0;
+        height: 0;
+        border: solid transparent;
+        content: " ";
+        pointer-events: none;
+    }
+
+    .login-from-failure-text:before {
+        top: 50%;
+        margin-top: -21px;
+        border-width: 0 22px 22px 0;
+        border-color: transparent;
+        border-right-color: #f54e37;
+    }
+
+    .login-from-failure-text:after {
+        top: 50%;
+        margin-top: -20px;
+        border-width: 0 20px 20px 0;
+        border-color: transparent;
+        border-right-color: #ffffff;
+    }
+
+    .login-from-failure-text:empty {
+        display: none;
+    }
+
+.div-fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.div-fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+/* Форма входа - конец */
+
+#hiddenContent {
+    display: none;
+}
+
+.rate-button {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-image: url("../images/filter--small.png");
+}

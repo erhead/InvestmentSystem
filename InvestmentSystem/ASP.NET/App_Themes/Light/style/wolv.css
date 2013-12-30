@@ -1,0 +1,530 @@
+﻿/* WOLV основные стили - начало */
+.ics-wolv {
+    width: 100%;
+    clear: both;
+}
+
+.wolv_table_pagers {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.wolv_wrap {
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 0;
+}
+
+.ListTable {
+    width: 100%;
+    overflow-x: auto;
+    border-spacing: 0;
+}
+
+.wolv-data-wrapper > table {
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: auto;
+    border-spacing: 0;
+}
+
+.ObjectListViewTable {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+    .ObjectListViewTable td {
+        border: 1px solid;
+    }
+
+.ics-wolv .wolv-caption-table .ics-wolv-column-header,
+.ics-wolv .wolv-data-table .wrapper-cell-data {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    -ms-word-wrap: normal;
+    word-wrap: normal;
+}
+
+/* Заголовочные ячейки */
+.ics-wolv-column-header {
+    cursor: pointer;
+}
+
+    .ics-wolv-column-header .ics-wolv-column-sort-order {
+        color: Black;
+        font-size: 0.7em;
+    }
+
+    .ics-wolv-column-header .ics-wolv-column-sort-direction {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+    }
+
+    .ics-wolv-column-header .ics-wolv-column-sort-asc {
+        background: url('../images/ascsign.gif') no-repeat left top;
+    }
+
+    .ics-wolv-column-header .ics-wolv-column-sort-desc {
+        background: url('../images/descsign.gif') no-repeat left top;
+    }
+/* WOLV основные стили - конец */
+
+/* WOLV цветовая схема - начало */
+div.ics-wolv {
+    background: #fff;
+}
+
+.ics-wolv .wolv-caption-table > tbody > tr > td {
+    font-weight: bold;
+    color: #666666;
+    border-color: #d8d8d8;
+    background: #f0f0f0;
+}
+
+.wolv-service-block-table {
+    border-color: #d8d8d8;
+    width: 77%;
+}
+
+.ics-wolv .wolv-data-table > tbody > tr > td {
+    border-color: #d8d8d8;
+    cursor: pointer;
+}
+
+    .ics-wolv .wolv-data-table > tbody > tr > td.checkedline {
+        color: #fff !important;
+        background: #c2d1e2 !important;
+    }
+
+    .ics-wolv .wolv-data-table > tbody > tr > td.WOLVSO {
+        color: #000 !important;
+        background: #d1e2c2 !important;
+    }
+
+.ics-wolv .wolv-data-table > tbody > tr:hover > td {
+    color: #ff6600;
+    background: #fdf6e9;
+}
+
+.ics-wolv .wolv-data-table > tbody > tr.ObjectListViewAlternateCell > td {
+    background: #f2f2f2;
+}
+
+.ics-wolv .wolv-data-table > tbody > tr.ObjectListViewAlternateCell:hover > td {
+    color: #ff6600;
+    background: #fdf6e9;
+}
+
+/* WOLV цветовая схема - конец */
+
+/* WOLV Toolbar - начало */
+.ics-wolv-toolbar {
+    overflow: auto;
+    margin: 0 0 1px 0;
+    padding: 16px;
+    background-color: #bfcad1;
+}
+
+.ics-wolv-toolbar-group {
+    display: inline-block;
+}
+
+.ics-wolv-toolbar-button {
+    display: inline-block;
+}
+
+    .ics-wolv-toolbar-button + .ics-wolv-toolbar-button,
+    .ics-wolv-toolbar-separator + .ics-wolv-toolbar-button,
+    .ics-wolv-toolbar-separator + .ics-wolv-toolbar-group {
+        margin-left: 8px;
+    }
+
+    .ics-wolv-toolbar-button .ics-wolv-toolbar-button-icon {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background: url(../images/wolv-toolbar-icons.png) no-repeat 0 0;
+    }
+
+    .ics-wolv-toolbar-button:hover .ics-wolv-toolbar-button-icon,
+    .ics-wolv-toolbar-button-active .ics-wolv-toolbar-button-icon {
+        background-image: url(../images/wolv-toolbar-icons--hover.png);
+    }
+
+.ics-wolv-toolbar-button-caption {
+    display: none;
+}
+
+.ics-wolv-toolbar-separator {
+    display: none;
+}
+
+.ics-wolv-toolbar-button-create .ics-wolv-toolbar-button-icon {
+    background-position: -32px 0;
+}
+
+.ics-wolv-toolbar-button-edit .ics-wolv-toolbar-button-icon {
+    background-position: -64px 0;
+}
+
+.ics-wolv-toolbar-button-delete .ics-wolv-toolbar-button-icon {
+    background-position: -96px 0;
+}
+
+.ics-wolv-toolbar-button-use-selected .ics-wolv-toolbar-button-icon {
+    background-position: -128px 0;
+}
+
+.ics-wolv-toolbar-button-search .ics-wolv-toolbar-button-icon {
+    background-position: -160px 0;
+}
+
+.ics-wolv-toolbar-button-filter .ics-wolv-toolbar-button-icon {
+    background-position: -192px 0;
+}
+
+.ics-wolv-toolbar-button-limit-edit .ics-wolv-toolbar-button-icon {
+    background-position: -224px 0;
+}
+
+.ics-wolv-toolbar-button-print .ics-wolv-toolbar-button-icon {
+    background-position: -256px 0;
+}
+
+.ics-wolv-toolbar-button-configure-columns .ics-wolv-toolbar-button-icon {
+    background-position: -288px 0;
+}
+
+.ics-wolv-toolbar-button-export-excel .ics-wolv-toolbar-button-icon {
+    background-position: -320px 0;
+}
+
+.ics-wolv-toolbar-button-export-xml .ics-wolv-toolbar-button-icon {
+    background-position: -352px 0;
+}
+
+.ics-wolv-toolbar-button-limit-options .ics-wolv-toolbar-button-icon,
+.ics-wolv-toolbar-button-export-excel-options .ics-wolv-toolbar-button-icon {
+    background-image: url(../images/button-arrow.png);
+}
+
+.ics-wolv-toolbar-button-limit-options:hover .ics-wolv-toolbar-button-icon,
+.ics-wolv-toolbar-button-export-excel-options:hover .ics-wolv-toolbar-button-icon {
+    background-image: url(../images/button-arrow--hover.png);
+}
+
+.ics-wolv-pager {
+    display: block;
+}
+
+.ics-wolv-pager-top {
+    float: right;
+    display: inline-block;
+}
+
+.ics-wolv-pager-bottom {
+    display: block;
+    margin: 1px 0 0 0;
+    padding: 16px;
+    background-color: #bfcad1;
+}
+
+/* **************************************************** */
+/* WOLV : Pagination                                    */
+/* **************************************************** */
+
+.ics-wolv-pager select,
+.ics-wolv-pager input {
+    margin: 0;
+}
+
+/* Группы панели навигации */
+.ics-wolv-pager-pages, .ics-wolv-pager-navigation,
+.ics-wolv-pager-items-on-page, .ics-wolv-pager-go-to-page {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.ics-wolv-pager-items-on-page-caption.ics-wolv-pager-items-on-page-caption-bottom {
+    display: inline-block;
+    float: left;
+    margin-top: -2px;
+    padding: 6px 6px 0 0;
+}
+
+/* Контейнер количества элементов на странице */
+.ics-wolv-pager-items-on-page {
+    float: right;
+}
+
+/* Метка контейнера перехода по номеру страницы */
+.ics-wolv-pager-go-to-page-label {
+    display: none;
+}
+
+/* Поле ввода контейнера перехода по номеру страницы */
+.ics-wolv-pager-go-to-page-input {
+    width: 43px;
+}
+
+/* Разделители */
+.ics-wolv-pager-navigation-separator {
+    display: none;
+}
+
+/* Контейнер с кнопками "Назад" и "Вперед" */
+.ics-wolv-pager-navigation {
+    margin-right: 3px;
+}
+
+.ics-wolv-pager-bottom .ics-wolv-pager-navigation {
+    float: left;
+}
+
+/* Контейнер с переключателями страниц */
+.ics-wolv-pager-pages {
+    float: left;
+    margin-right: 3px;
+    background: transparent;
+}
+
+    .ics-wolv-pager-pages > .ics-wolv-pager-page,
+    .ics-wolv-pager-navigation > .ics-wolv-pager-navigation-button {
+        margin-left: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+    }
+
+        .ics-wolv-pager-pages > .ics-wolv-pager-page:first-child,
+        .ics-wolv-pager-navigation > .ics-wolv-pager-navigation-button:first-child {
+            -moz-border-radius-bottomleft: 4px;
+            -moz-border-radius-topleft: 4px;
+            margin-left: 0;
+            -webkit-border-bottom-left-radius: 4px;
+            -webkit-border-top-left-radius: 4px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .ics-wolv-pager-pages > .ics-wolv-pager-page:last-child,
+        .ics-wolv-pager-navigation > .ics-wolv-pager-navigation-button:last-child {
+            -moz-border-radius-bottomright: 4px;
+            -moz-border-radius-topright: 4px;
+            margin-left: 0;
+            -webkit-border-bottom-right-radius: 4px;
+            -webkit-border-top-right-radius: 4px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+    /* Многоточие */
+    .ics-wolv-pager-pages > span {
+        margin-left: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        color: #999;
+        cursor: default;
+    }
+
+    .ics-wolv-pager-pages a + a,
+    .ics-wolv-pager-pages span + a,
+    .ics-wolv-pager-pages a + span,
+    .ics-wolv-pager-pages span + span,
+    .ics-wolv-pager-navigation a + a,
+    .ics-wolv-pager-navigation span + a,
+    .ics-wolv-pager-navigation a + span,
+    .ics-wolv-pager-navigation span + span {
+        margin-left: -1px !important;
+    }
+
+/* Текстовое поле внутри текущей страницы */
+.ics-wolv-pager-current-page > input {
+    margin: -4px 0 0 0;
+    padding: 0;
+    width: 43px;
+    border: none;
+    background: transparent;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none !important;
+    box-shadow: none;
+    text-align: center;
+}
+
+/* Ссылка в панели навигации */
+.ics-wolv-pager-page, .ics-wolv-pager-pages > span,
+.ics-wolv-pager-navigation-button {
+    display: inline-block;
+    margin: 0;
+    padding: 4px 8px;
+    border: 1px solid #a9a9a9;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(top,#fff,#cecece);
+    background-image: -o-linear-gradient(top,#fff,#cecece);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#cecece));
+    background-image: -webkit-linear-gradient(top,#fff,#cecece);
+    background-image: linear-gradient(to bottom,#fff,#cecece);
+    color: #333;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+    /* Выделенная ссылка в панели навигации */
+    .ics-wolv-pager-page:hover,
+    .ics-wolv-pager-navigation-button:hover {
+        background: #f0f0f0;
+        color: #333;
+        text-decoration: none;
+    }
+
+    /* Нажатая/текущая ссылка в панели навигации */
+    .ics-wolv-pager-pages > span.ics-wolv-pager-current-page,
+    .ics-wolv-pager-pages a:active, .ics-wolv-pager-navigation-button:active {
+        background-color: #cdcdcd;
+        background-image: -moz-linear-gradient(top,#cecece,#fff);
+        background-image: -o-linear-gradient(top,#cecece,#fff);
+        background-image: -webkit-gradient(linear,0 0,0 100%,from(#cecece),to(#fff));
+        background-image: -webkit-linear-gradient(top,#cecece,#fff);
+        background-image: linear-gradient(to bottom,#cecece,#fff);
+        -webkit-box-shadow: inset 1px 1px 1px rgba(128, 128, 128, 0.5);
+        box-shadow: inset 1px 1px 1px rgba(128, 128, 128, 0.5);
+        color: #333;
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcecece',endColorstr='#ffffffff',GradientType=0);
+    }
+
+/* Неактивная ссылка в панели навигации */
+.ics-wolv-pager-navigation-disabled,
+.ics-wolv-pager-navigation-disabled:hover {
+    background: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.ics-wolv-pager-information, .ics-wolv-pager-items-on-page-caption {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 16px;
+    margin: 0 10px;
+}
+
+/* WOLV Toolbar - конец */
+
+/* WOLV панель поиска - начало */
+.ics-wolv-toolbar-search-panel {
+    margin: 8px 0;
+}
+
+    .ics-wolv-toolbar-search-panel span {
+        margin: 0 6px 0 12px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    .ics-wolv-toolbar-search-panel br {
+        display: none;
+    }
+
+    .ics-wolv-toolbar-search-panel input[type="text"] {
+        margin-bottom: 0;
+        vertical-align: middle;
+        height: 20px;
+    }
+
+    .ics-wolv-toolbar-search-panel select {
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+
+    .ics-wolv-toolbar-search-panel input[type="button"] {
+        margin: 0;
+    }
+/* WOLV панель поиска - конец */
+
+/* WOLV филтрация - начало*/
+.FilterCell {
+    text-align: left;
+    background: #bfcad1 !important;
+}
+
+    .FilterCell select {
+        width: 50px;
+        margin: 0 0 4px 0;
+    }
+
+        .FilterCell select.FilterSelect, .FilterCell select.FilterOperationSelect,
+        .FilterCell input[type="text"] {
+            width: 100% !important;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+td.tableCellFilter {
+    text-align: center;
+    background: #bfcad1 !important;
+}
+
+    td.tableCellFilter .clrFilters {
+        cursor: pointer;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background: url(../images/filter_delete.png);
+    }
+
+        td.tableCellFilter .clrFilters:hover {
+            background: url(../images/filter_delete--hover.png);
+        }
+
+/* Тултип */
+
+#tooltip {
+    position: absolute;
+    border: 1px solid #111;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 16px;
+    -moz-box-shadow: 1px 1px 10px #000;
+    -webkit-box-shadow: 1px 1px 10px #000;
+    box-shadow: 1px 1px 10px #000;
+}
+
+/* WOLV кнопки - начало */
+.ics-wolv .wolv-buttons-in-row .actions, .ics-wolv .miniToolbar .actions {
+    text-align: right;
+    width: 100% !important;
+    vertical-align: middle;
+    margin: 2px 0;
+}
+
+.ics-wolv .wolv-buttons-in-row .actions input,
+.ics-wolv .miniToolbar .actions input {
+    vertical-align: middle;
+}
+/* WOLV кнопки - конец */
+
+/* WolvParametersInputControl начало */
+
+.wolv-service-block-text {
+    margin: 3px;
+}
+
+.wolv-param-btn-block {
+    margin: 3px;
+    clear: both;
+}
+
+/* WolvParametersInputControl конец */

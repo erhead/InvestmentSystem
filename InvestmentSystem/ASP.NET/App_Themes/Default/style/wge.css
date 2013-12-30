@@ -1,0 +1,148 @@
+﻿/* WGE основные стили - начало */
+.wge-list-table {
+    width: 100%;
+    clear: both;
+}
+
+.wge-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+    .wge-table > tbody > tr > td {
+        padding: 1px;
+        border: 1px solid #000000 !important;
+    }
+
+        .wge-table > tbody > tr > td > .wrapper-cell-data {
+            -ms-word-break: break-all;
+            word-break: break-all;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+            padding: 2px 4px;
+            overflow: hidden;
+        }
+    /* WGE основные стили - конец */
+
+    /* WGE цветовая схема - начало */
+    .wge-table tr.wge-caption-row > td {
+        font-weight: bold;
+        color: #000000 !important;
+        border-color: #e7ecf6 !important;
+        background: #e7ecf6;
+        background: -moz-linear-gradient(top, #e7ecf6 1%, #eff2f6 50%, #e2e8f5 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#e7ecf6), color-stop(50%,#eff2f6), color-stop(100%,#e2e8f5));
+        background: -webkit-linear-gradient(top, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+        background: -o-linear-gradient(top, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+        background: -ms-linear-gradient(top, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+        background: linear-gradient(to bottom, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7ecf6', endColorstr='#e2e8f5',GradientType=0 );
+        vertical-align: top;
+    }
+
+    .wge-table .wge-caption-table td {
+        font-size: 14px !important;
+        font-weight: bold;
+        color: #000000 !important;
+        background: transparent;
+    }
+
+    .wge-table tr.ObjectListViewCell > td {
+        color: #000;
+        border-color: #e7ecf6 !important;
+    }
+
+    .wge-table tr.ObjectListViewCell:hover > td {
+        color: #000 !important;
+        border-color: #e7ecf6 !important;
+        background: #e7ecf6;
+    }
+
+        .wge-table tr.ObjectListViewCell:hover > td a {
+            color: #000 !important;
+        }
+
+    .wge-table tr.ObjectListViewAlternateCell > td {
+        color: #000;
+        border-color: #e7ecf6 !important;
+        background: #eff2f6;
+    }
+
+    .wge-table tr.ObjectListViewAlternateCell:hover > td {
+        color: #000 !important;
+        border-color: #e7ecf6 !important;
+        background: #e7ecf6;
+    }
+
+        .wge-table tr.ObjectListViewAlternateCell:hover > td a {
+            color: #000 !important;
+        }
+/* WGE цветовая схема - конец */
+
+/* Текстовые поля в WGE - начало */
+.wrapper-cell-data > input {
+    width: 100%;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* Текстовые поля в WGE - конец */
+
+/* Лукап в WGE - начало */
+.wge-wrap .wrapper-cell-data .ics-lookup {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wge-wrap .wrapper-cell-data {
+    position: relative;
+}
+
+    .wge-wrap .wrapper-cell-data .ics-lookup .lookup > span {
+        height: 20px;
+        line-height: 20px;
+        display: block;
+        margin: 0;
+    }
+
+    .wge-wrap .wrapper-cell-data .ics-lookup .lookup > input {
+        border: 1px solid #bbb;
+        background: #eee;
+        padding: 2px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        min-height: 22px;
+        border-radius: 2px;
+        margin: 0;
+    }
+    /* Лукап в WGE - конец */
+
+    /* Маркер обязательного поля WGE - начало */
+    .wge-wrap .wrapper-cell-data .validator-field-required {
+        font-size: 2em;
+        color: #f00 !important;
+        line-height: 22px;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+    }
+/* Маркер обязательного поля WGE - конец */
+
+/* Кнопки в таблице WGE - начало */
+.wge-wrap .actions {
+    text-align: right;
+}
+
+.wge-wrap .actions > span {
+    vertical-align: middle;
+}
+
+.wge-wrap .actions > input {
+    vertical-align: middle;
+}
+/* Кнопки в таблице WGE - конец */

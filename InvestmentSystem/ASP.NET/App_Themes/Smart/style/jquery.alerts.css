@@ -1,0 +1,70 @@
+﻿#popup_container {
+    padding: 14px 15px;
+    border-top: 7px solid #333;
+    background: #333 url(../images/stroke-light.png) repeat;
+    color: #000000;
+    max-width: 600px;
+    min-width: 300px;
+    -moz-box-shadow: 1px 1px 10px #000;
+    -webkit-box-shadow: 1px 1px 10px #000;
+    box-shadow: 1px 1px 10px #000;
+}
+
+#popup_title {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -o-border-image: none;
+    -webkit-border-image: none;
+    border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url(../images/stroke-dark.png) repeat scroll center top #333;
+    border-width: 0;
+    color: #fff;
+    cursor: default;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.75em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#popup_content {
+    background: url("../images/info.gif") no-repeat scroll 16px 16px transparent;
+    margin: 0;
+    padding: 1em 1.75em;
+}
+
+    #popup_content.alert {
+        background-image: url("../images/info.gif");
+    }
+
+    #popup_content.confirm {
+        background-image: url("../images/important.gif");
+    }
+
+    #popup_content.prompt {
+        background-image: url("../images/help.gif");
+    }
+
+#popup_message {
+    padding-left: 48px;
+}
+
+#popup_panel {
+    margin: 1em 0 0 1em;
+    text-align: center;
+}
+
+#popup_prompt {
+    margin: 0.5em 0;
+}
+
+#popup_overlay {
+    background-color: #000 !important;
+    -moz-opacity: 0.45 !important;
+    opacity: 0.45 !important;
+    filter: alpha(opacity=45);
+}

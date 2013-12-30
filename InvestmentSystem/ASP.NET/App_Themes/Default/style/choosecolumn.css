@@ -1,0 +1,209 @@
+﻿body.choosecolumns {
+    margin: 0 8px;
+}
+
+    body.choosecolumns form {
+        width: 672px;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+
+    body.choosecolumns .wrap {
+        width: 100%;
+        margin-bottom: 32px;
+        overflow: auto;
+    }
+
+.cc-header {
+    width: 100%;
+}
+
+    .cc-header .cc-item {
+        border: 1px solid #8da6c6;
+        background: #e7ecf6;
+        background: -moz-linear-gradient(top, #e7ecf6 1%, #eff2f6 50%, #e2e8f5 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#e7ecf6), color-stop(50%,#eff2f6), color-stop(100%,#e2e8f5));
+        background: -webkit-linear-gradient(top, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+        background: -o-linear-gradient(top, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+        background: -ms-linear-gradient(top, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+        background: linear-gradient(to bottom, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+        display: inline-block;
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7ecf6', endColorstr='#e2e8f5',GradientType=0 );
+        margin: 0;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: middle;
+        padding: 5px;
+    }
+
+        .cc-header .cc-item .cc-select-all-btn {
+            background: url("../images/selectonthispage_small.png") no-repeat scroll 0 0 transparent;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            vertical-align: baseline;
+        }
+
+        .cc-header .cc-item .cc-reset-sort-btn {
+            background: url("../images/selectonthispage_small.png") no-repeat scroll 0 -30px transparent;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            vertical-align: baseline;
+        }
+
+        .cc-header .cc-item + .cc-item {
+            margin-left: -1px;
+        }
+
+.cc-checkbox {
+    width: 32px;
+    text-align: center;
+}
+
+.cc-sort-order {
+    width: 172px;
+}
+
+.cc-sort-priority {
+    width: 180px;
+}
+
+.cc-property-name {
+    width: 172px;
+}
+
+.cc-reset-sort {
+    width: 60px;
+    text-align: center;
+}
+
+.columns_list ul#sortable {
+    margin: 0;
+    padding: 0;
+}
+
+    .columns_list ul#sortable li {
+        display: block;
+        background: #fff;
+        border: 1px solid #8da6c6;
+        cursor: move;
+        margin-top: -1px;
+        white-space: nowrap;
+    }
+
+        .columns_list ul#sortable li.disabled {
+            background: #ccc !important;
+        }
+
+.columns_list ul li:nth-child(even) {
+    background: #e7ecf6 !important;
+}
+
+.columns_list ul#sortable li.disabled input[type="text"],
+.columns_list ul#sortable li.disabled select {
+    background: #ddd !important;
+    box-shadow: none !important;
+}
+
+.columns_list ul#sortable li .cc-checkbox {
+    display: inline-block;
+    width: 42px;
+    border: 1px solid #8da6c6;
+    border-width: 0 1px 0 1px;
+    margin: 0 0 0 -1px;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.columns_list ul#sortable li .cc-sort-order {
+    width: 64px;
+    vertical-align: top;
+}
+
+.columns_list ul#sortable li .cc-sort-order-wrap {
+    display: inline-block;
+    border: 1px solid #8da6c6;
+    border-width: 0 1px 0 1px;
+    margin: 0 0 0 -1px;
+    padding: 4px 2px;
+    width: 178px;
+    line-height: 16px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.columns_list ul#sortable li .cc-sort-priority {
+    width: 64px;
+    text-align: right;
+    vertical-align: top;
+}
+
+.columns_list ul#sortable li .cc-sort-priority-wrap {
+    display: inline-block;
+    border: 1px solid #8da6c6;
+    border-width: 0 1px 0 1px;
+    margin: 0 0 0 -1px;
+    padding: 4px 2px;
+    width: 186px;
+    line-height: 16px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.columns_list ul#sortable li .cc-property-name {
+    width: 160px;
+    vertical-align: top;
+}
+
+.columns_list ul#sortable li .cc-property-name-wrap {
+    display: inline-block;
+    border: 1px solid #8da6c6;
+    border-width: 0 1px 0 1px;
+    margin: 0 0 0 -1px;
+    padding: 4px 2px;
+    width: 178px;
+    line-height: 16px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.columns_list ul#sortable li .cc-sort-control {
+    display: inline-block;
+    width: 64px;
+    border: 1px solid #8da6c6;
+    border-width: 0 1px 0 1px;
+    padding: 3px 3px;
+    margin: 0 0 0 -1px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+    .columns_list ul#sortable li .cc-sort-control input {
+        margin: 0 2px;
+    }
+
+.cc-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 4px 16px;
+    height: 24px;
+    background: #fff;
+    min-width: 672px;
+}
+
+    .cc-footer .ics-btn#btnOK {
+        float: right;
+        width: 75px;
+    }
+
+.cc-hide {
+    visibility: hidden;
+}
+
+span.cc-hide {
+    display: none;
+}

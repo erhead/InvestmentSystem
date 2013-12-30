@@ -1,0 +1,60 @@
+﻿<%-- Site1.master --%>
+<asp:Image runat="server" ImageUrl="~/App_Themes/Blue/images/splitter.gif" SkinID="ShowHideButton" /> 
+
+<asp:SiteMapPath runat="server" Font-Names="Verdana" Font-Size="0.8em" SkinID="SiteMapPath">
+    <PathSeparatorStyle Font-Bold="False" ForeColor="#3F75AC" />
+    <CurrentNodeStyle ForeColor="#3F75AC" />
+    <NodeStyle Font-Bold="False" ForeColor="#3F75AC" />
+    <RootNodeStyle Font-Bold="False" ForeColor="#3F75AC" />
+</asp:SiteMapPath>
+
+<ac:IcsTreeView runat="server" Height="100%" NodeIndent="10" SkinID="NavigateTreeView" 
+CollapseImageUrl="~/App_Themes/Blue/images/ascsign.gif" ExpandImageUrl="~/App_Themes/Blue/images/descsign.gif">
+    <ParentNodeStyle Font-Bold="True" />
+    <HoverNodeStyle Font-Underline="True" BackColor="#b1d1f8" />
+    <SelectedNodeStyle Font-Underline="False" HorizontalPadding="15px" VerticalPadding="12px" BackColor="White" BorderColor="#9ACD32" BorderStyle="Solid" BorderWidth="1px" />
+    <NodeStyle Font-Names="Verdana" Font-Size="85%" ForeColor="Black" HorizontalPadding="15px" NodeSpacing="1px" VerticalPadding="12px" />
+</ac:IcsTreeView>
+<%-- Site1.master --%>
+
+<%-- Page --%>
+    <asp:ImageButton SkinID="SaveBtn" AlternateText="Сохранить" ToolTip="Сохранить" runat="server" ImageUrl="~/App_Themes/Blue/images/save.gif"  />
+    <asp:ImageButton SkinID="SaveAndCloseBtn" AlternateText="Сохранить и закрыть" ToolTip="Сохранить и закрыть" runat="server" ImageUrl="~/App_Themes/Blue/images/saveandclose.gif"/>
+    <asp:ImageButton SkinID="CancelBtn" AlternateText="Отменить" ToolTip="Отменить" runat="server" ImageUrl="~/App_Themes/Blue/images/back.gif"/>
+<%-- Page --%>
+
+<%-- WebObjectListView --%>
+    <asp:ImageButton SkinID="EditBtnWOLV" runat="server" ImageUrl="~/App_Themes/Blue/images/toolbar/edit_doc_small.gif"/>
+    <asp:ImageButton SkinID="ShowBtnWOLV" runat="server" ImageUrl="~/App_Themes/Blue/images/icons/lookup.gif"/>
+    <asp:ImageButton SkinID="DeleteBtnWOLV" runat="server" ImageUrl="~/App_Themes/Blue/images/toolbar/delete_small.gif"/>
+<%-- WebObjectListView --%>
+
+<%-- MasterEditorAjaxLookUp --%>
+<asp:Image runat="server" AlternateText="Выбрать" ToolTip="Выбрать" ImageUrl="~/App_Themes/Blue/images/icons/lookup.gif"  CssClass="toolbtn" SkinID="LookUpBtn" />
+<asp:Image runat="server" AlternateText="Очистить" ToolTip="Очистить" ImageUrl="~/App_Themes/Blue/images/icons/delete.gif"  CssClass="toolbtn" SkinID="LookUpClearBtn" />
+<asp:Image runat="server" AlternateText="Просмотреть" ToolTip="Просмотреть" ImageUrl="~/App_Themes/Blue/images/icons/magnifier.gif"  CssClass="toolbtn" SkinID="LookUpShowObjectBtn" />
+<asp:Image runat="server" AlternateText="" ToolTip="" ImageUrl="~/App_Themes/Blue/images/icons/magnifier_empty.gif" CssClass="empty" SkinID="LookUpShowObjectEmptyBtn" />
+<asp:ImageButton runat="server" AlternateText="Создать на основе" ToolTip="Создать на основе" ImageUrl="~/App_Themes/Blue/images/toolbar/new_by_small.gif" SkinID="NewByInRow" />
+<asp:Image runat="server" AlternateText="Загрузка" ImageUrl="~/App_Themes/Blue/images/indicator.gif" SkinID="AjaxIndicator" />
+<asp:TextBox runat="server" SkinID="PropertyToAutocomplete" />
+<%-- MasterEditorAjaxLookUp --%>
+
+<%-- MasterEditorAjaxDropDown --%>
+<asp:DropDownList runat="server" SkinID="MasterEditorDropDown" />
+<%-- MasterEditorAjaxDropDown --%>
+
+<%-- AjaxGroupEdit --%>
+        <asp:ImageButton runat="server" AlternateText="Добавить" ToolTip="Добавить" ImageUrl="~/App_Themes/Blue/images/toolbar/new_doc.gif" SkinID="WGEAddBtn" />
+        <asp:ImageButton runat="server" AlternateText="Редактировать" ToolTip="Редактировать" ImageUrl="~/App_Themes/Blue/images/toolbar/edit_doc.gif" SkinID="WGEEditBtn" />
+        <asp:ImageButton runat="server" AlternateText="Удалить" ToolTip="Удалить" ImageUrl="~/App_Themes/Blue/images/toolbar/del.gif" SkinID="WGEDeleteBtn" />
+        <asp:ImageButton runat="server" AlternateText="Сохранить" ToolTip="Сохранить" ImageUrl="~/App_Themes/Blue/images/toolbar/save.gif" SkinID="WGESaveInRow" />
+        <asp:ImageButton runat="server" AlternateText="Добавить" ToolTip="Добавить" ImageUrl="~/App_Themes/Blue/images/icons/plus.gif" SkinID="WGEPlusInRow" />
+        <asp:ImageButton runat="server" AlternateText="Редактировать" ToolTip="Редактировать" ImageUrl="~/App_Themes/Blue/images/toolbar/edit_doc_small.gif" SkinID="WGEEditInRow" />
+        <asp:ImageButton runat="server" AlternateText="Удалить" ToolTip="Удалить" ImageUrl="~/App_Themes/Blue/images/toolbar/delete_small.gif" SkinID="WGEDeleteInRow" />
+<%-- AjaxGroupEdit --%>
+
+<%-- Hinter --%>
+<ac:Hinter runat="server" ImageUrl="/App_Themes/Blue/images/quest.gif" SkinID="HintImage" />
+<%-- Hinter --%>
+
+<asp:Image runat="server" SkinID="404Image" ImageUrl="images/theme/404.png"/>

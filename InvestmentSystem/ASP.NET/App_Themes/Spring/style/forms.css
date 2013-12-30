@@ -1,0 +1,779 @@
+﻿.ics-btn,
+#popup_panel input[type="button"] {
+    background-color: #e5e5e5;
+    background-image: -moz-linear-gradient(top,#fff,#cecece);
+    background-image: -o-linear-gradient(top,#fff,#cecece);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#cecece));
+    background-image: -webkit-linear-gradient(top,#fff,#cecece);
+    background-image: linear-gradient(to bottom,#fff,#cecece);
+    border: 1px solid #a9a9a9;
+    border-color: #a9a9a9;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 1px 1px #fff;
+    -moz-box-shadow: inset 0 0 1px 1px #fff;
+    box-shadow: inset 0 0 1px 1px #fff;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-text-shadow: 0 1px 1px #ffffff;
+    text-shadow: 0 1px 1px #ffffff;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+#popup_panel input[type="button"] {
+    min-width: 75px;
+}
+
+    .ics-btn:hover,
+    .cc-down-button:hover,
+    .cc-up-button:hover,
+    #popup_panel input[type="button"]:hover {
+        background: #f0f0f0;
+        color: #333;
+        text-decoration: none;
+        filter: none;
+    }
+
+    .ics-btn:active,
+    .cc-down-button:active,
+    .cc-up-button:active,
+    #popup_panel input[type="button"]:active {
+        background-color: #cdcdcd;
+        background-image: -moz-linear-gradient(top,#cecece,#fff);
+        background-image: -o-linear-gradient(top,#cecece,#fff);
+        background-image: -webkit-gradient(linear,0 0,0 100%,from(#cecece),to(#fff));
+        background-image: -webkit-linear-gradient(top,#cecece,#fff);
+        background-image: linear-gradient(to bottom,#cecece,#fff);
+        -webkit-box-shadow: inset 1px 1px 1px #808080;
+        -webkit-box-shadow: inset 1px 1px 1px rgba(128, 128, 128, 0.5);
+        box-shadow: inset 1px 1px 1px #808080;
+        box-shadow: inset 1px 1px 1px rgba(128, 128, 128, 0.5);
+        color: #333;
+        text-decoration: none;
+    }
+
+    .ics-btn:focus,
+    .cc-down-button:focus,
+    .cc-up-button:focus,
+    #popup_panel input[type="button"]:focus {
+        outline: none;
+        border-color: #3a88d5;
+        background: #f0f0f0;
+        color: #333;
+        text-decoration: none;
+        filter: none;
+        position: relative;
+        z-index: 10;
+    }
+
+.ics-toolbar .ics-label {
+    padding-right: 8px;
+}
+
+a.aspNetDisabled,
+.ics-btn[disabled],
+.cc-down-button[disabled],
+.cc-up-button[disabled] {
+    color: #999;
+    cursor: default;
+    background: #f5f5f5;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+input[type="text"][readonly] {
+    background: #eee;
+}
+
+.ics-form {
+    display: block;
+    padding: 0 24px 24px 24px;
+}
+
+    .ics-form.ics-form-edit {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .ics-form.ics-form-list {
+        max-width: 100%;
+    }
+
+    .ics-form .ics-form-toolbar {
+        display: block;
+        overflow: hidden;
+        margin: 0 -24px 9px -24px;
+        padding: 7px 24px 7px 24px;
+        border-top: 1px solid #dbdbdb;
+        border-bottom: 1px solid #dbdbdb;
+        background-color: #f0f0f0;
+    }
+
+    .ics-form .ics-form-header {
+        font-weight: bold;
+        font-size: 18px;
+        margin: 8px 0;
+    }
+
+/* Текстовые поля */
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], 
+input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], 
+input[type="week"], input[type="number"], input[type="email"], input[type="url"], 
+input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    display: inline-block;
+    height: 20px;
+    padding: 4px 6px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #555555;
+    vertical-align: middle;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: inset 0 1px 1px #000000;
+    -moz-box-shadow: inset 0 1px 1px #000000;
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px #000000;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+    outline: none;
+/* ReSharper disable InvalidValue */
+    min-height: 20px\0/ !important; /* IE8 hack */
+/* ReSharper restore InvalidValue */
+}
+
+    /* Highlishter */
+    select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus {
+        background-color: #90ee90;
+    }
+
+/* Списки */
+select {
+    height: 30px;
+}
+
+/* Многострочные текстовые поля */
+.ics-form textarea {
+    resize: vertical;
+}
+
+.ics-form-toolbar {
+    background: #fff;
+}
+
+.ics-form-toolbar-edit {
+    margin: 8px 0;
+}
+
+/* Лукапы - начало */
+.ics-lookup {
+    margin: 0;
+    padding: 0;
+}
+
+    .ics-lookup .lookup {
+        display: block;
+        overflow: hidden;
+    }
+
+        .ics-lookup .lookup > input {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            min-height: 30px;
+            width: 100%;
+            -webkit-border-radius: 7px 0 0 7px;
+            -moz-border-radius: 7px 0 0 7px;
+            border-radius: 7px 0 0 7px;
+            border-right: none;
+        }
+
+            .ics-lookup .lookup > input:focus {
+                position: relative;
+            }
+
+.ics-lookup-btn {
+    border-right: none;
+    background-color: #e5e5e5;
+    background-image: -moz-linear-gradient(top,#fff,#cecece);
+    background-image: -o-linear-gradient(top,#fff,#cecece);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#cecece));
+    background-image: -webkit-linear-gradient(top,#fff,#cecece);
+    background-image: linear-gradient(to bottom,#fff,#cecece);
+    border: 1px solid #a9a9a9;
+    border-color: #a9a9a9;
+    -webkit-box-shadow: inset 0 0 1px 1px #fff;
+    -moz-box-shadow: inset 0 0 1px 1px #fff;
+    box-shadow: inset 0 0 1px 1px #fff;
+    color: #333;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    -webkit-text-shadow: 0 1px 1px #ffffff;
+    text-shadow: 0 1px 1px #ffffff;
+    margin-bottom: 0;
+    vertical-align: middle;
+    float: right;
+    display: inline-block;
+    margin: 0 -1px 0 -1px;
+    padding: 4px 4px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+    .ics-lookup-btn:hover {
+        background: #f0f0f0;
+        color: #333;
+        text-decoration: none;
+        filter: none;
+    }
+
+    .ics-lookup-btn:focus {
+        border-color: #3a88d5;
+        background: #f0f0f0;
+        color: #333;
+        text-decoration: none;
+        filter: none;
+        position: relative;
+        z-index: 10;
+        outline: none;
+        border: 1px solid #3a88d5 !important;
+    }
+
+    .ics-lookup-btn:active {
+        background-color: #cdcdcd;
+        background-image: -moz-linear-gradient(top,#cecece,#fff);
+        background-image: -o-linear-gradient(top,#cecece,#fff);
+        background-image: -webkit-gradient(linear,0 0,0 100%,from(#cecece),to(#fff));
+        background-image: -webkit-linear-gradient(top,#cecece,#fff);
+        background-image: linear-gradient(to bottom,#cecece,#fff);
+        -webkit-box-shadow: inset 1px 1px 1px #808080;
+        -webkit-box-shadow: inset 1px 1px 1px rgba(128, 128, 128, 0.5);
+        box-shadow: inset 1px 1px 1px #808080;
+        box-shadow: inset 1px 1px 1px rgba(128, 128, 128, 0.5);
+        color: #333;
+        text-decoration: none;
+    }
+
+    .ics-lookup-btn > span {
+        background: url(../images/lookup.png) no-repeat 0 0;
+        display: inline-block;
+        background-repeat: no-repeat;
+        height: 16px;
+        width: 16px;
+        line-height: 0;
+        vertical-align: middle;
+        margin-top: -1px;
+        padding: 0;
+        filter: none !important;
+    }
+
+    .ics-lookup-btn.ics-lookup-btn-disabled {
+        background-image: url(../images/lookup--disabled.png);
+    }
+
+    .ics-lookup-btn .ics-lookup-btn-search {
+        background-position: 0 0;
+    }
+
+    .ics-lookup-btn .ics-lookup-btn-clear {
+        background-position: -16px 0;
+    }
+
+    .ics-lookup-btn .ics-lookup-btn-show-object {
+        background-position: -32px 0;
+    }
+
+.ics-lookup > .ics-lookup-btn:first-child {
+    margin-left: 0;
+    -webkit-border-bottom-right-radius: 7px;
+    -moz-border-radius-bottomright: 7px;
+    -moz-border-radius-topright: 7px;
+    -webkit-border-top-right-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.ics-lookup-btn.icon-lookup-loading {
+    min-height: 20px;
+    vertical-align: middle;
+}
+
+.ics-lookup-btn .loading-indicator {
+    background: url(../../Spring/images/indicator.gif) no-repeat center center;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+/* Лукапы - конец */
+
+/* Datepicker - начало */
+.ics-datepicker {
+    width: 100%;
+    max-width: 167px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+    .ics-datepicker input[type="text"] {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        min-height: 30px;
+        width: 100%;
+    }
+
+    .ics-datepicker .ui-datepicker-trigger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        width: 26px !important;
+        height: 30px !important;
+        background: transparent url(../images/datepicker-btn.png) no-repeat 0 0 !important;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;
+        cursor: pointer;
+    }
+
+        .ics-datepicker .ui-datepicker-trigger:hover {
+            background-position: -64px 0 !important;
+        }
+
+        .ics-datepicker .ui-datepicker-trigger:focus {
+            background-position: -96px 0 !important;
+        }
+
+        .ics-datepicker .ui-datepicker-trigger:active {
+            background-position: -32px 0 !important;
+        }
+
+        .ics-datepicker .ui-datepicker-trigger[disabled] {
+            background-position: -128px 0 !important;
+            cursor: not-allowed;
+        }
+/* Datepicker - конец */
+
+.ics-form-controls-edit .clearfix {
+    clear: both;
+    overflow: hidden;
+    width: 100%;
+    margin: 8px 0;
+}
+
+.ics-form-controls-edit .descLbl {
+    float: left;
+    width: 130px;
+    padding: 4px 10px;
+    margin: 2px 0;
+    text-align: right;
+}
+
+.ics-form-controls-edit .descTxt {
+    float: left;
+    width: 200px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    min-height: 30px;
+}
+
+    .ics-form-controls-edit .descTxt > input {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        min-height: 30px;
+    }
+
+/* Fieldset */
+.ics-form fieldset {
+    margin: 0 -8px 8px -8px;
+    padding: 4px 5px;
+    border: 1px solid #dbdbdb;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: both;
+}
+
+    .ics-form fieldset > legend {
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+        line-height: 1.5;
+        margin: 0;
+        padding: 8px 4px;
+        border: none;
+        width: auto;
+    }
+
+/* SHOW-HIDE DIV */
+
+.ics-show-hide-div {
+    margin: 0;
+    padding: 4px 2px;
+}
+
+    .ics-show-hide-div > fieldset {
+        margin-bottom: 0;
+        padding: 4px 4px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        clear: both;
+    }
+
+        .ics-show-hide-div > fieldset > legend {
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 100%;
+        }
+
+.ics-show-hide-div-link {
+    text-decoration: none !important;
+    color: #333;
+    margin: 0 -5px 0 0;
+    padding: 8px 16px;
+    width: 100%;
+    display: block;
+    border: 1px solid #dbdbdb;
+    background: #f0f0f0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    .ics-show-hide-div-link:hover, .ics-show-hide-div-link:focus {
+        border-color: #3a88d5;
+        color: #333;
+    }
+
+.ics-show-hide-div > fieldset fieldset {
+    margin: 0 -2px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: both;
+    padding: 4px 2px;
+}
+
+.ics-show-hide-div .ics-wolv-toolbar {
+    margin: 4px -4px;
+}
+
+.ics-show-hide-div .ics-wolv-pager {
+    margin: 4px -4px;
+    margin-bottom: -5px;
+}
+
+.ics-show-hide-div-icon {
+    background: url(../images/shd-toggle.png) no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2px 5px;
+    float: left;
+}
+
+.ics-show-hide-div-expanded .ics-show-hide-div-icon {
+    background-position: -16px 0;
+}
+
+/* Кнопки в тулбаре формы редактирования - начало */
+.button-save {
+    display: inline-block;
+    background: #f0f0f0 url(../images/save.png) no-repeat 0 0;
+    color: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+    width: 108px !important;
+    height: 32px;
+}
+
+    .button-save:hover {
+        background-image: url(../images/save--hover.png);
+    }
+
+    .button-save:active {
+        background-image: url(../images/save--active.png);
+    }
+
+    .button-save:focus {
+        background-image: url(../images/save--focus.png);
+    }
+
+.button-saveclose {
+    display: inline-block;
+    background: #f0f0f0 url(../images/saveclose.png) no-repeat 0 0;
+    color: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+    width: 173px !important;
+    height: 32px;
+}
+
+    .button-saveclose:hover {
+        background-image: url(../images/saveclose--hover.png);
+    }
+
+    .button-saveclose:active {
+        background-image: url(../images/saveclose--active.png);
+    }
+
+    .button-saveclose:focus {
+        background-image: url(../images/saveclose--focus.png);
+    }
+
+.button-close {
+    display: inline-block;
+    background: transparent url(../images/close.png) no-repeat 0 0;
+    color: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+    width: 90px !important;
+    height: 32px !important;
+}
+
+    .button-close:hover {
+        background-image: url(../images/close--hover.png);
+    }
+
+    .button-close:active {
+        background-image: url(../images/close--active.png);
+    }
+
+    .button-close:focus {
+        background-image: url(../images/close--focus.png);
+    }
+/* Кнопки в тулбаре формы редактирования - конец */
+
+/* Lookup Form - начало */
+.lookup-form body {
+    margin: 0 24px;
+}
+/* Lookup Form - конец */
+
+/* Форма входа - начало */
+.login-form-header {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: table;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 64px 64px 16px 96px;
+    width: 494px;
+    color: #808080;
+    vertical-align: middle;
+    -webkit-text-shadow: 0 1px 1px #fff;
+    text-shadow: 0 1px 1px #fff;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.login-form {
+    background: #e6e6e6;
+    width: 100%;
+}
+
+    .login-form .container {
+        margin: 0;
+        padding: 0;
+        border: none;
+        width: auto;
+        height: 100%;
+    }
+
+    .login-form .failureNotification {
+        display: inline;
+        color: red;
+    }
+
+.login-form-label {
+    display: inline;
+}
+
+.login-form-btn {
+    clear: both;
+    float: right;
+    margin-top: 16px;
+    padding-right: 44px;
+    padding-left: 44px;
+    height: 37px;
+    width: 136px !important;
+    font-size: 16px !important;
+}
+
+.login-form .failureNotification[style="color: red; visibility: hidden;"] {
+    display: none;
+}
+
+.login-form .failureNotification[style="color:Red;visibility:hidden;"] {
+    display: none;
+}
+
+.login-form-remember label, .login-form-forgot a {
+    display: inline;
+    margin: 0 4px;
+    vertical-align: middle;
+    padding: 2px 0;
+}
+
+.login-form-remember input[type="checkbox"] {
+    margin: 0;
+}
+
+.login-form-forgot {
+    vertical-align: middle;
+    text-align: right;
+}
+
+.login-from-failure-text {
+    position: absolute;
+    display: block;
+    margin-top: 20px;
+    margin-left: 325px;
+    padding: 10px;
+    max-width: 220px;
+    border: 1px solid red;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    color: red;
+    background-color: #FFF;
+}
+
+    .login-from-failure-text:after, .login-from-failure-text:before {
+        position: absolute;
+        right: 100%;
+        width: 0;
+        height: 0;
+        border: solid transparent;
+        content: " ";
+        pointer-events: none;
+    }
+
+    .login-from-failure-text:before {
+        top: 50%;
+        margin-top: -21px;
+        border-width: 0 22px 22px 0;
+        border-color: #ffffff;
+        border-color: rgba(255, 255, 255, 0);
+        border-right-color: red;
+    }
+
+    .login-from-failure-text:after {
+        top: 50%;
+        margin-top: -20px;
+        border-width: 0 20px 20px 0;
+        border-color: #ffffff;
+        border-color: rgba(255, 255, 255, 0);
+        border-right-color: #ffffff;
+    }
+
+    .login-from-failure-text:empty {
+        display: none;
+    }
+
+.login-form-remember, .login-form-forgot {
+    width: 50%;
+    float: left;
+}
+
+.login-form-header small {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.login-form-inner {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 24px 32px;
+    width: 365px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    background-color: #fff;
+    -moz-box-shadow: 0 1px 8px #000000, 0 0 40px #000000;
+    -webkit-box-shadow: 0 1px 8px #000000, 0 0 40px #000000;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: 0 1px 8px #000000, 0 0 40px #000000;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    -ms-filter: "progid:DXImageTransform.</span>Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+    .login-form-inner h2 {
+        font-size: 22px;
+        color: #666;
+        margin: 0 0 16px 0;
+    }
+
+    .login-form-inner input[type="text"],
+    .login-form-inner input[type="password"] {
+        height: 36px;
+    }
+
+.login-form-footer {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 24px 32px;
+    width: 354px;
+    color: #808080;
+    font-size: 12px;
+    text-align: center;
+}
+
+.login-form-input {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* Форма входа - конец */
+
+#hiddenContent {
+    display: none;
+}

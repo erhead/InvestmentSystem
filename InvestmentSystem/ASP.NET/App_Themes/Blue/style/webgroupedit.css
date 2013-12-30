@@ -1,0 +1,45 @@
+﻿
+/** Стили WebGroupEdit начало **/
+.GroupEditTable
+{
+	border-color:#e4e4e4;
+	border-width:2px;
+	border-style:solid;
+	empty-cells:show;
+}
+.GroupEditCaptionCell
+{
+	background-color:#FFEEEE;
+	border-color:#5050FF;
+	border-width:1px;
+	border-style:solid;
+	font-weight:bold;
+}
+.GroupEditCell
+{
+	background-color:#EEEEFF;
+	border-color:#5050FF;
+	border-width:1px;
+	border-style:solid;
+}
+.GroupEditAlternateCell
+{
+	background-color:#EEFFEE;
+	border-color:#5050FF;
+	border-width:1px;
+	border-style:solid;
+}
+.GroupEditTextBox
+{
+	width: 95%;
+}
+.GroupEditMasterEditorDropDown
+{
+	width: 90%;
+}
+.GroupEditNewRow
+{
+    background-color: #6EFF70 !important;
+}
+
+/** Стили WebGroupEdit конец **/

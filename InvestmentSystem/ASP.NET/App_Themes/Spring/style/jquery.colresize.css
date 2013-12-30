@@ -1,0 +1,27 @@
+﻿.colresize-grip {
+    width: 10px;
+    cursor: col-resize;
+    position: absolute;
+}
+
+.colresize-ie-fake-grip {
+    width: 0;
+    position: absolute;
+}
+
+.colresize-dragged-grip {
+    width: 1px;
+    border-left: 1px black dotted;
+}
+
+.colresize-table {
+    table-layout: fixed;
+}
+
+.colresize-table-cell {
+    overflow-x: hidden;
+}
+
+.colresize-last-column {
+    width: auto;
+}

@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AdmConsole(Objects)</name>
+    </assembly>
+    <members>
+        <member name="T:ICSSoft.STORMNET.UI.FormsUtils.AddItemForm">
+            <summary>
+            Summary description for AddItem.
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.UI.FormsUtils.AddItemForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.UI.FormsUtils.AddItemForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.UI.FormsUtils.AddItemForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.UI.FormsUtils.AddItemForm.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            ok button click
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.UI.FormsUtils.AddItemForm.button2_Click(System.Object,System.EventArgs)">
+            <summary>
+            cancel button click
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:ICSSoft.STORMNET.AdmConsole.BaseTypeStorage.Key">
+            <summary>
+             Ключ по которому лежит настройка папки со сборками
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.BaseTypeStorage.op_Explicit(ICSSoft.STORMNET.AdmConsole.BaseTypeStorage)~System.String">
+            <summary>
+             Приведение к строке
+            </summary>
+            <param name="typ">что приводим</param>
+            <returns>строка</returns>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.BaseTypeStorage.op_Explicit(System.String)~ICSSoft.STORMNET.AdmConsole.BaseTypeStorage">
+            <summary>
+             Приведение из строки в BaseTypeStorage
+            </summary>
+            <param name="s">строка</param>
+            <returns>BaseTypeStorage</returns>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.BaseTypeStorage.GetCurrentType">
+            <summary>
+            Получить текущий тип
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.BaseTypeStorage.LoadAsmsFromFolder(System.String)">
+            <summary>
+            Загрузить в память все сборки из указанного каталога
+            </summary>
+            <param name="dllCacheFolder"></param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.BaseTypeStorage.DllCacheFolderSelect">
+            <summary>
+             Выбор каталога в котором будет лежать кэш сборок для настройки FilterSettings
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.BaseTypeStorage.SaveToIsolatedStorage(System.String)">
+            <summary>
+            Сохраним в Isolated Storage, если мы в ClickOnce
+            </summary>
+            <param name="dllCacheFolder"></param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.BaseTypeStorage.SaveToSett(System.String)">
+            <summary>
+            Сохранить настройки (в конфиг и в IsolatedStorage)
+            </summary>
+            <param name="dllCacheFolder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.BaseTypeStorage.CheckIsolatedStorage(System.String@)">
+            <summary>
+            Проверим, если мы ClickOnce, то может в IsolatedStorage сохранилось старое значение
+            </summary>
+            <param name="dllCacheFolder"></param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.BaseTypeStorage.GetFindBaseType">
+            <summary>
+            получить  базовый тип для фильтрации
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.BaseTypeStorage.FillByUser">
+            <summary>
+            запросить у пользователя заполнить данный тип
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.AdmConsole.BaseTypeStorage.DllCacheFolder">
+            <summary>
+             Папка, в которой лежат сборки для настроек
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.AdmConsole.BaseTypeStorage.type">
+            <summary>
+            имя типа
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.AdmConsole.BaseTypeStorage.Text">
+            <summary>
+            представление для юзера
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.AdmConsole.FilterDetail">
+            <summary>
+            Настройка детейловых и псевдодетейловых свойств
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.AdmConsole.FilterDetail.Caption">
+            <summary>
+            Заголовок (для пользователя)
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.AdmConsole.FilterDetail.DataObjectView">
+            <summary>
+            Представление детейла
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.AdmConsole.FilterDetail.OwnerConnectProp">
+            <summary>
+            Имя мастера для шапки
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.AdmConsole.FilterDetail.FilterSetting">
+            <summary>
+            мастеровая ссылка на шапку ICSSoft.STORMNET.AdmConsole.FilterSetting
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.AdmConsole.DetailArrayOfFilterDetail">
+            <summary>
+            Detail array of FilterDetail
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.DetailArrayOfFilterDetail.#ctor(ICSSoft.STORMNET.AdmConsole.FilterSetting)">
+            <summary>
+            Construct detail array
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.DetailArrayOfFilterDetail.Add(ICSSoft.STORMNET.AdmConsole.FilterDetail)">
+            <summary>
+            Adds object with type FilterDetail
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.AdmConsole.DetailArrayOfFilterDetail.Item(System.Int32)">
+            <summary>
+            Returns object with type FilterDetail by index
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.AdmConsole.FilterLookup">
+            <summary>
+            Класс для получения контейнеров при лукапе
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.AdmConsole.FilterLookup.DataObjectType">
+            <summary>
+            Тип выбираемого объекта
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.AdmConsole.FilterLookup.Container">
+            <summary>
+            Тип контейнера
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.AdmConsole.FilterLookup.FilterSetting">
+            <summary>
+            мастеровая ссылка на шапку ICSSoft.STORMNET.AdmConsole.FilterSetting
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.AdmConsole.DetailArrayOfFilterLookup">
+            <summary>
+            Detail array of FilterLookup
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.DetailArrayOfFilterLookup.#ctor(ICSSoft.STORMNET.AdmConsole.FilterSetting)">
+            <summary>
+            Construct detail array
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.DetailArrayOfFilterLookup.Add(ICSSoft.STORMNET.AdmConsole.FilterLookup)">
+            <summary>
+            Adds object with type FilterLookup
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.AdmConsole.DetailArrayOfFilterLookup.Item(System.Int32)">
+            <summary>
+            Returns object with type FilterLookup by index
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.AdmConsole.FilterSettEventArg.FSEditor">
+            <summary>
+            Контрол для редактирования настройки фильтров
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.FilterSetting.GetXmlTree(ICSSoft.STORMNET.View)">
+            <summary>
+            получить атрибуты (собственные, мастеровые, детейловые) в виде для показа пользователю
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.FilterSetting.GetXmlTree">
+            <summary>
+            получить атрибуты (собственные, мастеровые, детейловые) в виде для показа пользователю
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ICSSoft.STORMNET.AdmConsole.FilterSetting.Name">
+            <summary>
+            Имя настройки фильтра (желательно уникальное)
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.AdmConsole.FilterSetting.DataObjectView">
+            <summary>
+            Представление, по которому будет выводиться список
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.AdmConsole.FilterSetting.Stub">
+            <summary>
+            Заглушка для правильного показа в списке настроек фильтров
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.AdmConsole.FilterTreeControl">
+            <summary>
+            Summary description for FilterTreeControl.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.FilterTreeControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.FilterTreeControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.FilterTreeControl.GetCurentIndexes">
+            <summary>
+            возвратить индексы выделенных элементов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.IFilterSettingEditControl.GetFilterSetting">
+            <summary>
+            Получить настройку фильтра из контрола
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.IFilterSettingEditControl.SetFilterSetting(ICSSoft.STORMNET.AdmConsole.FilterSetting)">
+            <summary>
+            Установить настройку фильтра в контрол
+            </summary>
+            <param name="fs">Настройка фильтров, для инициализации контрола</param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.IFilterSettingEditControl.SetDllCacheFolder(System.String)">
+            <summary>
+            Указать папку, в которой живут сборки с объектами и формами
+            </summary>
+            <param name="dllCacheFolder">Папка с кешем сборок</param>
+        </member>
+        <member name="T:ICSSoft.STORMNET.AdmConsole.TypeStorageControl">
+            <summary>
+            Summary description for TypeStorageControl.
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.AdmConsole.TypeStorageControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.TypeStorageControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.AdmConsole.TypeStorageControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.AdmConsole.WebUser.fNewPassword">
+            <summary>
+            если null, то не надо менять 
+            </summary>
+        </member>
+    </members>
+</doc>

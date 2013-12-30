@@ -1,0 +1,44 @@
+/* LOOKUP, DATEPICKER */
+
+.ics-lookup, .ics-datepicker {
+    
+}
+
+.ics-lookup .lookup, .ics-datepicker .datepicker {
+    display: block;
+    overflow: hidden;
+    padding-right: 10px;
+}
+
+.ics-lookup .lookup > input, 
+.ics-lookup .lookup > span, 
+.ics-datepicker .datepicker > input {
+    width: 100%;
+}
+
+.ics-lookup-btn, .ics-datepicker-btn {
+    float: right;
+    display: block;
+    border: none;
+    width: 16px !important;
+    height: 16px !important;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+.ics-lookup-btn.icon-lookup {
+    background: transparent url(../../Light/images/icons/lookup.gif) no-repeat;
+}
+
+.ics-lookup-btn.icon-lookup-clear {
+    background: transparent url(../../Light/images/icons/delete.gif) no-repeat;
+}
+
+.ics-lookup-btn.icon-lookup-show-object {
+    background: transparent url(../../Light/images/icons/magnifier.gif) no-repeat;
+}
+
+.ics-lookup-btn.icon-lookup-loading {
+    background: transparent url(../../Light/images/indicator.gif) no-repeat;
+}

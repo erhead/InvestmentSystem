@@ -1,0 +1,234 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff url(../images/background.png) repeat;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    height: 100%;
+}
+
+    body a {
+        color: #000000;
+    }
+
+        body a:hover {
+            color: #12a1e5;
+            cursor: pointer;
+        }
+
+        body a:focus {
+            outline: none;
+            text-decoration: underline;
+            color: #3a88d5;
+        }
+
+.page-header {
+    background: #ffffff;
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+    .page-header .page-header-image {
+        vertical-align: middle;
+    }
+
+    .page-header .header-logo-block {
+        vertical-align: middle;
+        font-size: 24px;
+    }
+
+    .page-header .page-header-userbar {
+        float: right;
+        margin: 13px 0;
+    }
+
+.page-navigation {
+    padding-right: 20px;
+    padding-left: 20px;
+    border-top: 2px groove #fff;
+    border-bottom: 2px ridge #fff;
+    background: #4682b4;
+    background: -moz-linear-gradient(top, #8cc5ff 0, #1e5799 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#8cc5ff), color-stop(100%,#1e5799));
+    background: -webkit-linear-gradient(top, #8cc5ff 0,#1e5799 100%);
+    background: -o-linear-gradient(top, #8cc5ff 0,#1e5799 100%);
+    background: -ms-linear-gradient(top, #8cc5ff 0,#1e5799 100%);
+    background: linear-gradient(to bottom, #8cc5ff 0,#1e5799 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8cc5ff', endColorstr='#1e5799',GradientType=0 );
+    position: relative;
+    z-index: 2;
+    min-height: 27px !important;
+    height: 27px;
+    color: #fff;
+    line-height: 27px;
+}
+
+    .page-navigation .page-breadcrumbs a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+        .page-navigation .page-breadcrumbs a:hover {
+            text-decoration: none;
+            cursor: default;
+        }
+
+        .page-navigation .page-breadcrumbs a[href]:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+#pageBlockTreeview {
+    float: left;
+    margin: 0;
+    width: 255px;
+    border-right: 1px solid #cecece;
+    position: relative;
+    right: -1px;
+}
+
+    #pageBlockTreeview a[href="#TreeView1_SkipLink"] {
+        display: none;
+    }
+
+    #pageBlockTreeview .ics-treeview {
+        margin: 2px;
+        padding: 0;
+        border-spacing: 0 3px;
+        border-spacing: 0;
+        border-collapse: separate;
+        line-height: 20px;
+    }
+
+        #pageBlockTreeview .ics-treeview a {
+            color: #000000;
+        }
+
+        #pageBlockTreeview .ics-treeview table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+        }
+
+            #pageBlockTreeview .ics-treeview table td {
+                min-width: 16px;
+                text-align: center;
+            }
+
+    #pageBlockTreeview td.ics-treeview-node {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 29px;
+        border-spacing: 0;
+        white-space: normal !important;
+        text-align: left;
+    }
+
+    #pageBlockTreeview a.ics-treeview-node {
+        color: #333333;
+        display: block;
+        padding: 8px;
+        line-height: 16px;
+        text-align: left;
+    }
+
+    #pageBlockTreeview a > span.ics-treeview-node {
+        color: #333333;
+        display: block;
+        padding: 8px;
+        line-height: 16px;
+        text-align: left;
+    }
+
+    #pageBlockTreeview a.ics-treeview-node-selected {
+        color: #12a1e5;
+    }
+
+    #pageBlockTreeview .ics-treeview-node a:focus, .ics-treeview a:focus {
+        outline: 1px solid #3a88d5 !important;
+        text-decoration: none !important;
+        color: #3a88d5 !important;
+    }
+
+        #pageBlockTreeview .ics-treeview-node a:focus span {
+            outline: 1px solid #3a88d5 !important;
+            color: #3a88d5 !important;
+        }
+
+    #pageBlockTreeview .ics-treeview tr:hover td {
+        color: #000000;
+        background-color: #e5e5e5;
+    }
+
+#pageBlockContent {
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    margin-left: 256px;
+    padding: 0;
+    min-height: 60px;
+    border-left: 1px solid #cecece;
+}
+
+.page-footer {
+    border-top: 1px solid #d8d8d8;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #ffffff;
+    position: relative;
+    z-index: 1;
+    padding: 10px 20px;
+    overflow: hidden;
+    clear: both;
+}
+
+.page-form {
+    margin: 0;
+    padding: 0;
+}
+
+    .page-form.treeview-hidden #pageBlockTreeview {
+        display: none;
+    }
+
+    .page-form.treeview-hidden #pageBlockContent {
+        margin-left: 0 !important;
+    }
+
+    .page-form #pageTreeViewShowHideBtn {
+        position: absolute;
+        display: block;
+        width: 10px;
+        height: 29px;
+        background-image: url(../images/treeview-hide.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 50;
+        left: 0;
+        top: -1px;
+    }
+
+    .page-form.treeview-hidden #pageTreeViewShowHideBtn {
+        background-image: url(../images/treeview-show.png);
+    }
+
+    .page-form .treeview-hidden .ics-form-edit {
+        border-left: 1px solid #CECECE;
+        border-right: 1px solid #CECECE;
+    }
+
+
+    .page-form #pageTreeViewShowHideBtn > span {
+        display: none;
+    }
+
+    .page-form #pageTreeViewShowHideBtn-sticky-wrapper {
+        float: left;
+    }

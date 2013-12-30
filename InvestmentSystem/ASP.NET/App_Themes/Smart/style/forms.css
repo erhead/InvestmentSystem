@@ -1,0 +1,556 @@
+﻿/* кнопки */
+.ics-btn,
+input[type="button"],
+input[type="submit"],
+.ics-button,
+.ics-wolv-toolbar-button,
+.ics-wolv-pager-navigation-button,
+.ics-wolv-pager-page {
+    display: inline-block;
+    padding: 4px 6px;
+    margin: 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #e9e9e9;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: arial;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+#popup_panel input[type="button"] {
+    min-width: 75px;
+}
+
+.ics-btn:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.ics-button:hover,
+.ics-wolv-toolbar-button:hover,
+.ics-wolv-pager-navigation-button:hover,
+.ics-wolv-pager-page:hover {
+    background-color: #F6F6F6;
+}
+
+.ics-btn:active,
+input[type="button"]:active,
+input[type="submit"]:active,
+.ics-button:hover,
+.ics-wolv-pager-page:active,
+.ics-wolv-toolbar-button:active,
+.ics-wolv-pager-navigation-button:active,
+.ics-wolv-pager-current-page,
+.ics-wolv-toolbar-button-active {
+    background-color: #f0f0f0;
+    -webkit-box-shadow: inset 1px 1px 1px #808080;
+    box-shadow: inset 1px 1px 1px #808080;
+}
+
+.ics-btn:disabled,
+.ics-btn[disabled],
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="button"][disabled],
+input[type="submit"][disabled],
+.ics-wolv-pager-navigation-disabled {
+    background: #f0f0f0 !important;
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    display: inline-block;
+    margin: 0;
+    padding: 4px 6px;
+    border: 1px solid #cccccc;
+    border-color: #bbbbbb #dfdfdf #f9f9f9 #e2e2e2;
+    border-radius: 5px;
+    background: #e7e7e7;
+    background: -moz-linear-gradient(top, #e0e0e0 0, #ededed 100%);
+    background: -ms-linear-gradient(top, #e0e0e0 0,#ededed 100%);
+    background: -o-linear-gradient(top, #e0e0e0 0,#ededed 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#e0e0e0), color-stop(100%,#ededed));
+    background: -webkit-linear-gradient(top, #e0e0e0 0,#ededed 100%);
+    background: linear-gradient(to bottom, #e0e0e0 0,#ededed 100%);
+    font-weight: bold;
+    font-size: 12px;
+    font-family: arial;
+    text-decoration: none;
+}
+
+.ics-lookup .lookup span {
+    display: inline-block;
+    margin: 0;
+    padding: 4px 6px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: #cccccc;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: arial;
+    text-decoration: none;
+}
+
+    input[type="text"][disabled],
+    input[type="password"][disabled],
+    textarea[disabled] {
+        background: #ddd;
+        border-color: #666;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #fff;
+        background-color: #f0f0f0;
+        background: #f0f0f0;
+    }
+
+div.ics-datepicker, div.descTxt {
+    display: inline-block;
+}
+
+.ics-form-controls-edit {
+    max-width: 800px;
+}
+
+.ics-form-controls .clearfix {
+    display: block;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.ics-form-controls .descLbl {
+    width: 200px;
+    display: inline-block;
+    padding: 6px 6px;
+    vertical-align: top;
+}
+
+label {
+    vertical-align: middle;
+}
+
+select {
+    position: relative;
+    margin: 0;
+    padding: 3px;
+    border: 1px solid #cccccc;
+    border-color: #f9f9f9 #dfdfdf #bbbbbb #e2e2e2;
+    border-radius: 5px;
+    background: #ededed;
+    background: -moz-linear-gradient(top, #ededed 0, #e0e0e0 100%);
+    background: -ms-linear-gradient(top, #ededed 0,#e0e0e0 100%);
+    background: -o-linear-gradient(top, #ededed 0,#e0e0e0 100%);
+    font-weight: normal;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: arial;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#e0e0e0',GradientType=0 );
+}
+
+    input:focus, select:focus {
+        outline: none;
+    }
+
+.ics-form > h2 {
+    display: none;
+}
+
+.ics-form fieldset {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    margin: 0 0 16px 0;
+}
+
+    .ics-form fieldset > legend {
+        font-weight: bold;
+        color: #666;
+        margin: 0;
+        padding: 0 4px;
+    }
+
+.ics-form-row {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.ics-form-row-label {
+    float: left;
+    text-align: right;
+    width: 193px;
+    margin: 9px 12px 15px 0;
+    font-size: 12px;
+    vertical-align: text-bottom;
+    color: #000;
+}
+
+.ics-form-row-controls .ics-form-row-label {
+    display: inline-block;
+    float: left;
+    width: auto;
+    font-size: 12px;
+    vertical-align: text-bottom;
+    text-align: left;
+    margin: 9px 12px 15px 24px;
+    color: #000;
+}
+
+.ics-form-row-text {
+    display: inline-block;
+    float: left;
+    width: auto;
+    font-size: 12px;
+    vertical-align: text-bottom;
+    text-align: left;
+    margin: 9px 12px 15px 12px;
+    color: #666;
+}
+
+.ics-form-row-controls input[type="text"],
+.ics-form-row-controls input[type="file"],
+.ics-form-row-controls select,
+.ics-form-row-controls textarea,
+.ics-form-row-controls .ics-button {
+    margin-bottom: 7px;
+    vertical-align: top;
+}
+
+.ics-form-row-controls {
+    margin-left: 205px;
+    min-height: 40px;
+}
+
+    .ics-form-row-controls > .ics-form-row-controls {
+        margin-left: 0;
+        display: inline-block;
+    }
+
+.ics-form-controls .datepicker {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ics-lookup {
+    display: block;
+    position: relative;
+}
+
+    .ics-lookup .lookup input {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .ics-lookup .lookup span {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+.ics-form-row-controls input {
+    float: left;
+}
+
+.ics-form-row-controls .ics-checkbox {
+    float: left;
+    font-size: 13px;
+    display: inline-block;
+    padding: 7px 0;
+}
+
+.ics-lookup-btn {
+    background: url(../images/icons/icons-18.png) no-repeat 0 0;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    float: right;
+    position: absolute;
+    top: 4px;
+}
+
+.ics-lookup-btn-clear {
+    background-position: -72px 0;
+    right: 5px;
+}
+
+    .ics-lookup-btn-clear:hover {
+        background-position: -72px -18px;
+    }
+
+    .ics-lookup-btn-clear[disabled] {
+        background-position: -72px -36px;
+    }
+
+.ics-lookup-btn-lookup {
+    background-position: -36px 0;
+    right: 25px;
+}
+
+    .ics-lookup-btn-lookup:hover {
+        background-position: -36px -18px;
+    }
+
+    .ics-lookup-btn-lookup[disabled] {
+        background-position: -36px -36px;
+    }
+
+.ics-lookup-btn-show {
+    background: url(../images/icons/magnifier.gif) no-repeat left top;
+    right: 45px;
+}
+
+.ics-lookup-btn-show-empty {
+    background: url(../images/icons/magnifier_empty.gif) no-repeat left top;
+    right: 45px;
+}
+
+.ics-lookup .lookup, .ics-datepicker .datepicker {
+    display: block;
+    overflow: hidden;
+    min-width: 50px;
+}
+
+.ics-lookup-btn-lookup-multiple {
+    background-position: -54px 0;
+    right: 5px;
+}
+
+    .ics-lookup-btn-lookup-multiple:hover {
+        background-position: -54px -18px;
+    }
+
+/* |=> DatePicker */
+
+.ics-datepicker {
+    width: 132px;
+    position: relative;
+}
+
+.ics-form-row-controls .ics-datepicker {
+    float: left;
+}
+
+.ics-datepicker input[type="text"] {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.ics-datepicker .ui-datepicker-trigger {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+    background: transparent url(../images/icons/icons-18.png) no-repeat -144px 0;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+    .ics-datepicker .ui-datepicker-trigger:hover {
+        background-position: -144px -18px;
+    }
+
+.ics-datepicker input[disabled] + .ui-datepicker-trigger {
+    background-position: -144px -36px !important;
+    cursor: not-allowed !important;
+}
+
+.ics-datepicker > span {
+    display: block;
+    font-size: 13px;
+    position: absolute;
+    top: 20px;
+    z-index: 100;
+    width: 200px;
+    left: 10px;
+}
+
+
+/* <=| DatePicker */
+
+.wrapper-cell-data input[type="text"] {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wrapper-cell-data > span {
+    float: left;
+}
+
+.wrapper-cell-data .lookup,
+.wrapper-cell-data .ics-lookup {
+    width: 100%;
+}
+
+.input-justify input,
+.input-justify textarea,
+input.input-justify,
+textarea.input-justify {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.input-justify .lookup,
+.input-justify .ics-lookup,
+.input-justify.ics-lookup {
+    width: 100%;
+}
+
+.input-money, .input-int, .input-float {
+    text-align: right;
+}
+
+.ics-form-row-controls input + input,
+.ics-form-row-controls .ics-button + .ics-button,
+.ics-form-row-controls input + .ics-button,
+.ics-form-row-controls .ics-button + input {
+    margin-left: 7px;
+}
+
+.ics-form-row-controls input[type="Hidden"] + input,
+.ics-form-row-controls input[type="Hidden"] + .ics-button {
+    margin-left: 0;
+}
+
+/* Форма входа - начало */
+.login-form {
+    width: 280px;
+    height: 320px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -140px;
+    margin-top: -160px;
+}
+
+.login-form-header {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.ics-login-form-header img {
+    margin: 0 auto;
+}
+
+.login-form-required-validator {
+    display: none;
+}
+
+.login-form input[type="text"], .login-form input[type="password"] {
+    margin: 0 0 15px 0 !important;
+    padding: 17px 14px 16px 14px;
+    border: 1px solid #016d91;
+    border-width: 1px 0 0 0;
+    border-color: #016d91 transparent transparent transparent;
+    border-radius: 5px;
+    background: #0099cc;
+    background: -moz-linear-gradient(top, #0189b7 0, #0099cc 100%);
+    background: -ms-linear-gradient(top, #0189b7 0,#0099cc 100%);
+    background: -o-linear-gradient(top, #0189b7 0,#0099cc 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#0189b7), color-stop(100%,#0099cc));
+    background: -webkit-linear-gradient(top, #0189b7 0,#0099cc 100%);
+    background: linear-gradient(to bottom, #0189b7 0,#0099cc 100%);
+    color: #fff;
+    font-size: 14px;
+    font-family: arial;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ics-btn.login-form-btn {
+    color: #fff;
+    background: #0098cb;
+    background: -moz-linear-gradient(top, #0098cb 0, #017da6 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#0098cb), color-stop(100%,#017da6));
+    background: -webkit-linear-gradient(top, #0098cb 0,#017da6 100%);
+    background: -o-linear-gradient(top, #0098cb 0,#017da6 100%);
+    background: -ms-linear-gradient(top, #0098cb 0,#017da6 100%);
+    background: linear-gradient(to bottom, #0098cb 0,#017da6 100%);
+    border: 1px solid transparent;
+    border-color: transparent transparent #1e8bb0 transparent;
+    border-bottom: 1px solid #1e8bb0;
+    padding: 11px 24px;
+    box-shadow: 0 3px 1px #005572, 0 5px 3px 1px #000;
+    margin: -2px 0 0 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    line-height: 25px;
+    width: 100px;
+}
+
+    .ics-btn.login-form-btn:active {
+        box-shadow: 0 1px 3px 1px #000;
+        padding: 11px 24px;
+        margin: 2px 0 -2px 0;
+    }
+/* Форма входа - конец */
+
+#hiddenContent {
+    display: none;
+}
+
+/* SHOW-HIDE DIV - начало */
+.ics-show-hide-div {
+    margin: 0;
+}
+
+.ics-show-hide-div > fieldset {
+    margin: 8px 0;
+}
+
+.ics-show-hide-div-link {
+    text-decoration: none;
+}
+
+.ics-show-hide-div-link:hover {
+    color: #0197ca;
+}
+
+.ics-show-hide-div-caption {
+    font-size: 18px;
+    border-bottom: 1px dashed #333;
+    vertical-align: middle;
+}
+
+.ics-show-hide-div-link:hover .ics-show-hide-div-caption {
+    border-bottom: 1px dashed #0197ca;
+}
+
+.ics-show-hide-div-icon {
+    background: url(../images/shd-toggle.png) no-repeat 0 0;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 2px 0 8px;
+}
+
+.ics-show-hide-div-collapsed .ics-show-hide-div-icon {
+    background-position: -17px 0;
+}
+
+.ics-show-hide-div-collapsed > fieldset {
+    border: none;
+}
+/* SHOW-HIDE DIV - конец */

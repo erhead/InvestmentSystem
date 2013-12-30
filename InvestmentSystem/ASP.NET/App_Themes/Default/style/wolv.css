@@ -1,0 +1,453 @@
+﻿/* WOLV основные стили - начало */
+.ics-wolv {
+    width: 100%;
+    clear: both;
+}
+
+    .ics-wolv table {
+        border-spacing: 0;
+    }
+
+        .ics-wolv table td {
+            padding: 2px;
+        }
+
+.wolv_table_pagers {
+    width: 100%;
+}
+
+.wolv_wrap {
+    width: 100%;
+    table-layout: fixed;
+    background: #eee;
+}
+
+.ListTable {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.wolv-data-wrapper > table {
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: auto;
+    border-spacing: 0;
+}
+
+.ObjectListViewTable {
+    border-collapse: collapse;
+}
+
+    .ObjectListViewTable td {
+        border: 1px solid;
+    }
+
+.ics-wolv .wolv-caption-table .ics-wolv-column-header,
+.ics-wolv .wolv-data-table .wrapper-cell-data {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    -ms-word-wrap: normal;
+    word-wrap: normal;
+}
+
+/* Заголовочные ячейки */
+.ics-wolv-column-header {
+    cursor: pointer;
+}
+
+    .ics-wolv-column-header .ics-wolv-column-sort-order {
+        color: Black;
+        font-size: 0.7em;
+    }
+
+    .ics-wolv-column-header .ics-wolv-column-sort-direction {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+    }
+
+    .ics-wolv-column-header .ics-wolv-column-sort-asc {
+        background: url('../images/ascsign.gif') no-repeat left top;
+    }
+
+    .ics-wolv-column-header .ics-wolv-column-sort-desc {
+        background: url('../images/descsign.gif') no-repeat left top;
+    }
+/* WOLV основные стили - конец */
+
+/* WOLV цветовая схема - начало */
+.ics-wolv .wolv-caption-table > tbody > tr > td,
+.ics-wolv .wolv-data-table > tbody > tr.ObjectListViewCaptionCell > td {
+    font-weight: bold;
+    color: #000000;
+    border-color: #8da6c6;
+    background: #e7ecf6;
+    background: -moz-linear-gradient(top, #e7ecf6 1%, #eff2f6 50%, #e2e8f5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#e7ecf6), color-stop(50%,#eff2f6), color-stop(100%,#e2e8f5));
+    background: -webkit-linear-gradient(top, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+    background: -o-linear-gradient(top, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+    background: -ms-linear-gradient(top, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+    background: linear-gradient(to bottom, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7ecf6', endColorstr='#e2e8f5',GradientType=0 );
+}
+
+.wolv-service-block-table {
+    border: 1px solid #8da6c6;
+    width: 77%;
+}
+
+.ics-wolv .wolv-data-table > tbody > tr > td {
+    background: #fff;
+    border-color: #8da6c6;
+    cursor: pointer;
+}
+
+    .ics-wolv .wolv-data-table > tbody > tr > td.checkedline {
+        background: #c2d1e2 !important;
+    }
+
+    .ics-wolv .wolv-data-table > tbody > tr > td.WOLVSO {
+        background: #d1e2c2 !important;
+    }
+
+.ics-wolv .wolv-data-table > tbody > tr:hover > td {
+    color: #000;
+    background: #e7ecf6;
+}
+
+.ics-wolv .wolv-data-table > tbody > tr.ObjectListViewAlternateCell > td {
+    background: #eff2f6;
+}
+
+.ics-wolv .wolv-data-table > tbody > tr.ObjectListViewAlternateCell:hover > td {
+    color: #000;
+    background: #e7ecf6;
+}
+/* WOLV цветовая схема - конец */
+
+/* WOLV Toolbar - начало */
+.ics-wolv-toolbar {
+    margin: 8px 0;
+}
+
+.ics-wolv-toolbar-group {
+    display: inline-block;
+}
+
+.ics-wolv-toolbar-separator {
+    display: inline-block;
+    background: #ccc;
+    width: 1px;
+    height: 16px;
+    vertical-align: middle;
+    margin: 4px;
+}
+
+.ics-wolv-pager {
+    display: inline-block;
+}
+
+    .ics-wolv-pager.ics-wolv-pager-top {
+        float: right;
+        margin: 0;
+    }
+
+.ics-wolv-pager-navigation-button, .ics-wolv-pager-page {
+    padding: 2px 6px;
+}
+
+.ics-wolv-pager-navigation-disabled {
+    border-color: #999999 !important;
+    color: #999999 !important;
+    background: #f0f0f0 !important;
+    cursor: not-allowed;
+}
+
+.ics-wolv-toolbar-button-icon {
+    background: url(../images/wolv-toolbar-icons.png) no-repeat 0 0;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+    margin: 0;
+    padding: 0;
+}
+
+.ics-wolv-toolbar-button-caption {
+    vertical-align: middle;
+}
+
+.ics-wolv-toolbar-button-refresh .ics-wolv-toolbar-button-icon {
+    background-position: 0 0;
+}
+
+.ics-wolv-toolbar-button-create .ics-wolv-toolbar-button-icon {
+    background-position: -16px 0;
+}
+
+.ics-wolv-toolbar-button-edit .ics-wolv-toolbar-button-icon {
+    background-position: -32px 0;
+}
+
+.ics-wolv-toolbar-button-delete .ics-wolv-toolbar-button-icon {
+    background-position: -48px 0;
+}
+
+.ics-wolv-toolbar-button-select .ics-wolv-toolbar-button-icon {
+    background-position: -64px 0;
+}
+
+.ics-wolv-toolbar-button-search .ics-wolv-toolbar-button-icon {
+    background-position: -80px 0;
+}
+
+.ics-wolv-toolbar-button-filter .ics-wolv-toolbar-button-icon {
+    background-position: -96px 0;
+}
+
+.ics-wolv-toolbar-button-limit-edit .ics-wolv-toolbar-button-icon {
+    background-position: -112px 0;
+}
+
+.ics-wolv-toolbar-button-print .ics-wolv-toolbar-button-icon {
+    background-position: -128px 0;
+}
+
+.ics-wolv-toolbar-button-configure-columns .ics-wolv-toolbar-button-icon {
+    background-position: -144px 0;
+}
+
+.ics-wolv-toolbar-button-export-excel .ics-wolv-toolbar-button-icon {
+    background-position: -160px 0;
+}
+
+.ics-wolv-toolbar-button-export-xml .ics-wolv-toolbar-button-icon {
+    background-position: -172px 0;
+}
+
+.ics-wolv-toolbar-button-limit-options .ics-wolv-toolbar-button-icon,
+.ics-wolv-toolbar-button-export-excel-options .ics-wolv-toolbar-button-icon {
+    background: url(../images/button-arrow.png) no-repeat -4px 0;
+    width: 8px;
+}
+
+.ics-wolv-toolbar-button-caption,
+.ics-wolv-toolbar-button-limit-options .ics-wolv-toolbar-button-caption,
+.ics-wolv-toolbar-button-export-excel-options .ics-wolv-toolbar-button-caption {
+    display: none;
+}
+
+.ics-wolv-pager-navigation-separator {
+    display: none;
+}
+
+.ics-wolv-toolbar-button + .ics-wolv-toolbar-button,
+.ics-wolv-pager-page + .ics-wolv-pager-page,
+.ics-wolv-pager-navigation-button-forward {
+    margin-left: 1px;
+}
+
+.ics-wolv-toolbar-button + .ics-wolv-toolbar-button-limit-options,
+.ics-wolv-toolbar-button + .ics-wolv-toolbar-button-export-excel-options {
+    margin-left: -1px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.ics-wolv-pager, .ics-wolv-toolbar-dynamic-container {
+    display: inline-block;
+    margin: 8px 0;
+}
+
+.ics-wolv-pager.ics-wolv-pager-bottom {
+    width: 100%;
+}
+
+.ics-wolv-pager-go-to-page, .ics-wolv-pager-information, .ics-wolv-pager-items-on-page {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.ics-wolv-pager-bottom .ics-wolv-pager-items-on-page {
+    float: right;
+}
+
+.ics-wolv-pager-go-to-page-label, .ics-wolv-pager-information, .ics-wolv-pager-items-on-page-caption {
+    padding: 4px;
+}
+
+.ics-wolv-pager-go-to-page-input {
+    margin: 0;
+    width: 48px;
+}
+
+.ics-wolv-pager-inline-go-to-page {
+    padding: 0;
+    border: none;
+}
+
+    .ics-wolv-pager-inline-go-to-page > input {
+        width: 48px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+.ics-wolv-pager-items-on-page > select {
+    margin: 0;
+}
+/* WOLV Toolbar - конец */
+
+/* WOLV панель поиска - начало */
+.ics-wolv-toolbar-search-panel {
+    margin: 8px 0;
+}
+
+    .ics-wolv-toolbar-search-panel span {
+        display: inline-block;
+        padding: 4px 4px 4px 16px;
+    }
+
+    .ics-wolv-toolbar-search-panel br {
+        display: none;
+    }
+
+    .ics-wolv-toolbar-search-panel input[type="text"], .ics-wolv-toolbar-search-panel select {
+        margin: 0;
+    }
+
+    .ics-wolv-toolbar-search-panel input[type="button"] {
+        color: #000;
+        border: 1px solid #cccccc;
+        padding: 2px 6px;
+        margin: 0 4px;
+        box-shadow: inset 0 0 1px 1px #fff;
+        text-decoration: none;
+        border-radius: 2px;
+        background: #e6e6e6;
+        background: -moz-linear-gradient(top, #e6e6e6 0, #ffffff 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#e6e6e6), color-stop(100%,#ffffff));
+        background: -webkit-linear-gradient(top, #e6e6e6 0,#ffffff 100%);
+        background: -o-linear-gradient(top, #e6e6e6 0,#ffffff 100%);
+        background: -ms-linear-gradient(top, #e6e6e6 0,#ffffff 100%);
+        background: linear-gradient(to bottom, #e6e6e6 0,#ffffff 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e6e6', endColorstr='#ffffff',GradientType=0 );
+    }
+
+        .ics-wolv-toolbar-search-panel input[type="button"]:hover {
+            background: #ffffff;
+            background: -moz-linear-gradient(top, #ffffff 0, #e6e6e6 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#ffffff), color-stop(100%,#e6e6e6));
+            background: -webkit-linear-gradient(top, #ffffff 0,#e6e6e6 100%);
+            background: -o-linear-gradient(top, #ffffff 0,#e6e6e6 100%);
+            background: -ms-linear-gradient(top, #ffffff 0,#e6e6e6 100%);
+            background: linear-gradient(to bottom, #ffffff 0,#e6e6e6 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e6e6',GradientType=0 );
+        }
+/* WOLV панель поиска - конец */
+
+/* WOLV филтрация - начало*/
+.FilterCell {
+    text-align: left;
+}
+
+    .FilterCell select {
+        width: 56px;
+        font-size: 1em;
+        min-height: 24px;
+        margin: 0 0 1px 0;
+        border: 1px solid #8DA6C6;
+    }
+
+        .FilterCell select.FilterSelect, .FilterCell select.FilterOperationSelect,
+        .FilterCell input[type="text"] {
+            font-size: 1em;
+            width: 100% !important;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            min-height: 24px;
+            margin: 0;
+            padding: 2px;
+            border: 1px solid #8DA6C6;
+        }
+
+td.tableCellFilter {
+    text-align: center;
+}
+
+    td.tableCellFilter .clrFilters {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background: url(../images/filter_delete.png);
+        cursor: pointer;
+    }
+
+/* Тултип */
+
+#tooltip {
+    color: #000;
+    position: absolute;
+    background-color: #ffffcc;
+    border: 1px solid #111;
+    padding: 4px;
+    line-height: 1em;
+}
+
+/* WOLV фильтрация - конец */
+
+/* WOLV кнопки - начало */
+.ics-wolv .actions {
+    width: auto !important;
+    vertical-align: middle;
+    text-align: right;
+}
+
+    .ics-wolv .actions .selectAllOnPageBtn {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url(../images/check_box.png) no-repeat 0 0;
+        margin: 0 4px;
+        vertical-align: middle;
+    }
+
+    .ics-wolv .actions .selectAllOnAllPagesBtn {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url(../images/check_boxes_series.png) no-repeat 0 0;
+        margin: 0 4px;
+        vertical-align: middle;
+    }
+
+    .ics-wolv .actions .resetSort {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url(../images/sort_delete.png) no-repeat 0 0;
+        margin: 0 4px;
+        vertical-align: middle;
+    }
+
+    .ics-wolv .actions > input {
+        margin: 0 4px;
+    }
+
+    .ics-wolv .actions > a {
+        margin: 0 4px;
+    }
+/* WOLV кнопки - конец */
+
+/* WolvParametersInputControl начало */
+
+.wolv-service-block-text {
+    margin: 3px;
+}
+
+.wolv-param-btn-block {
+    margin: 3px;
+    clear: both;
+}
+
+/* WolvParametersInputControl конец */

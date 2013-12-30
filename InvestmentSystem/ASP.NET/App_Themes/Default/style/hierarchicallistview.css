@@ -1,0 +1,75 @@
+table.ics-hlistview-treetable tbody tr:hover td {
+    background: none repeat scroll 0 0 #E7ECF6;
+}
+
+tr.ics-hlistview-treetable-secondrow td {
+    background: none repeat scroll 0 0 #EFF2F6;
+}
+
+tr.ics-hlistview-treetable-firstrow td {
+    background-color: #fff;
+}
+
+table.ics-hlistview-treetable {
+  border: 1px solid #003085;
+  margin: 1px 0;
+  font-family: inherit;
+  font-size: inherit;
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.ics-hlistview-treetable caption {
+  font-size: inherit;
+  font-weight: bold;
+  margin-bottom: .2em;
+}
+
+table.ics-hlistview-treetable thead {
+  background: linear-gradient(to bottom, #E7ECF6 1%, #EFF2F6 50%, #E2E8F5 100%) repeat scroll 0 0 transparent;
+  color: #000000 !important;
+  font-weight: bold;
+  vertical-align: top;
+  font-size: inherit;
+}
+
+table.ics-hlistview-treetable thead tr th {
+  border: 1px solid;
+  border-color: #E7ECF6 !important;
+  font-weight: bold;
+  padding: 5px;
+  text-align: left;
+}
+
+table.ics-hlistview-treetable tbody {
+    color: #000000 !important;
+}
+
+table.ics-hlistview-treetable tbody tr td {
+  cursor: default;
+  padding: 5px;
+  border: 1px solid;
+  border-color: #E7ECF6 !important;
+}
+
+table.ics-hlistview-treetable span {
+  background-position: center left;
+  background-repeat: no-repeat;
+  padding: .2em 0 .2em 1.5em;
+}
+
+
+table.ics-hlistview-treetable tr.branch {
+    background-color: #f9f9f9;
+}
+
+table.ics-hlistview-treetable tr.selected {
+  background-color: #3875d7;
+  color: #fff;
+}
+
+table.ics-hlistview-treetable tr.accept {
+  background-color: #a3bce4;
+  color: #fff
+}

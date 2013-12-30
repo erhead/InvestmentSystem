@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IIS.Caseberry.Logging(Objects)</name>
+    </assembly>
+    <members>
+        <member name="T:IIS.Caseberry.Logging.Objects.ApplicationLog">
+            <summary>
+            Application Log
+            </summary>
+        </member>
+        <member name="M:IIS.Caseberry.Logging.Objects.ApplicationLog.CreateException">
+            <summary>
+            Создать исключение, содержащее информацию по строке лога
+            </summary>
+            <returns>Исключение</returns>
+        </member>
+        <member name="T:IIS.Caseberry.Logging.Objects.ApplicationLog.Views">
+            <summary>
+            Class views container
+            </summary>
+        </member>
+        <member name="P:IIS.Caseberry.Logging.Objects.ApplicationLog.Views.ApplicationLogL">
+            <summary>
+            "ApplicationLogL" view
+            </summary>
+        </member>
+        <member name="P:IIS.Caseberry.Logging.Objects.ApplicationLog.Views.ApplicationLogR">
+            <summary>
+            "ApplicationLogR" view
+            </summary>
+        </member>
+        <member name="T:IIS.Caseberry.Logging.Objects.ApplicationLogException">
+            <summary>
+            Исключение-обертка для строк лога
+            </summary>
+        </member>
+        <member name="M:IIS.Caseberry.Logging.Objects.ApplicationLogException.#ctor(System.Exception)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="innerException">Исключение</param>
+        </member>
+        <member name="M:IIS.Caseberry.Logging.Objects.ApplicationLogException.#ctor(System.String,System.Exception)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="message">Сообщение</param>
+            <param name="innerException">Исключение</param>
+        </member>
+    </members>
+</doc>

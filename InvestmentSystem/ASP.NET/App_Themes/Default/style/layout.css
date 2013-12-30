@@ -1,0 +1,198 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: #747474;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+    /*Opera Fix*/
+    body:before {
+        content: "";
+        height: 100%;
+        float: left;
+        width: 0;
+        margin-top: -32767px;
+    }
+
+    body a {
+        color: #000074;
+    }
+
+.page-wrap {
+    min-height: 100%;
+}
+
+.page-empty {
+    overflow: auto;
+    padding-bottom: 32px;
+}
+
+.page-header {
+    color: #747474;
+    background: #e7ecf6;
+    background: -moz-linear-gradient(top, #e7ecf6 1%, #eff2f6 50%, #e2e8f5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#e7ecf6), color-stop(50%,#eff2f6), color-stop(100%,#e2e8f5));
+    background: -webkit-linear-gradient(top, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+    background: -o-linear-gradient(top, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+    background: -ms-linear-gradient(top, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+    background: linear-gradient(to bottom, #e7ecf6 1%,#eff2f6 50%,#e2e8f5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7ecf6', endColorstr='#e2e8f5',GradientType=0 );
+    padding: 8px;
+    line-height: 16px;
+}
+
+    .page-header a {
+        color: #000074;
+    }
+
+    .page-header .page-header-image {
+        vertical-align: middle;
+    }
+
+    .page-header .header-logo-block {
+        color: #000074;
+        vertical-align: middle;
+        font-size: 24px;
+    }
+
+.page-navigation {
+    padding: 8px;
+    line-height: 16px;
+    background-color: #eeeeee;
+}
+
+    .page-navigation a {
+        color: #333333;
+    }
+
+    .page-navigation .breadcrumb {
+        position: absolute;
+        left: 266px;
+    }
+
+.page-header-userbar {
+    float: right;
+}
+
+#pageBlockTreeview {
+    float: left;
+    width: 256px;
+    padding: 0;
+    margin: 0;
+    line-height: 16px;
+    background: #f2f4fa;
+}
+
+    #pageBlockTreeview a[href="#TreeView1_SkipLink"] {
+        display: none;
+    }
+
+    #pageBlockTreeview .ics-treeview {
+        line-height: 2em;
+    }
+
+        #pageBlockTreeview .ics-treeview a {
+            color: #333333;
+        }
+
+            #pageBlockTreeview .ics-treeview a > img {
+                vertical-align: middle;
+            }
+
+        #pageBlockTreeview .ics-treeview table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+        }
+
+            #pageBlockTreeview .ics-treeview table td {
+                min-width: 32px;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+    #pageBlockTreeview td.ics-treeview-node {
+        padding: 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    #pageBlockTreeview a.ics-treeview-node {
+        color: #333333;
+        display: block;
+        padding: 8px;
+        line-height: 16px;
+        text-align: left;
+    }
+
+    #pageBlockTreeview a > span.ics-treeview-node {
+        color: #333;
+        background-color: #e2e8f5;
+        display: block;
+        padding: 8px;
+        line-height: 16px;
+        text-align: left;
+    }
+
+        #pageBlockTreeview a.ics-treeview-node:hover,
+        #pageBlockTreeview a > span.ics-treeview-node:hover {
+            color: #000;
+            background-color: #e7ecf6;
+            display: block;
+        }
+
+#pageBlockContent {
+    overflow: hidden;
+    padding: 8px;
+}
+
+    #pageBlockContent .ics-form-header {
+        display: block;
+        margin: 0 0 8px 0;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 16px;
+        padding: 8px;
+        background-color: #eeeeee;
+    }
+
+.page-footer {
+    position: relative;
+    background-color: #eeeeee;
+    overflow: hidden;
+    clear: both;
+    padding: 8px;
+    line-height: 16px;
+    margin-top: -32px;
+    height: 16px !important;
+    clear: both;
+}
+
+    .page-footer a {
+        color: #333;
+    }
+
+.page-form {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+    .page-form.treeview-hidden #pageBlockTreeview {
+        display: none;
+    }
+
+    .page-form.treeview-hidden #treeviewHideSpan {
+        display: none;
+    }
+
+    .page-form.treeview-visible #treeviewShowSpan {
+        display: none;
+    }

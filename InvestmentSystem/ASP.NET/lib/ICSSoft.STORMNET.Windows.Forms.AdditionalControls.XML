@@ -1,0 +1,1241 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ICSSoft.STORMNET.Windows.Forms.AdditionalControls</name>
+    </assembly>
+    <members>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox">
+            <summary>
+            Контрол предиктивного ввода
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox._completeItem">
+            <summary>
+            Текущий предложенный элемент
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox._completeItemIndex">
+            <summary>
+            Индекс текущего предложенного элемента
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.GetObjectStringData">
+            <summary>
+            Делегат для получения данных каким-нибудь хитрым пользовательским способом (можно искорёжить LCS или даже запрос)
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.GetComboBoxInfo(System.IntPtr,ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.COMBOBOXINFO@)">
+            <summary>
+            Полцчить параметры ComboBox
+            </summary>
+            <param name="hWnd"></param>
+            <param name="pcbi"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.SetText(System.String)">
+            <summary>
+            Установить текст без поиска и предложения вариантов
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.SetCompleteItem(System.String,System.Int32)">
+            <summary>
+            Установить в качестве подсказки элемент с указанным индексом. Применяется при дополнении значения. 
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.CloseUp">
+            <summary>
+            Событие закрытия списка
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.MaskFormat">
+            <summary>
+            Формат маски для поиска совпадений. По умолчанию: "{0}%"
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.CaseSensitive">
+            <summary>
+            Если false, то выборка из справочника будет идти с приведением 
+            обоих сравниваемых значений к верхнему регистру
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.AutoOpenListForSuggestions">
+            <summary>
+            Автоматически открыть список для вариантов при вводе
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.Property">
+            <summary>
+            Свойство объекта, по которому происходит поиск вариантов
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.LimitFunction">
+            <summary>
+            Ограничение
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.ReadOnly">
+            <summary>
+            Получает или задает значение, указывающее, является ли текст в текстовом поле доступным только для чтения. 
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.SymbolsToIntellisense">
+            <summary>
+            Количество символов, с которого начинается подсказка
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.OrderColumns">
+            <summary>
+            Задает сортировку значений в списке предлагаемых значений
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.Value">
+            <summary>
+            Текущий выбранный объект данных
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.Suggestions">
+            <summary>
+            Предлагаемые в данный момент значения
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.DataObjectTypes">
+            <summary>
+            Отображаемые типы объектов данных
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.ViewName">
+            <summary>
+            Получить имя представления/установить представление по имени
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.View">
+            <summary>
+            Представление
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.AutoCompleteBox.GetObjectStringDataDelegate">
+            <summary>
+            Делегат для получения списка объектов
+            </summary>
+            <param name="ds"></param>
+            <param name="split"></param>
+            <param name="lcs"></param>
+            <returns></returns>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.AutoCompleteButton.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.AutoCompleteButton.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.AutoCompleteButton.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox">
+            <summary>
+            TextBox с автодополнением.
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox._completeItem">
+            <summary>
+            Текущий предложенный элемент
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox._completeItemIndex">
+            <summary>
+            Индекс текущего предложенного элемента
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.GetObjectStringData">
+            <summary>
+            Делегат для получения данных каким-нибудь хитрым пользовательским способом (можно искорёжить LCS или даже запрос)
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.SetCompleteItem(System.String,System.Int32)">
+            <summary>
+            Установить в качестве подсказки элемент с указанным индексом. Применяется при дополнении значения. 
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.op_Explicit(ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox)~System.Windows.Forms.TextBox">
+            <summary>
+            Преобразование к TextBox
+            </summary>
+            <param name="autoCompleteTextBox"></param>
+            <returns></returns>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.ComboBoxDropDownHeight">
+            <summary>
+            Высота выпадающего списка
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.ComboBoxDropDownWidth">
+            <summary>
+            Ширина выпадающего списка
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.ComboBoxDroppedDown">
+            <summary>
+            Признак раскрытия выпадающего списка
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.MaskFormat">
+            <summary>
+            Формат маски для поиска совпадений. По умолчанию: "{0}%"
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.CaseSensitive">
+            <summary>
+            Если false, то выборка из справочника будет идти с приведением 
+            обоих сравниваемых значений к верхнему регистру
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.Property">
+            <summary>
+            Свойство объекта, по которому происходит поиск вариантов
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.CharacterCasing">
+            <summary>
+            Получает или задает значение, показывающее, изменяет ли элемент управления регистр вводимых знаков.
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.MaxLength">
+            <summary>
+            Получает или задает максимальное число знаков, которое разрешается вводить или вставлять в элемент управления.
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.ReadOnly">
+            <summary>
+            Получает или задает значение, указывающее, является ли текст в текстовом поле доступным только для чтения. 
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.SymbolsToIntellisense">
+            <summary>
+            Количество символов, с которого начинается подсказка
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.SortingCols">
+            <summary>
+            Задает сортировку значений в списке предлагаемых значений
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.Value">
+            <summary>
+            Текущий выбранный объект данных
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.BorderStyle">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.AutoCompleteTextBox.GetObjectStringDataDelegate">
+            <summary>
+            Делегат для получения списка объектов
+            </summary>
+            <param name="ds"></param>
+            <param name="split"></param>
+            <param name="lcs"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.CompleteItem">
+            <summary>
+            Элемент 
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.CompleteItem.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="value"></param>
+            <param name="valueForSearch"></param>
+            <param name="primaryKey"></param>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.CompleteItem.Value">
+            <summary>
+            Значение
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.CompleteItem.ValueForSearch">
+            <summary>
+            Значение для поиска
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.CompleteItem.PrimaryKey">
+            <summary>
+            Первичный ключ объекта
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.CompleteItemLoader.GetObjectStringData">
+            <summary>
+            Делегат для получения данных пользовательским способом (можно искорёжить LCS или даже запрос)
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.CompleteItemLoader.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.CompleteItemLoader.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.CompleteItemLoader.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.SuggestionItemSelectedEventArgs">
+            <summary>
+            Аргумент события SuggestionItemSelected
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.SuggestionItemSelectedEventArgs.#ctor(ICSSoft.STORMNET.Windows.Forms.CompleteItem,System.Int32)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="completeItem"></param>
+            <param name="completeItemIndex"></param>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.SuggestionItemSelectedEventArgs.CompleteItem">
+            <summary>
+            Выбранный элемент
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.SuggestionItemSelectedEventArgs.CompleteItemIndex">
+            <summary>
+            Индекс выбранного элемента
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.MouseHook">
+            <summary>
+            This is the class we will use to hook mouse events.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.MouseHook.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Look for any kind of mouse activity that is not in the
+            text box itself, and hide the popup if it is visible.
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="E:ICSSoft.STORMNET.Windows.Forms.MouseHook.MouseClickOutControl">
+            <summary>
+            Клик мышки вне контрола
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.Messages">
+            <summary>
+            Summary description for Messages.
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.SuggestionListForm">
+            <summary>
+            Форма для отображения списка вариантов
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.SuggestionListForm.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.SuggestionListForm.HideList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.SuggestionListForm.ShowList(System.Collections.Generic.List{ICSSoft.STORMNET.Windows.Forms.CompleteItem},System.Drawing.Point)">
+            <summary>
+            
+            </summary>
+            <param name="items"></param>
+            <param name="location"></param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.SuggestionListForm.SelectCurrentListBoxItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.SuggestionListForm.SelectNextListItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.SuggestionListForm.SelectPreviousListItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.SuggestionListForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.SuggestionListForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.SuggestionListForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:ICSSoft.STORMNET.Windows.Forms.SuggestionListForm.SuggestionItemSelected">
+            <summary>
+            Выбор элемента из списка
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.SuggestionListForm.BorderStyle">
+            <summary>
+            Стиль рамки
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.ExtendedMultyLineTextBox">
+            <summary>
+            Summary description for UserControl1.
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.ExtendedMultyLineTextBox.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedMultyLineTextBox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedMultyLineTextBox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.ExtendedMultyLineTextBox.GetObjectStringData">
+            <summary>
+            Делегат для получения данных каким-нибудь хитрым пользовательским способом (можно искорёжить LCS или даже запрос)
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedMultyLineTextBox.GetFirstDataObject">
+            <summary>
+            Возвратить первый объект, удовлетворяющий маске введенного текста
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedMultyLineTextBox.GetCurrentDataObject(System.Boolean)">
+            <summary>
+            Получить текущий выбранный объект
+            </summary>
+            <param name="reloadItems">Произвести поиск по текущему значению</param>
+            <returns></returns>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedMultyLineTextBox.ComboBoxDropDownHeight">
+            <summary>
+            Высота выпадающего списка
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedMultyLineTextBox.ComboBoxDropDownWidth">
+            <summary>
+            Ширина выпадающего списка
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedMultyLineTextBox.ComboBoxDroppedDown">
+            <summary>
+            Признак раскрытия выпадающего списка
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedMultyLineTextBox.MaskFormat">
+            <summary>
+            Формат маски для поиска совпадений. По умолчанию: "{0}%"
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedMultyLineTextBox.AutoOpenListForSuggestions">
+            <summary>
+            Автоматически открыть список для вариантов при вводе
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedMultyLineTextBox.UseExtendedMask">
+            <summary>
+            Использовать расширенную маску (предложение вариантов по подстроке)
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedMultyLineTextBox.CaseSensitive">
+            <summary>
+            Если false, то выборка из справочника будет идти с приведением 
+            обеих сравниваемых значений к верхнему регистру
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp">
+            <summary>
+            Контрол для задания мастера путем предикативного ввода или путем выбора из списка. 
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp._isChanged">
+            <summary>
+            Были ли изменения, которые еще не попали в объект данных
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.GetCurrentDataObject">
+            <summary>
+            Получить текущий выбранный объект (мастер)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.ClearText">
+            <summary>
+            Очищает поле "Текст", привязанное к EditManager
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.AddLimit(System.Object)">
+            <summary>
+            Добавить ограничение для вычитываемых объектов данных
+            </summary>
+            <param name="Limit"></param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.GetObjectStringData(ICSSoft.STORMNET.Business.IDataService,System.Char,ICSSoft.STORMNET.Business.LoadingCustomizationStruct)">
+            <summary>
+            Делегированная обработка получения вариантов предикативного ввода
+            </summary>
+            <param name="dataService">Сервис данных, который производит вычитку данных</param>
+            <param name="split">Разделитель, который ожидается при получения результата в StringedObjectView</param>
+            <param name="lcs">Ограничение, по которому планируется вычитывать варианты для ввода</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.ExtLookUpTextControl_AfterGenerateSQLSelectQuery(System.Object,ICSSoft.STORMNET.Business.GenerateSQLSelectQueryEventArgs)">
+            <summary>
+            Метод перехвата сгенерированного запроса на вычитку вариантов предикативного ввода
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Переопределение OnKeyDown
+            </summary>
+            <param name="e">Аргумент OnKeyDown</param>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.LookUpEvent">
+            <summary>
+            Сообщение об открытии лукапа
+            </summary>
+        </member>
+        <member name="E:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.ClearLookUpEvent">
+            <summary>
+            Сообщение о нажатии на кнопку очистки лукапа
+            </summary>
+        </member>
+        <member name="E:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.ValueChanged">
+            <summary>
+            Сообщение об изменении значения
+            </summary>
+        </member>
+        <member name="E:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.StringedValueChanged">
+            <summary>
+            Сообщение об изменении значения соответствующего мастеру строкой
+            </summary>
+        </member>
+        <member name="E:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.ButtonClearClick">
+            <summary>
+            Нажата кнопка удаления значения
+            </summary>
+        </member>
+        <member name="E:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.ButtonLookUpClick">
+            <summary>
+            Нажата кнопка LookUp'а
+            </summary>
+        </member>
+        <member name="E:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.ValueSelected">
+            <summary>
+            Выбор значения пользователем
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.InGridProperty">
+            <summary>
+            Свойство, отображаемое в GE
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.DataObjectTypes">
+            <summary>
+             Мастер, чей атрибут будет подставляться в качестве вариантов для ввода (берется только нулевой элемент)
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.Property">
+            <summary>
+            Свойство мастера, значения которого будут выдаваться как варианты для ввода
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.ОтображаемоеСвойство">
+            <summary>
+            Отображаемое свойство мастера. Если свойство не задано, отображается Property
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.ИспользоватьОтображСвойствоПриВводе">
+            <summary>
+            Если свойство установлено в true варианты ввода ищутся в обоих полях: поле предикативного ввода и в отображаемом поле. Иначе - только в поле предикативного ввода
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.ViewName">
+            <summary>
+            Имя представления мастера
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.РежимВводаЗначений">
+            <summary>
+            Показывает, значения принимаются от пользователя (true)
+            или приходят от биндингов (false)
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.РежимЗаменыЗначений">
+            <summary>
+            Показывает, значения заменяются на отображаемое значение (true)
+            или приходят от биндингов (false)
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.РежимМастерСтрокой">
+            <summary>
+            Режим дублирования поля мастера [PropForUpdate.Property] в собственное поле PropForBind.
+            При включении этого режима:
+                1. в случае, если вводимое значение не найдено в мастере, 
+                  оно будет записано в PropForBind, а мастер очищается (PropForUpdate = null)
+                2. свойство StringedValue привязывается к полю PropForBind через EditManager
+                3. свойство Text определяется по значению поля PropForBind
+            При выключении этого режима:
+                1. свойство Text определяется по значению поля PropForUpdate
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.DataService">
+            <summary>
+            DataService, через который вычитываются варианты предикативного ввода.
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.QueryID">
+            <summary>
+            GUID для идентификации запросов, посылаемых экземляром контрола
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.SymbolsToIntellisense">
+            <summary>
+            "Количество символов для того, чтобы начать предикативный ввод"
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.ОтображатьВсеПоляПриLookup">
+            <summary>
+            Признак, отображаются в поднимаемом списке все поля или только поле с отображаемым значением
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.ReadOnlyText">
+            <summary>
+            Редактируется ли поле ввода
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.ReadOnly">
+            <summary>
+            Элемент управления может быть изменен или нет
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.Text">
+            <summary>
+            Отображаемое значение
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.LimitFunction">
+            <summary>
+            Функция ограничения для вычитываемых объектов
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.Value">
+            <summary>
+            Свойство Value. Должно быть привязано к полю объекта данных, которое ссылается на мастера
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.StringedValue">
+            <summary>
+            Свойство StringedValue. Должно быть привязано к мастеру строкой
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.MaxLength">
+            <summary>
+            Получает или задает максимальное число знаков, которое разрешается вводить или вставлять в элемент управления.
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.AutoOpenListForSuggestions">
+            <summary>
+            Автоматически открыть список для вариантов при вводе
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedLookUp.AutoCompleteBox">
+            <summary>
+            Контрол предиктивного ввода
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.ExtendedTextBox">
+            <summary>
+            Summary description for UserControl1.
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.ExtendedTextBox.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedTextBox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedTextBox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.ExtendedTextBox.GetObjectStringData">
+            <summary>
+            Делегат для получения данных каким-нибудь хитрым пользовательским способом (можно искорёжить LCS или даже запрос)
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedTextBox.GetFirstDataObject">
+            <summary>
+            Возвратить первый объект, удовлетворяющий маске введенного текста
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtendedTextBox.GetCurrentDataObject(System.Boolean)">
+            <summary>
+            Получить текущий выбранный объект
+            </summary>
+            <param name="reloadItems">Произвести поиск по текущему значению</param>
+            <returns></returns>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedTextBox.ComboBoxDropDownHeight">
+            <summary>
+            Высота выпадающего списка
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedTextBox.ComboBoxDropDownWidth">
+            <summary>
+            Ширина выпадающего списка
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedTextBox.ComboBoxDroppedDown">
+            <summary>
+            Признак раскрытия выпадающего списка
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedTextBox.MaskFormat">
+            <summary>
+            Формат маски для поиска совпадений. По умолчанию: "{0}%"
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedTextBox.AutoOpenListForSuggestions">
+            <summary>
+            Автоматически открыть список для вариантов при вводе
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedTextBox.UseExtendedMask">
+            <summary>
+            Использовать расширенную маску (предложение вариантов по подстроке)
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtendedTextBox.CaseSensitive">
+            <summary>
+            Если false, то выборка из справочника будет идти с приведением 
+            обеих сравниваемых значений к верхнему регистру
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.UserControl2.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.UserControl2.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.UserControl2.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.binded">
+            <summary>
+            Признак привязки каждого свойства к EditManager
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.Bind(System.String,System.String)">
+            <summary>
+            Привязывает к EditManager'у конкретную пару свойств контрола и объекта данных
+            </summary>
+            <param name="type">Собственно свойсто</param>
+            <param name="property">Свойство объекта данных</param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.УстановитьЗначениеВОбъектеДанных(System.String,System.Object)">
+            <summary>
+            Установливает в текущем объекте данных в заданное Свойство заданное Значение 
+            и сообщает форме об изменении в объекте данных
+            </summary>
+            <param name="Свойство"></param>
+            <param name="Значение"></param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.ClearText">
+            <summary>
+            Очищает поле "Текст", привязанное к EditManager
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.GetObjectStringData(ICSSoft.STORMNET.Business.IDataService,System.Char,ICSSoft.STORMNET.Business.LoadingCustomizationStruct)">
+            <summary>
+            Делегированная обработка получения вариантов предикативного ввода
+            </summary>
+            <param name="dataService">Сервис данных, который производит вычитку данных</param>
+            <param name="split">Разделитель, который ожидается при получения результата в StringedObjectView</param>
+            <param name="lcs">Ограничение, по которому планируется вычитывать варианты для ввода</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.ExtLookUpTextControl_AfterGenerateSQLSelectQuery(System.Object,ICSSoft.STORMNET.Business.GenerateSQLSelectQueryEventArgs)">
+            <summary>
+            Метод перехвата сгенерированного запроса на вычитку вариантов предикативного ввода
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.ValueChanged">
+            <summary>
+            Сообщение об изменении значения
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.IntoGroupEdit">
+            <summary>
+            Признак привязки контрола к полю в GroupEdit.
+            Необходим для того, чтобы контрол самостоятельно искал GroupEdit.EditManager
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.РежимВводаЗначений">
+            <summary>
+            Показывает, значения принимаются от пользователя (true)
+            или приходят от биндингов (false)
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.РежимЗаменыЗначений">
+            <summary>
+            Показывает, значения заменяются на отображаемое значенин (true)
+            или приходят от биндингов (false)
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.РежимМастерСтрокой">
+            <summary>
+            Режим дублирования поля мастера [PropForUpdate.Property] в собственное поле PropForBind.
+            При включении этого режима:
+                1. в случае, если вводимое значение не найдено в мастере, 
+                  оно будет записано в PropForBind, а мастер очищается (PropForUpdate = null)
+                2. свойство StringedValue привязывается к полю PropForBind через EditManager
+                3. свойство Text определяется по значению поля PropForBind
+            При выключении этого режима:
+                1. свойство Text определяется по значению поля PropForUpdate
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.DataService">
+            <summary>
+            DataService, через который вычитываются варианты предикативного ввода.
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.QueryID">
+            <summary>
+            GUID для идентификации запросов, посылаемых экземляром контрола
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.ОтображатьВсеПоляПриLookup">
+            <summary>
+            Имя атрибута Код в DataObject (в самом объекте, не в справочнике)
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.MaxLength">
+            <summary>
+            Получает или задает максимальное число знаков, которое разрешается вводить или вставлять в элемент управления.
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.ExtLookUpTextControl.TextBox">
+            <summary>
+            Ссылка на ExtendedTextBox, прмаеняемый для ввода текста 
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.ExtTextControl">
+            <summary>
+            Summary description for ExtTextControl.
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.ExtTextControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtTextControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ExtTextControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.HighLighter">
+            <summary>
+            Summary description for HighLighter.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.HighLighter.#ctor(System.Windows.Forms.Form)">
+            <summary>
+            Конструктор HighLighter
+            </summary>
+            <param name="frm">Форма</param>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.HighLighter.m_arrAttachedControls">
+            <summary>
+            Контролы, к которым проаттачились
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.HighLighter.AttachEventsToControl(System.Windows.Forms.Control)">
+            <summary>
+            Рекурсивное подключение к событиям контролов
+            </summary>
+            <param name="ctrl"></param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.HighLighter.HighLightFirstControl">
+            <summary>
+            Подсветить первый контрол на форме
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.HighLighter.manual_control">
+            <summary>
+            Контрол, который был подкрашен насильно из таймера
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.BeforeAttachEventDelegate">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.BeforeAttachEventEventArgs">
+            <summary>
+            Параметр события BeforeAttach
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.BeforeAttachEventEventArgs.#ctor(System.Windows.Forms.Control,System.Boolean)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="objControl"></param>
+            <param name="bCancel"></param>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.BeforeAttachEventEventArgs.Control">
+            <summary>
+            Присоединяемый контрол
+            </summary>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.BeforeAttachEventEventArgs.Cancel">
+            <summary>
+            Отмена
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.NextControlByEnterTuner">
+            <summary>
+            Основа класса взята из АСУ-ДЧ из SpecificControls.
+            Класс предназначен для организации перехода по Enter по форме.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.NextControlByEnterTuner.SubscribeDefaultSetOfControlsOnEnter(System.Windows.Forms.Control)">
+            <summary>
+            Подписывание подходящих контролов формы на переход по Enter, при этом формируется список подписанных контролов.
+            На настоящий момент подписываются: System.Windows.Forms.TextBox , System.Windows.Forms.DateTimePicker ,
+            System.Windows.Forms.CheckBox , System.Windows.Forms.ComboBox , ICSSoft.STORMNET.Windows.Forms.DateTimePicker ,
+            ICSSoft.STORMNET.Windows.Forms.ExtendedComboBox , ICSSoft.STORMNET.Windows.Forms.ExtendedTextBox , 
+            ICSSoft.STORMNET.Windows.Forms.ExtTextControl (эти контролы не должны быть контролами-контейнерами).
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.NextControlByEnterTuner.AddToSubscribedOnEnterControls(System.Windows.Forms.Control)">
+            <summary>
+            Добавление контрола в список подписанных на переход по Enter
+            </summary>
+            <returns> Возвращает результат добавления контрола в список: true, если контрол был удачно добавлен. Иначе - false. </returns>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.NextControlByEnterTuner.AddToSubscribedOnEnterControls(System.Windows.Forms.Control[])">
+            <summary>
+            Добавление контролов в список подписанных на переход по Enter
+            </summary>
+            <returns> Возвращает результат добавления контролов в список: true, если все контролы были удачно добавлены. Иначе - false. </returns>
+        </member>
+        <member name="P:ICSSoft.STORMNET.Windows.Forms.NextControlByEnterTuner.SubscribedOnEnterControls">
+            <summary>
+            Получение списка добавленных контролов
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ProgressForm.ShowProgress(System.String,System.Int32)">
+            <summary>
+            Инициализирует и запускает форму прогрессбара
+            </summary>
+            <param name="caption">заголовок окна формы</param>
+            <param name="maximum">максимальное значение</param>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ProgressForm.Increment(System.Int32)">
+            <summary>
+            Двигает прогресс на 1, в какую строну зависит от знака праметра val
+            </summary>
+            <param name="val"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ProgressForm.MoveNext(System.String,System.Boolean@)">
+            <summary>
+            Двигает прогресс вперед на 1
+            </summary>
+            <param name="text"></param>
+            <param name="cancel">true - если была нажата кнопка Отмена</param>
+            <returns>возвращает true если достигнуто max занчение</returns>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ProgressForm.MoveBack(System.String,System.Boolean@)">
+            <summary>
+            Двигает прогресс назад на 1
+            </summary>
+            <param name="text"></param>
+            <param name="cancel">true - если была нажата кнопка Отмена</param>
+            <returns>возвращает true если достигнуто min значение</returns>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.ProgressForm.ProgressBarForm">
+            <summary>
+            Summary description for ProgressBarForm.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ProgressForm.ProgressBarForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.ProgressForm.ProgressBarForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:ICSSoft.STORMNET.Windows.Forms.RegexpKeyFilter" -->
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.RegexpKeyFilter.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.RegexpKeyFilter.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.RegexpKeyFilter.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.RegexpKeyFilter2">
+            <summary>
+            Summary description for RegexpKeyFilter.
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.RegexpKeyFilter2.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.RegexpKeyFilter2.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.RegexpKeyFilter2.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.RegexpKeyFilter2.Checktext(System.String)">
+            <summary>
+            Проверяет текст на соответствие regexpStringEntering
+            </summary>
+            <param name="strtocheck"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.RegexpKeyFilter2.prvGetEndStringsDiffPos(System.Int32@,System.Int32@,System.String,System.String)">
+            <summary>
+            Для каждой строки возвращает позицию, с которой строки начинают различаться при сравнении, начиная с конца.
+            </summary>
+            <param name="s1"></param>
+            <param name="s2"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.SimilarityListSearcher">
+            <summary>
+            Summary description for SimilarityListSearcher.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.SimilarityListSearcher.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.SimilarityListSearcher.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.SimilarityOptionsForm">
+            <summary>
+            Summary description for SimilarityOptionsForm.
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.SimilarityOptionsForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.SimilarityOptionsForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.SimilarityOptionsForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.SimilaritySearchingProgressForm">
+            <summary>
+            Summary description for SimilaritySearchingProgressForm.
+            </summary>
+        </member>
+        <member name="F:ICSSoft.STORMNET.Windows.Forms.SimilaritySearchingProgressForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.SimilaritySearchingProgressForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ICSSoft.STORMNET.Windows.Forms.SimilaritySearchingProgressForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ICSSoft.STORMNET.Windows.Forms.SmoothProgressBar">
+            <summary>
+            Summary description for SmoothProgressBar.
+            </summary>
+            
+        </member>
+    </members>
+</doc>

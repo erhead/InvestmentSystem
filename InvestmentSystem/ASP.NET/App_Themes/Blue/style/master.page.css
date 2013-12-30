@@ -1,0 +1,331 @@
+/* сюда я хочу вынести все стили, которые были явно прописаны в Site1.Master. */
+
+body {
+	/*font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+	font-family: Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.Hide
+{
+    display: none;
+}
+.Visible
+{
+    display: block;
+}
+#maintable
+{
+    width: 100%;
+    height: 100%;
+    border: 0px;
+}
+#maintable #navigate
+{
+    width: 8%;
+    vertical-align: top;
+    background-color: #daeafe;
+    height: 500px;
+}
+#maintable #showHideNavigate
+{
+    width: 5px;
+    height: 500px;
+    background-color: #F5F5F5;
+    vertical-align: middle;
+    cursor: pointer;
+}
+#maintable #contentHolder
+{
+    vertical-align: top;
+    height: 500px;
+    width: 100%;
+    border-color: #daeafe;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/*****top line (Начало)******/
+
+#top_line
+{
+    height: 31px;
+    font-size: 85%;
+    background: #e6f1fe url('/App_Themes/Blue/images/design/top_line.png') repeat-x scroll;
+}
+#top_line div
+{
+    padding: 8px 40px 0;
+}
+
+/*****top line (Конец)******/
+
+/***** nav *****/
+div.ics_tree
+{
+    width: 100%;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 10000;
+}
+div.ics_tree ul
+{
+    margin: 0 !important;
+    position: relative;
+    z-index: 10000;
+}
+div.ics_tree li span, div.ics_tree li a
+{
+    display: block;
+    padding: 4px 0 2px 40px;
+}
+div.ics_tree li a
+{
+    padding-bottom: 4px; /*background:transparent url('/App_Themes/Blue/images/blank.gif') no-repeat scroll;*/
+}
+div.ics_tree li
+{
+    list-style: none none inside;
+}
+div.ics_tree li .lvl1, div.ics_tree li .sel
+{
+    font-weight: bold;
+    margin: 3px 0;
+}
+div.ics_tree li .lvl1
+{
+    background-color: #73afed !important;
+    color: #fff;
+}
+div.ics_tree li .sel
+{
+    background-color: #fff;
+    color: #f27848;
+    text-decoration: none;
+}
+div.ics_tree li a:hover
+{
+    background-color: #fff;
+}
+/***** nav END *****/
+
+/********************************************* header ***************************************************/
+a
+{
+    color: #0470de;
+}
+#logo
+{
+    position: absolute;
+    top: 102px;
+    left: 39px;
+    width: 291px;
+    height: 62px;
+    behavior: url('/App_Themes/Blue/images/iepngfix.htc');
+    background: url('/App_Themes/Blue/images/design/logo.png');
+    background-repeat: no-repeat;
+    color: #fff;
+}
+#logo #slogan a
+{
+    color: #fff;
+    text-decoration: none;
+}
+#logo #slogan
+{
+    position: absolute;
+    top: 62px;
+    font-size: 85%;
+    color: #fff;
+    letter-spacing: 1.1px;
+    margin-left: 5px;
+}
+
+#hdr
+{
+    height: 186px;
+    background: #fff url('/App_Themes/Blue/images/design/reg_top_bg.png') repeat-x scroll 0 31px;
+    border-bottom: solid 1px #fff; /*font-size:85%;*/
+    color: #3f75ac;
+    position: relative;
+}
+#clouds
+{
+    height: 134px;
+    background: transparent url('/App_Themes/Blue/images/design/reg_clouds.jpg') no-repeat scroll left top;
+}
+#logo
+{
+    top: 59px;
+}
+#nav_line
+{
+    height: 21px;
+    background: #7db0f1 url('/App_Themes/Blue/images/design/reg_nav_line.png') repeat-x scroll;
+}
+#hdr .user_box, #hdr .detail_box
+{
+    position: absolute;
+    top: 31px;
+    height: 134px;
+    width: 252px;
+    background: transparent url('/App_Themes/Blue/images/design/reg_hdr_box.png') no-repeat scroll bottom right;
+}
+#hdr .user_box
+{
+    right: 252px;
+}
+#hdr .detail_box
+{
+    right: 0;
+    overflow: hidden;
+}
+#hdr .detail_box select
+{
+    width: 146px;
+}
+#hdr .user_box .content, #hdr .detail_box .content
+{
+    position: relative;
+}
+
+/**********************User Box************************/
+.avatar
+{
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    width: 70px;
+    height: 90px;
+}
+.fio
+{
+    position: absolute;
+    top: 13px;
+    left: 114px;
+    width: 130px;
+    height: 50px;
+    font-weight: bold;
+    color: #f27848;
+}
+.menu
+{
+    position: absolute;
+    top: 72px;
+    left: 114px;
+    width: 130px;
+    height: 50px;
+    font-size: 85%;
+}
+.menu .userNav
+{
+    margin-bottom: 1px;
+}
+.menu .userNav img
+{
+    margin: 1px 4px 0 0;
+    vertical-align: middle;
+}
+
+/**********************User Box END************************/
+
+/*********************Detail Box************************/
+
+.detail_box .exit
+{
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    font-size: 85%;
+    font-weight: bold;
+}
+.detail_box .exit a
+{
+    background: transparent url('/App_Themes/Blue/images/design/reg_exit_cross.png') no-repeat right bottom;
+    padding-right: 15px;
+}
+.details
+{
+    position: absolute;
+    left: 22px;
+    top: 37px;
+    width: 190px;
+}
+.details td
+{
+    vertical-align: top;
+    padding-top: 3px;
+}
+.details td a
+{
+    font-size: 93%;
+    text-decoration: none;
+    line-height: 1.1;
+    border-bottom: dashed 1px #0470de;
+}
+.details .label
+{
+    font-size: 85%;
+    padding-right: 5px;
+    text-transform: lowercase;
+}
+.details select
+{
+    font-size: 85%;
+}
+/*********************Detail Box END************************/
+/************************************** header  END*****************************************/
+
+/***** footer *****/
+
+#ftr
+{
+    position: relative; /*display:none;*/ /* в ява-скрипте ftr показывается */
+    zoom: 1;
+    _height: 0;
+    z-index: 0;
+}
+#ftr .border_top
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff url('/App_Themes/Blue/images/design/footer_line_t.png') repeat-x scroll;
+    width: 100%;
+    height: 42px;
+}
+#ftr .border_bottom
+{
+    position: absolute;
+    top: 42px;
+    left: 0;
+    background: #cfe4ff url('/App_Themes/Blue/images/design/footer_line_b.png') repeat-x scroll;
+    width: 100%;
+    height: 77px;
+}
+#ftr .book_diary
+{
+    position: absolute;
+    top: -62px;
+    right: 0px;
+    background: transparent url('/App_Themes/Blue/images/design/book_diary.png') no-repeat scroll left top;
+    behavior: url('/App_Themes/Blue/images/iepngfix.htc');
+    width: 268px;
+    height: 142px;
+    z-index: 100;
+}
+.float_left
+{
+    float: left;
+}
+.float_right
+{
+    float: right;
+}
+#ftr .content
+{
+    margin: 36px 40px 0;
+    font-size: 93%;
+    color: #3f75ac;
+}
+/***** footer END *****/
+
+

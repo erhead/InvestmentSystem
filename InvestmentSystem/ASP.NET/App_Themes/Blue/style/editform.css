@@ -1,0 +1,101 @@
+﻿
+/************Контролы формы редактирования (начало)***************/
+
+.desc
+{
+    padding: 0 0 1px 0;
+    border: none;
+    color: #222;
+    display: block;
+    font-size: 95%;
+    font-weight: bold;
+}
+.descLbl
+{
+    width: 120px;
+    border: none;
+    padding: 2px 5px 1px 0;
+    color: #3f75ac;
+    font-size: 95%;
+    text-align: right;
+    float: left;
+}
+.descTxt, .ddlStreet
+{
+    border: solid 1px #8da6c6;
+    width: 50%;
+    padding: 2px;
+    vertical-align: middle;
+    float: left;
+    min-height: 16px;
+}
+.descErrTxt
+{
+    font-weight: bold;
+    color: Red;
+    width: 100%;
+    float: left;
+    padding: 2px;
+}
+.descTxtGray
+{
+    border: solid 1px #8da6c6;
+    width: 50%;
+    padding: 2px;
+    vertical-align: middle;
+    float: left;
+    min-height: 16px;
+    background-color: #DDDDDD;
+}
+.descTxtWithOutFloat
+{
+    border: solid 1px #8da6c6;
+    width: 50%;
+    padding: 2px;
+}
+.descTxt option
+{
+}
+.descCheckBox input
+{
+    vertical-align: middle;
+}
+.descCheckBoxLabel
+{
+    vertical-align: middle;
+}
+.descLbl2
+{
+    border: none;
+    padding: 2px 5px 1px 0;
+    color: #3f75ac;
+    font-size: 95%;
+    font-weight: bold;
+    text-align: left;
+    float: left;
+}
+.descLbl3
+{
+    border: none;
+    padding: 0 4px 1px 2px;
+    color: #3f75ac; /*font-size:95%;*/
+    text-align: right;
+}
+.descLbl4
+{
+    padding-top: 3px;
+    vertical-align: top;
+}
+
+.ReadOnlyEditForm
+{
+    background-color: #E0E0E0;
+    color: #707070;
+}
+
+/* количество введнных символов достигло предела */
+textarea.notification {
+    border: 2px solid #8DA6C6;
+}
+
+/************Контролы формы редактирования (конец)***************/

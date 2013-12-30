@@ -1,0 +1,146 @@
+﻿/* WGE основные стили - начало */
+.wge-list-table {
+    width: 100%;
+    clear: both;
+}
+
+.wge-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+    .wge-table > tbody > tr > td {
+        padding: 1px;
+        border: 1px solid #000 !important;
+    }
+
+        .wge-table > tbody > tr > td > .wrapper-cell-data {
+            -ms-word-break: break-all;
+            word-break: break-all;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+            padding: 1px;
+            overflow: hidden;
+        }
+
+        .wge-wrap {
+            border-spacing: 0;
+        }
+
+        .wge-wrap td {
+            padding: 0;
+        }
+    /* WGE основные стили - конец */
+
+    /* WGE цветовая схема - начало */
+    .wge-table tr.wge-caption-row > td {
+        font-weight: bold;
+        color: #000 !important;
+        border-color: #d8d8d8 !important;
+        background: #f0f0f0;
+    }
+
+    .wge-table .wge-caption-table td {
+        font-size: 13px !important;
+        font-weight: normal !important;
+        color: #000 !important;
+        background: #f0f0f0;
+    }
+
+    .wge-table tr.ObjectListViewCell > td {
+        border-color: #d8d8d8 !important;
+    }
+
+    .wge-table tr.ObjectListViewCell:hover > td {
+        color: #000 !important;
+        background: #def4ff !important;
+    }
+
+        .wge-table tr.ObjectListViewCell:hover > td a {
+            color: #000 !important;
+        }
+
+    .wge-table tr.ObjectListViewAlternateCell > td {
+        background: #fff;
+        border-color: #d8d8d8 !important;
+    }
+
+    .wge-table tr.ObjectListViewAlternateCell:hover > td {
+        color: #000 !important;
+        background: #def4ff !important;
+    }
+
+        .wge-table tr.ObjectListViewAlternateCell:hover > td a {
+            color: #000 !important;
+        }
+/* WGE цветовая схема - конец */
+
+/* Текстовые поля в WGE - начало */
+.wrapper-cell-data > input {
+    width: 100%;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 30px;
+}
+/* Текстовые поля в WGE - конец */
+
+/* Лукап в WGE - начало */
+.wge-wrap .wrapper-cell-data .ics-lookup {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    .wge-wrap .wrapper-cell-data .ics-lookup .lookup > span {
+        background: #fff;
+        padding: 4px 6px;
+        display: block;
+        border: 1px solid #a9a9a9;
+        border-color: #909090 #e5e5e5 #e5e5e5 #909090;
+        -moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        border-radius: 7px;
+        white-space: nowrap;
+        overflow: hidden;
+        -webkit-border-bottom-right-radius: 0;
+        -webkit-border-top-right-radious: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        line-height: 20px;
+        min-height: 20px;
+    }
+/* Лукап в WGE - конец */
+
+/* Маркер обязательного поля WGE - начало */
+.wge-wrap .wrapper-cell-data {
+    position: relative;
+}
+
+    .wge-wrap .wrapper-cell-data .validator-field-required {
+        font-size: 2em;
+        color: #f00 !important;
+        line-height: 22px;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+    }
+/* Маркер обязательного поля WGE - конец */
+
+/* WGE первая колонка - начало */
+.wge-list-table .actions {
+    text-align: right;
+    padding: 2px;
+}
+
+.wge-list-table .actions span {
+    vertical-align: middle;
+}
+
+.wge-list-table .actions input {
+    vertical-align: middle;
+}
+/* WGE первая колонка - конец */

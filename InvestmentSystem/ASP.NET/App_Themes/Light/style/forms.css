@@ -1,0 +1,793 @@
+﻿/* Кнопка */
+.ics-btn,
+.ics-wolv-toolbar-search-panel input[type="button"],
+#popup_panel input[type="button"],
+.ui-state-default {
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    -webkit-text-shadow: 0 1px 1px #ffffff;
+    text-shadow: 0 1px 1px #ffffff;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #e5e5e5;
+    background-image: none !important;
+    border: 1px solid #ccc;
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 #ffffff,0 1px 2px #000000;
+    -moz-box-shadow: inset 0 1px 0 #ffffff,0 1px 2px #000000;
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 0 #ffffff,0 1px 2px #000000;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    color: #4c4c4c;
+}
+
+#popup_panel input[type="button"] {
+    min-width: 75px;
+}
+
+    /* Кнопка выделенная */
+    .ics-btn:hover,
+    .ics-wolv-toolbar-search-panel input[type="button"]:hover,
+    #popup_panel input[type="button"]:hover,
+    .ui-state-hover {
+        color: #333;
+        text-decoration: none;
+        background-position: 0 -15px;
+        -webkit-transition: background-position .1s linear;
+        -moz-transition: background-position .1s linear;
+        -o-transition: background-position .1s linear;
+        transition: background-position .1s linear;
+    }
+
+    /* Нажатая кнопка */
+    .ics-btn:active,
+    .ics-wolv-toolbar-search-panel input[type="button"]:active,
+    #popup_panel input[type="button"]:active,
+    .ui-state-active {
+        background-image: none;
+        outline: 0;
+        -webkit-box-shadow: inset 0 2px 4px #000000,0 1px 2px #000000;
+        -moz-box-shadow: inset 0 2px 4px #000000,0 1px 2px #000000;
+        -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+        box-shadow: inset 0 2px 4px #000000,0 1px 2px #000000;
+        box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+    }
+
+    /* Кнопка с фокусом */
+    .ics-btn:focus,
+    .ics-wolv-toolbar-search-panel input[type="button"]:focus,
+    #popup_panel input[type="button"]:focus,
+    .ui-state-focus, .ui-state-highlight {
+        outline: none !important;
+        border-color: #f60 !important;
+    }
+
+
+.ics-toolbar .ics-label {
+    padding-right: 8px;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    background: #f2f2f2;
+    padding: 5px 6px;
+    border: 1px solid #d4d4d4;
+    border-color: #d4d4d4 #e8e8e8 #ffffff #e8e8e8;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+    /* поля ввода с курсором */
+    textarea:focus,
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="datetime"]:focus,
+    input[type="datetime-local"]:focus,
+    input[type="date"]:focus,
+    input[type="month"]:focus,
+    input[type="time"]:focus,
+    input[type="week"]:focus,
+    input[type="number"]:focus,
+    input[type="email"]:focus,
+    input[type="url"]:focus,
+    input[type="search"]:focus,
+    input[type="tel"]:focus,
+    input[type="color"]:focus,
+    select:focus {
+        border-color: #f60;
+        outline: none;
+        background: #fdc;
+    }
+
+/* Неактивная кнопка */
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="button"][disabled],
+input[type="submit"][disabled] {
+    background: #f0f0f0;
+    color: #999;
+    cursor: default;
+}
+
+/* Список */
+select, select option {
+    background: #f2f2f2;
+    border: 1px inset #fff;
+    padding: 4px 6px !important;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+    /* Неактивные текстовые поля */
+    input[type="text"][readonly],
+    textarea[readonly],
+    input[type="datetime"][readonly],
+    input[type="datetime-local"][readonly],
+    input[type="date"][readonly],
+    input[type="month"][readonly],
+    input[type="time"][readonly],
+    input[type="week"][readonly],
+    input[type="number"][readonly],
+    input[type="email"][readonly],
+    input[type="url"][readonly],
+    input[type="search"][readonly],
+    input[type="tel"][readonly],
+    input[type="color"][readonly],
+    .uneditable-input,
+    input[type="text"][disabled],
+    textarea[disabled],
+    input[type="datetime"][disabled],
+    input[type="datetime-local"][disabled],
+    input[type="date"][disabled],
+    input[type="month"][disabled],
+    input[type="time"][disabled],
+    input[type="week"][disabled],
+    input[type="number"][disabled],
+    input[type="email"][disabled],
+    input[type="url"][disabled],
+    input[type="search"][disabled],
+    input[type="tel"][disabled],
+    input[type="color"][disabled],
+    select[disabled],
+    .uneditable-input {
+        background-color: #d9d9d9;
+        cursor: not-allowed;
+    }
+
+/* количество введнных символов достигло предела */
+textarea.notification {
+    border: 2px solid #8DA6C6;
+}
+
+/* Лукапы - начало */
+.ics-lookup .lookup > input {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* Лукапы - конец */
+
+.ics-form .clearfix {
+    margin: 4px 0;
+}
+
+.ics-form .descTxt, .ics-datepicker-input {
+    margin: 0;
+}
+
+.ics-form h2 {
+    margin-top: 0;
+}
+
+.treeview-hidden .ics-form h2 {
+    margin-left: 30px;
+}
+
+.ics-datepicker {
+    white-space: nowrap;
+    min-width: 100px;
+    max-width: 180px;
+}
+
+.ui-datepicker-trigger {
+    margin: 5px;
+    height: 18px !important;
+    width: 18px !important;
+    background: url(../images/theme/icons-mini-green.png) no-repeat -57px -22px !important;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+    .ui-datepicker-trigger:hover {
+        background-position: -57px -64px !important;
+    }
+
+.datepicker {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/************Контролы формы редактирования (конец)***************/
+
+/* Big Icons */
+
+.big-icon {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    padding-top: 120px;
+    width: 110px;
+    background-image: url(../images/theme/icons-big.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    color: #333333;
+    vertical-align: top;
+    text-align: center;
+    font-size: 16px;
+}
+
+a.big-icon-pacient {
+    background-position: 0 0;
+}
+
+a.big-icon-programma {
+    background-position: -110px 0;
+}
+
+a.big-icon-sertifikat {
+    background-position: -220px 0;
+}
+
+a.big-icon-kurs {
+    background-position: -330px 0;
+}
+
+a.big-icon-obsledovanie {
+    background-position: -440px 0;
+}
+
+a.big-icon-report {
+    background-position: -550px 0;
+}
+
+a.big-icon-manual {
+    background-position: -660px 0;
+}
+
+a.big-icon-pacient:hover {
+    background-position: -770px 0;
+}
+
+a.big-icon-programma:hover {
+    background-position: -880px 0;
+}
+
+a.big-icon-sertifikat:hover {
+    background-position: -990px 0;
+}
+
+a.big-icon-kurs:hover {
+    background-position: -1100px 0;
+}
+
+a.big-icon-obsledovanie:hover {
+    background-position: -1210px 0;
+}
+
+a.big-icon-report:hover {
+    background-position: -1320px 0;
+}
+
+a.big-icon-manual:hover {
+    background-position: -1430px 0;
+}
+
+.miniToolbar {
+    border: none;
+    background-color: #bfcad1;
+}
+
+    .miniToolbar a {
+        display: inline-block;
+    }
+
+    .miniToolbar div {
+        width: auto !important;
+    }
+
+    .miniToolbar a.selectAllOnPageBtn {
+        width: 20px !important;
+        height: 20px !important;
+        background-image: url(../images/theme/icons-mini.png) !important;
+        background-position: -238px 0 !important;
+    }
+
+        .miniToolbar a.selectAllOnPageBtn:hover {
+            background-position: -238px -42px !important;
+        }
+
+    .miniToolbar a.selectAllOnAllPagesBtn {
+        width: 20px !important;
+        height: 20px !important;
+        background-image: url(../images/theme/icons-mini.png) !important;
+        background-position: -257px 0 !important;
+    }
+
+        .miniToolbar a.selectAllOnAllPagesBtn:hover {
+            background-position: -257px -42px !important;
+        }
+
+    .miniToolbar a.resetSort {
+        width: 20px !important;
+        height: 20px !important;
+        background-image: url(../images/theme/icons-mini.png) !important;
+        background-position: -218px -0 !important;
+    }
+
+        .miniToolbar a.resetSort:hover {
+            background-position: -218px -42px !important;
+        }
+
+.icon-normal {
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    margin: 0 12px 0 0;
+    padding: 0;
+    height: 30px !important;
+    width: 30px !important;
+    background: transparent url(../images/theme/icons-normal.png) no-repeat;
+    background-position: 30px 30px;
+}
+
+.icon-normal-save {
+    background-position: 0 0;
+}
+
+    .icon-normal-save:hover {
+        background-position: 0 -30px;
+    }
+
+.icon-normal-save-close {
+    background-position: -30px 0;
+}
+
+    .icon-normal-save-close:hover {
+        background-position: -30px -30px;
+    }
+
+.icon-normal-back {
+    background-position: -60px 0;
+}
+
+    .icon-normal-back:hover {
+        background-position: -60px -30px;
+    }
+
+.icon-mini {
+    border: none;
+    margin: 2px;
+    padding: 0 !important;
+    height: 18px !important;
+    width: 18px !important;
+    background-image: url(../images/theme/icons-mini.png);
+    background-position: 18px 18px;
+    cursor: pointer;
+}
+
+.icon-green {
+    background: transparent url(../images/theme/icons-mini-green.png) no-repeat;
+}
+
+.icon-red {
+    background: transparent url(../images/theme/icons-mini-red.png) no-repeat;
+}
+
+.icon-mini-plus {
+    background-position: -116px 0;
+}
+
+    .icon-mini-plus:hover {
+        background-position: -116px -42px;
+    }
+
+.icon-mini-save {
+    background-position: 0 0;
+}
+
+    .icon-mini-save:hover {
+        background-position: 0 -42px;
+    }
+
+.icon-mini-delete {
+    background-position: -134px 0;
+}
+
+    .icon-mini-delete:hover {
+        background-position: -134px -42px;
+    }
+
+.icon-mini-pencil {
+    background-position: 0 -22px;
+}
+
+    .icon-mini-pencil:hover {
+        background-position: 0 -64px;
+    }
+
+.icon-mini-filter {
+    background-position: -220px -21px;
+}
+
+    .icon-mini-filter:hover {
+        background-position: -220px -63px;
+    }
+
+.icon-mini-up {
+    background-position: -132px -22px;
+}
+
+    .icon-mini-up:hover {
+        background-position: -132px -63px;
+    }
+
+.icon-mini-down {
+    background-position: -147px -21px;
+}
+
+    .icon-mini-down:hover {
+        background-position: -147px -63px;
+    }
+
+.icon-mini-lookup {
+    background-position: -79px 0;
+}
+
+    .icon-mini-lookup:hover {
+        background-position: -79px -42px;
+    }
+
+.icon-mini-remove {
+    border-radius: 8px; /* Если задизейблена, то фон будет серый и круглый */
+    background-position: -59px 0;
+}
+
+    .icon-mini-remove:hover {
+        background-position: -59px -42px;
+    }
+
+.icon-mini-search {
+    background-position: -98px 0;
+}
+
+    .icon-mini-search:hover {
+        background-position: -98px -42px;
+    }
+
+.ics-wolv-toolbar, .ics-form-toolbar {
+    overflow: auto;
+    margin: 0 0 1px 0;
+    padding: 16px;
+    background-color: #bfcad1;
+}
+
+.ics-form-controls {
+    margin: 16px 0;
+}
+
+    .ics-form-controls .clearfix {
+        margin-bottom: 4px;
+    }
+
+    .ics-form-controls .descLbl {
+        width: 150px;
+        padding: 5px;
+        display: inline-block;
+    }
+
+div.descTxt, div.ics-datepicker {
+    display: inline-block;
+}
+
+.ics-lookup {
+    min-width: 50px;
+}
+
+.ics-lookup .ics-lookup-btn {
+    margin: 5px 2px;
+    height: 18px !important;
+    width: 18px !important;
+}
+
+/* Форма входа - начало */
+.login-form-header {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: table;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 64px;
+    width: 494px;
+    color: #808080;
+    -webkit-text-shadow: 0 1px 1px #fff;
+    text-shadow: 0 1px 1px #fff;
+    font-size: 22px;
+    line-height: 22px;
+    background: url(../images/theme/arrow.png) no-repeat left center;
+}
+
+.login-form {
+    background: #e6e6e6;
+    width: 100%;
+}
+
+    .login-form .container {
+        margin: 0;
+        padding: 0;
+        border: none;
+        width: auto;
+        height: 100%;
+    }
+
+    .login-form .failureNotification {
+        display: inline;
+        color: red;
+    }
+
+.login-form-label {
+    display: inline;
+}
+
+.login-form-btn {
+    clear: both;
+    float: right;
+    margin-top: 16px;
+}
+
+.login-form .failureNotification[style="color: red; visibility: hidden;"] {
+    display: none;
+}
+
+.login-form .failureNotification[style="color:Red;visibility:hidden;"] {
+    display: none;
+}
+
+.login-form-remember label, .login-form-forgot a {
+    display: inline;
+    margin: 0 4px;
+    vertical-align: middle;
+    padding: 2px 0;
+}
+
+.login-form-remember input[type="checkbox"] {
+    margin: 0;
+}
+
+.login-form-forgot {
+    vertical-align: middle;
+    text-align: right;
+}
+
+.login-from-failure-text {
+    position: absolute;
+    display: block;
+    margin-top: 20px;
+    margin-left: 325px;
+    padding: 10px;
+    max-width: 220px;
+    border: 1px solid red;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    color: red;
+    background-color: #FFF;
+}
+
+    .login-from-failure-text:after, .login-from-failure-text:before {
+        position: absolute;
+        right: 100%;
+        width: 0;
+        height: 0;
+        border: solid transparent;
+        content: " ";
+        pointer-events: none;
+    }
+
+    .login-from-failure-text:before {
+        top: 50%;
+        margin-top: -21px;
+        border-width: 0 22px 22px 0;
+        border-color: #ffffff;
+        border-color: rgba(255, 255, 255, 0);
+        border-right-color: red;
+    }
+
+    .login-from-failure-text:after {
+        top: 50%;
+        margin-top: -20px;
+        border-width: 0 20px 20px 0;
+        border-color: #ffffff;
+        border-color: rgba(255, 255, 255, 0);
+        border-right-color: #ffffff;
+    }
+
+    .login-from-failure-text:empty {
+        display: none;
+    }
+
+.login-form-remember, .login-form-forgot {
+    width: 50%;
+    float: left;
+}
+
+.login-form-header small {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.login-form-inner {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 24px 32px;
+    width: 365px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    background-color: #fff;
+    -moz-box-shadow: 0 1px 8px #000000, 0 0 40px #000000;
+    -webkit-box-shadow: 0 1px 8px #000000, 0 0 40px #000000;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: 0 1px 8px #000000, 0 0 40px #000000;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    -ms-filter: "progid:DXImageTransform.</span>Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+    .login-form-inner h2 {
+        font-size: 22px;
+        color: #666;
+        margin: 0 0 16px 0;
+    }
+
+    .login-form-inner input[type="text"],
+    .login-form-inner input[type="password"] {
+        height: 36px;
+    }
+
+.login-form-footer {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 24px 32px;
+    width: 354px;
+    color: #808080;
+    font-size: 12px;
+    text-align: center;
+}
+
+.login-form-input {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* Форма входа - конец */
+
+#hiddenContent {
+    display: none;
+}
+
+/* SHOW-HIDE DIV - начало */
+
+legend {
+    padding: 0;
+    line-height: 40px;
+}
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.ics-show-hide-div {
+    margin: 0;
+}
+
+    .ics-show-hide-div > fieldset {
+        display: block;
+        overflow: auto;
+        margin: 16px 0 16px -12px;
+        padding: 20px 0 15px 12px;
+        border: 1px solid #ccc;
+        border-right: none;
+        background-color: #fff;
+    }
+
+        .ics-show-hide-div > fieldset > legend {
+            display: block;
+            width: 100%;
+            border: none;
+            margin: 0;
+        }
+
+.ics-show-hide-div-link {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0 16px;
+    display: block;
+    border: none;
+    background-color: #fff;
+    color: #333 !important;
+    text-decoration: none !important;
+}
+
+    .ics-show-hide-div-link:hover {
+        background-color: #fdf6e9 !important;
+    }
+
+.ics-show-hide-div-collapsed .ics-show-hide-div-link {
+    background-color: #f2f2f2;
+    vertical-align: middle;
+}
+
+.ics-show-hide-div-collapsed > fieldset {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.ics-show-hide-div-icon {
+    background: url(../images/sdh-close.png) no-repeat 0 0;
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.ics-show-hide-div-collapsed .ics-show-hide-div-icon {
+    background-image: url(../images/sdh-open.png);
+}
+/* SHOW-HIDE DIV - конец */

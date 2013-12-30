@@ -1,0 +1,982 @@
+﻿.wolv_table_pagers, .wolv_column_header, .wolv_wrap, .ObjectListViewTable, .wolv_column_header {
+    /* для wolv */
+    width: 100%;
+}
+
+.wolv_row_checkbox {
+    /* Чекбоксы для showMarks */
+}
+
+/* В дальнейшем избавиться от этого */
+table {
+    width: 100%;
+}
+
+.Hide /**/
+{
+    display: none;
+}
+
+/*************Переключение страниц***************/
+.wolv_wrap {
+    /*overflow:auto;*/
+    table-layout: fixed;
+    width: 100%;
+}
+
+.wolv_wrap .clearfix {
+    margin-top: 0;
+}
+
+.wolv_top_pager {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: -20px;
+    padding: 0 !important;
+}
+
+.wolv_top_pager .prev_next {
+    margin-right: 10px !important;
+}
+
+.wolv_pager {
+    color: #3f75ac;
+    padding: 10px 0;
+}
+
+.wolv_pager .panel {
+    float: left;
+    margin-right: 25px;
+    font-size: 93%;
+}
+
+.wolv_pager .prev_next {
+    margin-left: 7px;
+}
+
+.wolv_pager .prev_next .deadend {
+    color: #959595;
+}
+
+.wolv_pager .results_count {
+}
+
+.wolv_pager .pages_wrap .sel, .wolv_pager .pages_wrap .page_link {
+    display: block;
+    float: left;
+    margin-right: 5px;
+    padding: 0 3px;
+}
+
+.wolv_pager .pages_wrap .sel {
+    font-weight: bold;
+    color: #f27848;
+    width: 20px;
+}
+
+.wolv_pager .results_pp {
+    margin-right: 7px;
+    float: right;
+    white-space: nowrap;
+    text-align: right;
+    margin-top: -4px;
+    /*background-color:#ccc;*/
+}
+
+/*************Переключение страниц END***************/
+
+.ObjectListViewPagerDiv {
+    display: inline;
+    font-size: 14px;
+    border: 1px solid #555454;
+    cursor: pointer;
+    color: #555454;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.ObjectListViewPagerDiv span {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.ObjectListViewPagerDiv img {
+    padding-left: 5px;
+}
+
+.ObjectListViewPagerDiv2 {
+    display: inline;
+    font-size: 14px;
+    border: 1px solid #555454;
+    cursor: pointer;
+    color: #555454;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.ObjectListViewPagerDiv2 span {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.ObjectListViewPagerDiv2 img {
+    padding-right: 5px;
+}
+
+.ObjectListViewHypers {
+    font-size: 14px;
+    font-style: normal;
+}
+
+.ObjectListViewTable1 tr td /* чтобы не привязывалось к ширине */  {
+    border: solid 1px #3f75ac;
+}
+
+/*Начало секции пурпурных заголовков*/
+tr.ObjectListViewPurpurCell td, tr.ObjectListViewAlternatePurpurCell td {
+    border: solid 1px #BE008D;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewPurpurCaptionCell td {
+    border: solid 1px #ffffff;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewPurpurCaptionCell td {
+    background-color: #BE008D;
+    color: #ffffff;
+    font-size: 90%;
+    font-weight: bold;
+    padding: 5px 3px 4px 10px;
+}
+
+tr.ObjectListViewPurpurCaptionCell table td {
+    border: none;
+    padding: 0;
+}
+
+tr.ObjectListViewPurpurCaptionCell td span {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+tr.ObjectListViewPurpurCell td, tr.ObjectListViewAlternatePurpurCell td {
+    padding: 3px 3px 2px 10px;
+    color: #0250a0;
+    font-size: 85%;
+    line-height: 1.5;
+}
+
+tr.ObjectListViewAlternatePurpurCell td {
+    background-color: #EECEE4;
+}
+
+/*Конец секции пурпурных заголовков*/
+
+/*Начало секции малиновых заголовков*/
+tr.ObjectListViewRaspberryCell td, tr.ObjectListViewAlternateRaspberryCell td {
+    border: solid 1px #E4008D;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewRaspberryCaptionCell td {
+    border: solid 1px #ffffff;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewRaspberryCaptionCell td {
+    background-color: #E4008D;
+    color: #ffffff;
+    font-size: 90%;
+    font-weight: bold;
+    padding: 5px 3px 4px 10px;
+}
+
+tr.ObjectListViewRaspberryCaptionCell table td {
+    border: none;
+    padding: 0;
+}
+
+tr.ObjectListViewRaspberryCaptionCell td span {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+tr.ObjectListViewRaspberryCell td, tr.ObjectListViewAlternateRaspberryCell td {
+    padding: 3px 3px 2px 10px;
+    color: #0250a0;
+    font-size: 85%;
+    line-height: 1.5;
+}
+
+tr.ObjectListViewAlternateRaspberryCell td {
+    background-color: #F8D1E5;
+}
+
+/*Конец секции малиновых заголовков*/
+
+/*Начало секции красных заголовков*/
+tr.ObjectListViewRedCell td, tr.ObjectListViewAlternateRedCell td {
+    border: solid 1px #E30033;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewRedCaptionCell td {
+    border: solid 1px #ffffff;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewRedCaptionCell td {
+    background-color: #E30033;
+    color: #ffffff;
+    font-size: 90%;
+    font-weight: bold;
+    padding: 5px 3px 4px 10px;
+}
+
+tr.ObjectListViewRedCaptionCell table td {
+    border: none;
+    padding: 0;
+}
+
+tr.ObjectListViewRedCaptionCell td span {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+tr.ObjectListViewRedCell td, tr.ObjectListViewAlternateRedCell td {
+    padding: 3px 3px 2px 10px;
+    color: #0250a0;
+    font-size: 85%;
+    line-height: 1.5;
+}
+
+tr.ObjectListViewAlternateRedCell td {
+    background-color: #F9D1C0;
+}
+
+/*Конец секции красных заголовков*/
+
+/*Начало секции темно-зеленых заголовков*/
+tr.ObjectListViewDarkGreenCell td, tr.ObjectListViewAlternateDarkGreenCell td {
+    border: solid 1px #4B8A46;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewDarkGreenCaptionCell td {
+    border: solid 1px #ffffff;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewDarkGreenCaptionCell td {
+    background-color: #4B8A46;
+    color: #ffffff;
+    font-size: 90%;
+    font-weight: bold;
+    padding: 5px 3px 4px 10px;
+}
+
+tr.ObjectListViewDarkGreenCaptionCell table td {
+    border: none;
+    padding: 0;
+}
+
+tr.ObjectListViewDarkGreenCaptionCell td span {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+tr.ObjectListViewDarkGreenCell td, tr.ObjectListViewAlternateDarkGreenCell td {
+    padding: 3px 3px 2px 10px;
+    color: #0250a0;
+    font-size: 85%;
+    line-height: 1.5;
+}
+
+tr.ObjectListViewAlternateDarkGreenCell td {
+    background-color: #D4DECC;
+}
+
+/*Конец секции темно-зеленых заголовков*/
+
+/*Начало секции сине-серых заголовков*/
+tr.ObjectListViewBlueGreyCell td, tr.ObjectListViewAlternateBlueGreyCell td {
+    border: solid 1px #6084A9;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewBlueGreyCaptionCell td {
+    border: solid 1px #ffffff;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewBlueGreyCaptionCell td {
+    background-color: #6084A9;
+    color: #ffffff;
+    font-size: 90%;
+    font-weight: bold;
+    padding: 5px 3px 4px 10px;
+}
+
+tr.ObjectListViewBlueGreyCaptionCell table td {
+    border: none;
+    padding: 0;
+}
+
+tr.ObjectListViewBlueGreyCaptionCell td span {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+tr.ObjectListViewBlueGreyCell td, tr.ObjectListViewAlternateBlueGreyCell td {
+    padding: 3px 3px 2px 10px;
+    color: #0250a0;
+    font-size: 85%;
+    line-height: 1.5;
+}
+
+tr.ObjectListViewAlternateBlueGreyCell td {
+    background-color: #D7DEEA;
+}
+
+/*Конец секции сине-серых заголовков*/
+
+/*Начало секции светло-зеленых заголовков*/
+tr.ObjectListViewLightGreenCell td, tr.ObjectListViewAlternateLightGreenCell td {
+    border: solid 1px #8CCC3F;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewLightGreenCaptionCell td {
+    border: solid 1px #ffffff;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewLightGreenCaptionCell td {
+    background-color: #8CCC3F;
+    color: #ffffff;
+    font-size: 90%;
+    font-weight: bold;
+    padding: 5px 3px 4px 10px;
+}
+
+tr.ObjectListViewLightGreenCaptionCell table td {
+    border: none;
+    padding: 0;
+}
+
+tr.ObjectListViewLightGreenCaptionCell td span {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+tr.ObjectListViewLightGreenCell td, tr.ObjectListViewAlternateLightGreenCell td {
+    padding: 3px 3px 2px 10px;
+    color: #0250a0;
+    font-size: 85%;
+    line-height: 1.5;
+}
+
+tr.ObjectListViewAlternateLightGreenCell td {
+    background-color: #E4F3D3;
+}
+
+/*Конец секции светло-зеленых заголовков*/
+
+/*Начало секции темно-синих заголовков*/
+tr.ObjectListViewDarkBlueCell td, tr.ObjectListViewAlternateDarkBlueCell td {
+    border: solid 1px #1653A9;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewDarkBlueCaptionCell td {
+    border: solid 1px #ffffff;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewDarkBlueCaptionCell td {
+    background-color: #1653A9;
+    color: #ffffff;
+    font-size: 90%;
+    font-weight: bold;
+    padding: 5px 3px 4px 10px;
+}
+
+tr.ObjectListViewDarkBlueCaptionCell table td {
+    border: none;
+    padding: 0;
+}
+
+tr.ObjectListViewDarkBlueCaptionCell td span {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+tr.ObjectListViewDarkBlueCell td, tr.ObjectListViewAlternateDarkBlueCell td {
+    padding: 3px 3px 2px 10px;
+    color: #0250a0;
+    font-size: 85%;
+    line-height: 1.5;
+}
+
+tr.ObjectListViewAlternateDarkBlueCell td {
+    background-color: #C7CBE8;
+}
+
+/*Конец секции темно-синих заголовков*/
+
+/*Начало секции оранжевых заголовков*/
+tr.ObjectListViewOrangeCaptionCell td, tr.ObjectListViewOrangeCell td, tr.ObjectListViewAlternateOrangeCell td {
+    border: solid 1px #979797;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewOrangeCaptionCell td {
+    background-color: #F27848;
+    color: #ffffff;
+    font-size: 90%;
+    font-weight: bold;
+    padding: 5px 3px 4px 10px;
+}
+
+tr.ObjectListViewOrangeCaptionCell table td {
+    border: none;
+    padding: 0;
+}
+
+tr.ObjectListViewOrangeCaptionCell td span {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+tr.ObjectListViewOrangeCell td, tr.ObjectListViewAlternateOrangeCell td {
+    padding: 3px 3px 2px 10px;
+    color: #0250a0;
+    font-size: 85%;
+    line-height: 1.5;
+}
+
+tr.ObjectListViewAlternateOrangeCell td {
+    background-color: #EFEFEF;
+}
+
+/*Конец секции оранжевых заголовков*/
+
+/*Начало секции светло-синих заголовков*/
+tr.ObjectListViewLightBlueCell td, tr.ObjectListViewAlternateLightBlueCell td {
+    border: solid 1px #00A9ED;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewLightBlueCaptionCell td {
+    border: solid 1px #ffffff;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewLightBlueCaptionCell td {
+    background-color: #00A9ED;
+    color: #ffffff;
+    font-size: 90%;
+    font-weight: bold;
+    padding: 5px 3px 4px 10px;
+}
+
+tr.ObjectListViewLightBlueCaptionCell table td {
+    border: none;
+    padding: 0;
+}
+
+tr.ObjectListViewLightBlueCaptionCell td span {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+tr.ObjectListViewLightBlueCell td, tr.ObjectListViewAlternateLightBlueCell td {
+    padding: 3px 3px 2px 10px;
+    color: #0250a0;
+    font-size: 85%;
+    line-height: 1.5;
+}
+
+tr.ObjectListViewAlternateLightBlueCell td {
+    background-color: #C9E9FB;
+}
+
+/*Конец секции светло-синих заголовков*/
+
+/*Начало секции темно-оранжевых заголовков*/
+tr.ObjectListViewDarkOrangeCell td, tr.ObjectListViewAlternateDarkOrangeCell td {
+    border: solid 1px #E96B30;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewDarkOrangeCaptionCell td {
+    border: solid 1px #ffffff;
+    border-top: none;
+    border-right: none;
+}
+
+tr.ObjectListViewDarkOrangeCaptionCell td {
+    background-color: #E96B30;
+    color: #ffffff;
+    font-size: 90%;
+    font-weight: bold;
+    padding: 5px 3px 4px 10px;
+}
+
+tr.ObjectListViewDarkOrangeCaptionCell table td {
+    border: none;
+    padding: 0;
+}
+
+tr.ObjectListViewDarkOrangeCaptionCell td span {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+tr.ObjectListViewDarkOrangeCell td, tr.ObjectListViewAlternateDarkOrangeCell td {
+    padding: 3px 3px 2px 10px;
+    color: #0250a0;
+    font-size: 85%;
+    line-height: 1.5;
+}
+
+tr.ObjectListViewAlternateDarkOrangeCell td {
+    background-color: #FADEC5;
+}
+
+/*Конец секции темно-оранжевых заголовков*/
+
+.ObjectListViewTxtBox {
+    padding: 2px 5px 0 2px;
+    width: 20px;
+}
+
+.footer {
+    background-color: #dadada;
+    height: 32px;
+}
+
+.ObjectListViewTotal {
+    margin-left: 10px;
+    padding: 2px;
+    font-size: 12px;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+}
+
+.ObjectListViewTotalRight {
+    padding-right: 20px;
+    font-size: 12px;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+    float: right;
+}
+
+.ObjectListViewCellLeft {
+    text-align: left;
+}
+
+.ObjectListViewCellRight {
+    text-align: right;
+}
+
+.ObjectListViewCellCenter {
+    text-align: center;
+}
+
+.WOLVSO {
+    background-color: #6EFF70 !important;
+}
+
+/** Стили универсальной списковой формы начало **/
+
+.ListTable {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.ObjectListViewTable {
+    border: solid 1px #3f75ac;
+    margin: 1px 0;
+}
+
+.width150 {
+    width: 150px;
+}
+
+.width90 {
+    width: 90px;
+}
+
+.width20 {
+    width: 26px;
+}
+
+/*
+		tr.ObjectListViewCaptionCell td, tr.ObjectListViewCell td, tr.ObjectListViewAlternateCell td 
+		*/
+.ObjectListViewTable tr td {
+    border: solid 1px #3f75ac;
+}
+
+tr.ObjectListViewCaptionCell td {
+    background-color: #d2e8ff;
+    color: #0250a0;
+    font-size: 90%;
+    font-weight: bold;
+    padding: 5px 3px 4px 10px;
+}
+
+tr.ObjectListViewCaptionCell table td {
+    border: none;
+    padding: 0;
+}
+
+tr.ObjectListViewCaptionCell td span {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+tr.ObjectListViewCell td, tr.ObjectListViewAlternateCell td {
+    padding: 3px 10px 3px 10px;
+    color: #0250a0;
+    font-size: 85%;
+    line-height: 1.5;
+}
+
+tr.ObjectListViewCell td a, tr.ObjectListViewAlternateCell td a {
+    /*color:#00f;*/
+}
+
+tr.ObjectListViewAlternateCell td {
+    background-color: #e4ebf2;
+}
+
+.ObjectListViewPage {
+    text-decoration: underline;
+}
+
+.ObjectListViewPageArrow {
+    text-decoration: none;
+}
+
+/** Стили универсальной списковой формы конец **/
+
+/******* miniToolbar *******/
+td.miniToolbar {
+    width: 42px;
+}
+
+/* .miniToolbar
+{
+    width: 1px;
+} */
+.miniToolbar a {
+    display: block;
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin-right: 3px;
+    cursor: pointer;
+    margin-left: 1px;
+}
+
+.miniToolbar .actions {
+    margin-left: 0;
+}
+
+.miniToolbar a.selectAllOnPageBtn {
+    background: transparent url(../images/selectonthispage_small.png) no-repeat scroll 0 0;
+}
+
+.miniToolbar a.selectAllOnPageBtn:hover {
+    background: transparent url(../images/selectonthispage_small.png) no-repeat scroll -15px 0;
+}
+
+.miniToolbar a.selectAllOnAllPagesBtn {
+    background: transparent url(../images/selectonthispage_small.png) no-repeat scroll 0 -15px;
+}
+
+.miniToolbar a.selectAllOnAllPagesBtn:hover {
+    background: transparent url(../images/selectonthispage_small.png) no-repeat scroll -15px -15px;
+}
+
+.miniToolbar a.resetSort {
+    background: transparent url(../images/selectonthispage_small.png) no-repeat scroll 0 -30px;
+}
+
+.miniToolbar a.resetSort:hover {
+    background: transparent url(../images/selectonthispage_small.png) no-repeat scroll -15px -30px;
+}
+/******* miniToolbar END*******/
+
+
+/****** tableCellFilter *********/
+.tableCellFilter {
+    text-align: center;
+    background-color: #DADADA;
+}
+
+/* Кнопка очистки фильтра в верхней строчке */
+.tableCellFilter a.clrFilters {
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin: 0 auto;
+    background: transparent url(../images/toolbar-icons.png) no-repeat scroll -132px 0;
+    cursor: pointer;
+}
+
+.tableCellFilter a.clrFilters:hover {
+    background-position: -132px -22px;
+}
+/****** tableCellFilter END*********/
+
+/**/
+.toolbarText {
+    float: left;
+    padding-top: 5px;
+}
+
+.toolbarText span {
+    color: Red;
+    font-weight: bold;
+}
+
+.toolbarTextFix {
+    clear: both;
+    display: inline;
+}
+
+/***Панель и кнопка поиска (начало)***/
+.fullViewSearchPanel {
+    float: right;
+    width: 50%;
+    overflow: visible;
+}
+
+.fullViewSearchPanelFix {
+    clear: both;
+    display: inline;
+}
+
+.fullViewSearchTextBox {
+    float: right;
+    display: block;
+    height: 16px;
+    margin: 1px 3px 0 -58px;
+    width: 100%;
+}
+
+a.fullViewSearchButton, a.clearFullViewSearchButton {
+    float: right;
+    display: block;
+    cursor: pointer;
+}
+
+.fullViewSearchPanel a.fullViewSearchButton {
+}
+
+.fullViewSearchPanel a.fullViewSearchButton:hover {
+}
+
+.fullViewSearchPanel a.clearFullViewSearchButton {
+}
+
+.fullViewSearchPanel a.clearFullViewSearchButton:hover {
+    background-position: -110px 0;
+}
+
+.fullViewSearchPanel a {
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin-right: 3px;
+}
+/***Панель и кнопка поиска (конец)***/
+
+/*Раскраски не понятоно зачем, но удалять не стал (начало)*/
+tr.RedTextObjectListViewCell td {
+    background-color: #FF8484 !important;
+    font-weight: bold;
+}
+
+tr.RedTextObjectListViewCell td {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+tr.GreenTextObjectListViewCell td {
+    background-color: #8DFD79 !important;
+    font-weight: bold;
+}
+
+tr.YellowTextObjectListViewCell td {
+    background-color: #FAEC6B !important;
+    font-weight: bold;
+}
+
+td.RedTextObjectListViewTd {
+    background-color: #FF8484 !important;
+    font-weight: bold;
+}
+
+td.GreenTextObjectListViewTd {
+    background-color: #8DFD79 !important;
+    font-weight: bold;
+}
+
+td.YellowTextObjectListViewTd {
+    background-color: #FAEC6B !important;
+    font-weight: bold;
+}
+
+td.checkedline {
+    background: #c2d1e2 !important;
+}
+
+tr.hover td {
+    /*background-color:#c1f3b6;/*зеленая подсветка*/
+    background-color: #fea; /*желтоватая подсветка*/
+}
+
+#LookUpFormCaption {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #567;
+    margin: 15px 10px 10px;
+}
+
+.FilterCell {
+    /*background-image: url(../images/toolbar/filtr_small.gif);*/
+    background-color: #DADADA;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 2px 5px 5px;
+}
+
+#tooltip {
+    position: absolute;
+    z-index: 3000;
+    border: 1px solid #111;
+    background-color: #ffffcc;
+    padding: 2px;
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+}
+
+#tooltip h3, #tooltip div {
+    margin: 0;
+}
+
+.actions {
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.actions input {
+    vertical-align: middle;
+    height: 15px;
+    width: 15px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.actions input[type="image"] {
+    border-width: 0;
+}
+
+.ReadOnlyEditForm {
+    background-color: #E0E0E0;
+    color: #707070;
+}
+
+.deleted_row td {
+    font-weight: bold;
+    /*color:#FF9090;
+		background-color:#FF9090!important;*/
+}
+
+.not_deleted_row input {
+    display: none;
+}
+
+/* **************************************************** */
+/* Заголовки столбцов                                   */
+/* **************************************************** */
+/* Контейнер заголовка столбца. */
+.ics-wolv-column-header {
+}
+
+/* Порядок сортировки. */
+.ics-wolv-column-header .ics-wolv-column-sort-order {
+    color: Black;
+    font-size: 0.7em;
+}
+
+/* Направление сортировки. */
+.ics-wolv-column-header .ics-wolv-column-sort-direction {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+/* Направление сортировки - по возрастанию. */
+.ics-wolv-column-header .ics-wolv-column-sort-asc {
+    background-image: url('/App_Themes/Blue/images/ascsign.gif');
+}
+
+/* Направление сортировки - по убыванию. */
+.ics-wolv-column-header .ics-wolv-column-sort-desc {
+    background-image: url('/App_Themes/Blue/images/descsign.gif');
+}
+
+/* Подпись столбца. */
+.ics-wolv-column-header .ics-wolv-column-caption {
+}
+
+/* Столбец с включенной сортировкой. */
+tr.ObjectListViewCaptionCell > td.ics-wolv-column-sort-enabled {
+    cursor: pointer;
+}
+
+/* Столбец с отключенной сортировкой. */
+tr.ObjectListViewCaptionCell > td.ics-wolv-column-sort-disabled {
+    cursor: default;
+}
+
+/* WolvParametersInputControl начало */
+
+.wolv-service-block-text {
+    margin: 3px;
+}
+
+.wolv-param-btn-block {
+    margin: 3px;
+    clear: both;
+}
+
+/* WolvParametersInputControl конец */

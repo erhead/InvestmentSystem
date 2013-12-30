@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IIS.Аудит(Objects)</name>
+    </assembly>
+    <members>
+        <member name="P:IIS.Аудит.СборкаФормыГенератора.Генератор">
+            <summary>
+            мастеровая ссылка на шапку IIS.Аудит.ГенераторНастроекОбъектовАудита
+            </summary>
+        </member>
+        <member name="T:IIS.Аудит.DetailArrayOfСборкаФормыГенератора">
+            <summary>
+            Detail array of СборкаФормыГенератора
+            </summary>
+        </member>
+        <member name="M:IIS.Аудит.DetailArrayOfСборкаФормыГенератора.#ctor(IIS.Аудит.ГенераторНастроекОбъектовАудита)">
+            <summary>
+            Construct detail array
+            </summary>
+        </member>
+        <member name="M:IIS.Аудит.DetailArrayOfСборкаФормыГенератора.Add(IIS.Аудит.СборкаФормыГенератора)">
+            <summary>
+            Adds object with type СборкаФормыГенератора
+            </summary>
+        </member>
+        <member name="P:IIS.Аудит.DetailArrayOfСборкаФормыГенератора.Item(System.Int32)">
+            <summary>
+            Returns object with type СборкаФормыГенератора by index
+            </summary>
+        </member>
+        <member name="P:IIS.Аудит.АудитИзменения.Операция">
+            <summary>
+            мастеровая ссылка на шапку IIS.Аудит.АудитОперации
+            </summary>
+        </member>
+        <member name="T:IIS.Аудит.DetailArrayOfАудитИзменения">
+            <summary>
+            Detail array of АудитИзменения
+            </summary>
+        </member>
+        <member name="M:IIS.Аудит.DetailArrayOfАудитИзменения.#ctor(IIS.Аудит.АудитОперации)">
+            <summary>
+            Construct detail array
+            </summary>
+        </member>
+        <member name="M:IIS.Аудит.DetailArrayOfАудитИзменения.Add(IIS.Аудит.АудитИзменения)">
+            <summary>
+            Adds object with type АудитИзменения
+            </summary>
+        </member>
+        <member name="P:IIS.Аудит.DetailArrayOfАудитИзменения.Item(System.Int32)">
+            <summary>
+            Returns object with type АудитИзменения by index
+            </summary>
+        </member>
+        <member name="P:IIS.Аудит.Пользователь.ПоследнийЛогин">
+            <summary>
+            Поле необходимо для того чтобы проверять наличие оставшихся блокировок 
+            при смене логина пользователя. Логин из текущего пользователя нельзя проверять, 
+            т.к. в случае неудачной авторизации Пользователь.Текущий = null и тогда нельзя будет
+            сравнить новый логин со старым
+            </summary>
+        </member>
+        <member name="P:IIS.Аудит.Аудит_ОперацияОбъекта.Настройка">
+            <summary>
+            мастеровая ссылка на шапку IIS.Аудит.Аудит_НастройкаОбъекта
+            </summary>
+        </member>
+        <member name="T:IIS.Аудит.DetailArrayOfАудит_ОперацияОбъекта">
+            <summary>
+            Detail array of Аудит_ОперацияОбъекта
+            </summary>
+        </member>
+        <member name="M:IIS.Аудит.DetailArrayOfАудит_ОперацияОбъекта.#ctor(IIS.Аудит.Аудит_НастройкаОбъекта)">
+            <summary>
+            Construct detail array
+            </summary>
+        </member>
+        <member name="M:IIS.Аудит.DetailArrayOfАудит_ОперацияОбъекта.Add(IIS.Аудит.Аудит_ОперацияОбъекта)">
+            <summary>
+            Adds object with type Аудит_ОперацияОбъекта
+            </summary>
+        </member>
+        <member name="P:IIS.Аудит.DetailArrayOfАудит_ОперацияОбъекта.Item(System.Int32)">
+            <summary>
+            Returns object with type Аудит_ОперацияОбъекта by index
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.tТипОперацииАудита.Создание">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.tТипОперацииАудита.Изменение">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.tТипОперацииАудита.Удаление">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.tТипОперацииАудита.Чтение">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.tТипОперацииАудита.Выполнение">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.tТипДоступа.Windows">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.tТипДоступа.Web">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:IIS.Аудит.Аудит_ПолеОбъекта.Настройка">
+            <summary>
+            мастеровая ссылка на шапку IIS.Аудит.Аудит_НастройкаОбъекта
+            </summary>
+        </member>
+        <member name="T:IIS.Аудит.DetailArrayOfАудит_ПолеОбъекта">
+            <summary>
+            Detail array of Аудит_ПолеОбъекта
+            </summary>
+        </member>
+        <member name="M:IIS.Аудит.DetailArrayOfАудит_ПолеОбъекта.#ctor(IIS.Аудит.Аудит_НастройкаОбъекта)">
+            <summary>
+            Construct detail array
+            </summary>
+        </member>
+        <member name="M:IIS.Аудит.DetailArrayOfАудит_ПолеОбъекта.Add(IIS.Аудит.Аудит_ПолеОбъекта)">
+            <summary>
+            Adds object with type Аудит_ПолеОбъекта
+            </summary>
+        </member>
+        <member name="P:IIS.Аудит.DetailArrayOfАудит_ПолеОбъекта.Item(System.Int32)">
+            <summary>
+            Returns object with type Аудит_ПолеОбъекта by index
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.tСпособПолученияОписания.КлючевыеПоля">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.tСпособПолученияОписания.МетодОбъекта">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

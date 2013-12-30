@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IIS.Аудит(BusinessServers)</name>
+    </assembly>
+    <members>
+        <member name="T:IIS.Аудит.Impersonator">
+            <summary>
+            Impersonation of a user. Allows to execute code under another
+            user context.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <remarks>     
+            This class is based on the information in the Microsoft knowledge base
+            article http://support.microsoft.com/default.aspx?scid=kb;en-us;Q306158
+            
+            Encapsulate an instance into a using-directive like e.g.:
+            
+                     ...
+                     using ( new Impersonator( "myUsername", "myDomainname", "myPassword" ) )
+                     {
+                          ...
+                          [code that executes under the new context]
+                          ...
+                     }
+                     ...
+            </remarks>
+        </member>
+        <member name="F:IIS.Аудит.Impersonator.LOGON32_PROVIDER_DEFAULT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IIS.Аудит.Impersonator"/> class.
+            </summary>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.#ctor(System.String,System.String,System.String,IIS.Аудит.ProfileBehaviour)">
+            <summary>
+            Constructor. Starts the impersonation with the given credentials.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+            <param name="profileBehaviour">The profile behaviour.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.#ctor(System.String,System.String,System.String,IIS.Аудит.LoginType,IIS.Аудит.ProfileBehaviour)">
+            <summary>
+            Constructor. Starts the impersonation with the given credentials.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+            <param name="loginType">The login type.</param>
+            <param name="profileBehaviour">The profile behaviour.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.#ctor(System.String,System.String,System.Security.SecureString,IIS.Аудит.ProfileBehaviour)">
+            <summary>
+            Constructor. Starts the impersonation with the given credentials.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+            <param name="profileBehaviour">The profile behaviour.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.#ctor(System.String,System.String,System.Security.SecureString,IIS.Аудит.LoginType,IIS.Аудит.ProfileBehaviour)">
+            <summary>
+            Constructor. Starts the impersonation with the given credentials.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+            <param name="loginType">The login type.</param>
+            <param name="profileBehaviour">The profile behaviour.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor. Starts the impersonation with the given credentials.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.#ctor(System.String,System.String,System.String,IIS.Аудит.LoginType)">
+            <summary>
+            Constructor. Starts the impersonation with the given credentials.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+            <param name="loginType">The login type.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.#ctor(System.String,System.String,System.Security.SecureString)">
+            <summary>
+            Constructor. Starts the impersonation with the given credentials.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.#ctor(System.String,System.String,System.Security.SecureString,IIS.Аудит.LoginType)">
+            <summary>
+            Constructor. Starts the impersonation with the given credentials.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+            <param name="loginType">The login type.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.Impersonate(System.String,System.String,System.String,IIS.Аудит.ProfileBehaviour)">
+            <summary>
+            Starts the impersonation with the given credentials.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+            <param name="profileBehaviour">The profile behaviour.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.Impersonate(System.String,System.String,System.String,IIS.Аудит.LoginType,IIS.Аудит.ProfileBehaviour)">
+            <summary>
+            Starts the impersonation with the given credentials.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+            <param name="loginType">The login type.</param>
+            <param name="profileBehaviour">The profile behaviour.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.Impersonate(System.String,System.String,System.Security.SecureString,IIS.Аудит.ProfileBehaviour)">
+            <summary>
+            Starts the impersonation with the given credentials.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+            <param name="profileBehaviour">The profile behaviour.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.Impersonate(System.String,System.String,System.Security.SecureString,IIS.Аудит.LoginType,IIS.Аудит.ProfileBehaviour)">
+            <summary>
+            Starts the impersonation with the given credentials.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+            <param name="loginType">The login type.</param>
+            <param name="profileBehaviour">The profile behaviour.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.Impersonate(System.String,System.String,System.String)">
+            <summary>
+            Starts the impersonation with the given credentials.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.Impersonate(System.String,System.String,System.String,IIS.Аудит.LoginType)">
+            <summary>
+            Starts the impersonation with the given credentials.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+            <param name="loginType">The login type.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.Impersonate(System.String,System.String,System.Security.SecureString)">
+            <summary>
+            Starts the impersonation with the given credentials.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.Impersonate(System.String,System.String,System.Security.SecureString,IIS.Аудит.LoginType)">
+            <summary>
+            Starts the impersonation with the given credentials.
+            The account that instantiates the Impersonator class
+            needs to have the 'Act as part of operating system' privilege set.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+            <param name="loginType">The login type.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.Undo">
+            <summary>
+            Undoes the impersonation. Safe to call even if not yet
+            impersonized.
+            </summary>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing,
+            releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.Finalize">
+            <summary>
+            Releases unmanaged resources and performs other cleanup operations before the
+            <see cref="T:IIS.Аудит.Impersonator"/> is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.LogonUser(System.String,System.String,System.String,System.Int32,System.Int32,System.IntPtr@)">
+            <summary>
+            Logons the user.
+            </summary>
+            <param name="lpszUserName">Name of the LPSZ user.</param>
+            <param name="lpszDomain">The LPSZ domain.</param>
+            <param name="lpszPassword">The LPSZ password.</param>
+            <param name="dwLogonType">Type of the dw logon.</param>
+            <param name="dwLogonProvider">The dw logon provider.</param>
+            <param name="phToken">The ph token.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.LogonUser2(System.String,System.String,System.IntPtr,System.Int32,System.Int32,System.IntPtr@)">
+            <summary>
+            Logons the user2.
+            </summary>
+            <param name="lpszUserName">Name of the LPSZ user.</param>
+            <param name="lpszDomain">The LPSZ domain.</param>
+            <param name="Password">The password.</param>
+            <param name="dwLogonType">Type of the dw logon.</param>
+            <param name="dwLogonProvider">The dw logon provider.</param>
+            <param name="phToken">The ph token.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.DuplicateToken(System.IntPtr,System.Int32,System.IntPtr@)">
+            <summary>
+            Duplicates the token.
+            </summary>
+            <param name="hToken">The h token.</param>
+            <param name="impersonationLevel">The impersonation level.</param>
+            <param name="hNewToken">The h new token.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.RevertToSelf">
+            <summary>
+            Reverts to self.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.CloseHandle(System.IntPtr)">
+            <summary>
+            Closes the handle.
+            </summary>
+            <param name="handle">The handle.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.ImpersonateValidUser(System.String,System.String,System.String,IIS.Аудит.LoginType,IIS.Аудит.ProfileBehaviour)">
+            <summary>
+            Does the actual impersonation.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+            <param name="loginType">Type of the login.</param>
+            <param name="profileBehaviour">The profile behaviour.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.ImpersonateValidUser(System.String,System.String,System.Security.SecureString,IIS.Аудит.LoginType,IIS.Аудит.ProfileBehaviour)">
+            <summary>
+            Does the actual impersonation.
+            </summary>
+            <param name="userName">The name of the user to act as.</param>
+            <param name="domainName">The domain name of the user to act as.</param>
+            <param name="password">The password of the user to act as.</param>
+            <param name="loginType">Type of the login.</param>
+            <param name="profileBehaviour">The profile behaviour.</param>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.CheckLoadProfile(IIS.Аудит.ProfileBehaviour)">
+            <summary>
+            Checks and loads the load profile.
+            </summary>
+        </member>
+        <member name="M:IIS.Аудит.Impersonator.UndoImpersonation">
+            <summary>
+            Reverts the impersonation.
+            </summary>
+        </member>
+        <member name="T:IIS.Аудит.LoginType">
+            <summary>
+            How to log in the user.
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.LoginType.Interactive">
+            <summary>
+            Interactive. This is the default.
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.LoginType.Batch">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.LoginType.Network">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.LoginType.NetworkClearText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.LoginType.Service">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.LoginType.Unlock">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.LoginType.NewCredentials">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:IIS.Аудит.ProfileBehaviour">
+            <summary>
+            How to deal with the user's profile.
+            </summary>
+            <remarks>
+            2008-05-21, suggested and implemented by Tim Daplyn 
+            (TDaplyn@MedcomSoft.com).
+            </remarks>
+        </member>
+        <member name="F:IIS.Аудит.ProfileBehaviour.DontLoad">
+            <summary>
+            Do not load the user's profile. This is the default behaviour.
+            </summary>
+        </member>
+        <member name="F:IIS.Аудит.ProfileBehaviour.Load">
+            <summary>
+            Load the user's profile.
+            </summary>
+        </member>
+        <member name="M:IIS.Аудит.АудитBS.GetValueFromDb(System.String,System.Boolean)">
+            <summary>
+            Получить значение из базы
+            </summary>
+            <param name="SQL">Запрос возвращающий единственное значение</param>
+            <param name="dataservice"> IDataService </param>
+            <param name="NotIgnoreException">false, если нужно игнорировать исключение</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

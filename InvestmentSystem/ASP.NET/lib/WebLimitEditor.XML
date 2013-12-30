@@ -1,0 +1,522 @@
+﻿<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>WebLimitEditor</name>
+  </assembly>
+  <members>
+    <member name="T:WebLimitEditor.Forms.LimitEditor">
+      <summary>
+            Форма для отображения редактора ограничений.
+            </summary>
+    </member>
+    <member name="M:WebLimitEditor.Forms.LimitEditor.#ctor">
+      <summary>
+            Создание формы с редактором ограничений.
+            </summary>
+    </member>
+    <member name="P:WebLimitEditor.Forms.LimitEditor.EnableTheming">
+      <summary>
+            Темы отключены для формы редактора.
+            </summary>
+    </member>
+    <member name="T:WebLimitEditor.HandlerFactories.LimitEditorAjaxServiceHandlerFactory">
+      <summary>
+            Фабрика для создания <see cref="T:WebLimitEditor.Services.LimitEditorAjaxService" />.
+            </summary>
+    </member>
+    <member name="T:WebLimitEditor.HandlerFactories.LimitEditorHandlerFactory">
+      <summary>
+            Фабрика для создания <see cref="T:WebLimitEditor.Forms.LimitEditor" />.
+            </summary>
+    </member>
+    <member name="T:LinqEditor.LinqConverter.LinqConverter">
+      <summary>
+            Класс реализует конвертацию из Linq в html и обратно.
+            </summary>
+    </member>
+    <member name="M:LinqEditor.LinqConverter.LinqConverter.LinqToHtml(System.Linq.Expressions.Expression)">
+      <summary>
+            Преобразование из Linq в html.
+            </summary>
+      <param name="query"> Linq-выражение. </param>
+      <returns> Сформированное html. </returns>
+    </member>
+    <member name="M:LinqEditor.LinqConverter.LinqConverter.ExprToTypeMap(System.Collections.Generic.List{System.Linq.Expressions.LambdaExpression})">
+      <summary>
+            Заполнение карты преобразования типов.
+            Берутся все используемые типы, после чего проверяется, какие типы в какие можно преобразовать.
+            Все эти преобразования преобразуются в html особого вида, откуда потом их будет забирать javascript.
+            </summary>
+      <param name="lambdas"> Используемые в данном ограничении лямбды: обращения к свойствам текущего типа, допустимые операции с пустыми параметрами и пр. </param>
+      <returns> Html, содержащий карту преобразования типов. </returns>
+    </member>
+    <member name="M:LinqEditor.LinqConverter.LinqConverter.RegIsMatchFunction(System.Text.StringBuilder)">
+      <summary>
+            Формирование карты преобразования для функции IsMatch (ПоМаске).
+            Определяется LambdaExpression, которая содержит информацию о том, с какими операндами работает метод IsMatch (ПоМаске) и пр.
+            </summary>
+      <param name="sb">Строка, содержащая текущую сформированную карту преобразований. </param>
+    </member>
+    <member name="M:LinqEditor.LinqConverter.LinqConverter.AddCompareExpressionReg(System.Text.StringBuilder,System.Linq.Expressions.ExpressionType,System.Type,System.Type)">
+      <summary>
+            Добавление записи в формируемую карту преобразования типов о том, какие типы с чем можно сравнивать.
+            </summary>
+      <param name="sb"> Текущий сформированный html, соответствующий сформированной карте. </param>
+      <param name="expressionType"> Тип допустимой операции для типов. </param>
+      <param name="left"> Тип, находящийся слева от оператора. </param>
+      <param name="right"> Тип, находящийся справа от оператора.  </param>
+    </member>
+    <member name="M:LinqEditor.LinqConverter.LinqConverter.DeserealizeHtml(System.String,System.Type)">
+      <summary>
+            HTML -&gt; SerealizedExpression.
+            </summary>
+      <param name="htmlString"> Само html. </param>
+      <param name="t"> Тип элементов, которые должно возвращать выражение (фактически здесь не используется). </param>
+      <returns> Сериализованное linq. </returns>
+    </member>
+    <member name="M:LinqEditor.LinqConverter.LinqConverter.DeserealizeExpression(System.String,System.Type)">
+      <summary>
+            Десериалиуем выражение с html в linq.
+            </summary>
+      <param name="htmlString"> Само html. </param>
+      <param name="t"> Тип элементов, которые должно возвращать выражение (фактически используется для получения сборки, где этот тип находится). </param>
+      <returns> Полученное linq. </returns>
+    </member>
+    <member name="T:LinqEditor.QueryService">
+      <summary>
+            Веб-сервис редактора ограничений.
+            </summary>
+    </member>
+    <member name="M:LinqEditor.QueryService.GetExistedValues(System.String,System.String[],System.String)">
+      <summary>
+            Веб-метод для получения списка существующих значений свойства в БД.
+            </summary>
+      <param name="typeName">Наименование типа.</param>
+      <param name="properties">Цепочка наименований свойств.</param>
+      <param name="viewName">Название представления для загрузки данных.</param>
+      <returns>Список существующих значений свойства БД.</returns>
+      <requires description="Type name is required." exception="T:System.ArgumentException" csharp="(() =&gt; {&#xD;&#xA;    {&#xD;&#xA;        LinqEditor.QueryService.&lt;&gt;c__DisplayClass5 local_5 = new LinqEditor.QueryService.&lt;&gt;c__DisplayClass5();&#xD;&#xA;    }&#xD;&#xA;    return !IsNullOrEmpty(typeName); })()" vb="(() =&gt; {&#xD;&#xA;    LinqEditor.QueryService.&lt;&gt;c__DisplayClass5 local_5 = New LinqEditor.QueryService.&lt;&gt;c__DisplayClass5();&#xD;&#xA;    return Not IsNullOrEmpty(typeName); })()">(() =&gt; {
+    {
+        LinqEditor.QueryService.&lt;&gt;c__DisplayClass5 local_5 = new LinqEditor.QueryService.&lt;&gt;c__DisplayClass5();
+    }
+    return !string.IsNullOrEmpty(typeName); })()</requires>
+      <exception cref="T:System.ArgumentException">!(() =&gt; {
+    {
+        LinqEditor.QueryService.&lt;&gt;c__DisplayClass5 local_5 = new LinqEditor.QueryService.&lt;&gt;c__DisplayClass5();
+    }
+    return !string.IsNullOrEmpty(typeName); })()</exception>
+      <requires description="Properties' names are required." exception="T:System.ArgumentException" csharp="properties != default(string[]) &amp;&amp; properties.Length &gt; 0" vb="properties &lt;&gt; Nothing AndAlso properties.Length &gt; 0">properties != default(string[]) &amp;&amp; properties.Length &gt; 0</requires>
+      <exception cref="T:System.ArgumentException">properties == default(string[]) ? !false : properties.Length &lt;= 0</exception>
+      <requires description="View name is required." exception="T:System.ArgumentException" csharp="!IsNullOrEmpty(viewName)" vb="Not IsNullOrEmpty(viewName)">!string.IsNullOrEmpty(viewName)</requires>
+      <exception cref="T:System.ArgumentException">string.IsNullOrEmpty(viewName)</exception>
+    </member>
+    <member name="M:LinqEditor.QueryService.CheckAccess(System.Type,System.String[])">
+      <summary>
+            Метод для проверки прав доступа для цепочки свойств в объекте данных.
+            Используется для проверки прав доступа при загрузке в редакторе ограничений
+            существующих значений произвольного свойства объекта данных.
+            </summary>
+      <param name="type">Тип объекта данных, у которого загружаются значения.</param>
+      <param name="properties">Цепочка наименований свойств.</param>
+      <returns>Возвращает <c>true</c>, если пользователь имеет права на чтение указанного свойства.</returns>
+      <requires description="Type can't be null." exception="T:System.ArgumentException" csharp="type != (System.Type)null" vb="type &lt;&gt; ((System.Type)Nothing) ">type != (System.Type)null</requires>
+      <exception cref="T:System.ArgumentException">!type != (System.Type)null</exception>
+      <requires description="Type should be subclass of DataObject." exception="T:System.ArgumentException" csharp="type.IsSubclassOf(typeof(ICSSoft.STORMNET.DataObject))" vb="type.IsSubclassOf(typeof(ICSSoft.STORMNET.DataObject))">type.IsSubclassOf(typeof(ICSSoft.STORMNET.DataObject))</requires>
+      <exception cref="T:System.ArgumentException">!type.IsSubclassOf(typeof(ICSSoft.STORMNET.DataObject))</exception>
+      <requires description="Properties can't be null." exception="T:System.ArgumentException" csharp="properties != null" vb="properties &lt;&gt; Nothing">properties != null</requires>
+      <exception cref="T:System.ArgumentException">properties == null</exception>
+    </member>
+    <member name="T:LinqEditor.RibbonTabWithReturnButton">
+      <summary>
+            RibbonTab с добавленной кнопкой "Применить".
+            </summary>
+    </member>
+    <member name="T:WebLimitEditor.Services.LimitEditorAjaxService">
+      <summary>
+            Сервис для Ajax запросов LimitEditor'а.
+            </summary>
+    </member>
+    <member name="M:WebLimitEditor.Services.LimitEditorAjaxService.ReturnLimit(System.String,System.Collections.Generic.List{ICSSoft.STORMNET.Web.Tools.Limitation.ParameterDefModel})">
+      <summary>
+            Записывает ограничение из html в сессию
+            </summary>
+      <param name="htmlEpression">
+            Ограничение в виде html, которое преобразуется в xml, а потом десереализуется
+            </param>
+      <param name="parameters">
+            Параметры ограничения
+            </param>
+      <returns>
+            The <see cref="T:System.String" />.
+            </returns>
+    </member>
+    <member name="T:WebLimitEditor.Templates.EmptyLimitTemplate">
+      <summary>
+            Шаблон для пустого ограничения.
+            </summary>
+      <summary>
+            Class to produce the template output
+            </summary>
+    </member>
+    <member name="T:WebLimitEditor.Templates.EmptyLimitTemplateBase">
+      <summary>
+            Base class for this transformation
+            </summary>
+    </member>
+    <member name="M:WebLimitEditor.Templates.EmptyLimitTemplateBase.Write(System.String)">
+      <summary>
+            Write text directly into the generated output
+            </summary>
+    </member>
+    <member name="M:WebLimitEditor.Templates.EmptyLimitTemplateBase.WriteLine(System.String)">
+      <summary>
+            Write text directly into the generated output
+            </summary>
+    </member>
+    <member name="M:WebLimitEditor.Templates.EmptyLimitTemplateBase.Write(System.String,System.Object[])">
+      <summary>
+            Write formatted text directly into the generated output
+            </summary>
+    </member>
+    <member name="M:WebLimitEditor.Templates.EmptyLimitTemplateBase.WriteLine(System.String,System.Object[])">
+      <summary>
+            Write formatted text directly into the generated output
+            </summary>
+    </member>
+    <member name="M:WebLimitEditor.Templates.EmptyLimitTemplateBase.Error(System.String)">
+      <summary>
+            Raise an error
+            </summary>
+    </member>
+    <member name="M:WebLimitEditor.Templates.EmptyLimitTemplateBase.Warning(System.String)">
+      <summary>
+            Raise a warning
+            </summary>
+    </member>
+    <member name="M:WebLimitEditor.Templates.EmptyLimitTemplateBase.PushIndent(System.String)">
+      <summary>
+            Increase the indent
+            </summary>
+    </member>
+    <member name="M:WebLimitEditor.Templates.EmptyLimitTemplateBase.PopIndent">
+      <summary>
+            Remove the last indent that was added with PushIndent
+            </summary>
+    </member>
+    <member name="M:WebLimitEditor.Templates.EmptyLimitTemplateBase.ClearIndent">
+      <summary>
+            Remove any indentation
+            </summary>
+    </member>
+    <member name="P:WebLimitEditor.Templates.EmptyLimitTemplateBase.GenerationEnvironment">
+      <summary>
+            The string builder that generation-time code is using to assemble generated output
+            </summary>
+    </member>
+    <member name="P:WebLimitEditor.Templates.EmptyLimitTemplateBase.Errors">
+      <summary>
+            The error collection for the generation process
+            </summary>
+    </member>
+    <member name="P:WebLimitEditor.Templates.EmptyLimitTemplateBase.indentLengths">
+      <summary>
+            A list of the lengths of each indent that was added with PushIndent
+            </summary>
+    </member>
+    <member name="P:WebLimitEditor.Templates.EmptyLimitTemplateBase.CurrentIndent">
+      <summary>
+            Gets the current indent we use when adding lines to the output
+            </summary>
+    </member>
+    <member name="P:WebLimitEditor.Templates.EmptyLimitTemplateBase.Session">
+      <summary>
+            Current transformation session
+            </summary>
+    </member>
+    <member name="P:WebLimitEditor.Templates.EmptyLimitTemplateBase.ToStringHelper">
+      <summary>
+            Helper to produce culture-oriented representation of an object as a string
+            </summary>
+    </member>
+    <member name="T:WebLimitEditor.Templates.EmptyLimitTemplateBase.ToStringInstanceHelper">
+      <summary>
+            Utility class to produce culture-oriented representation of an object as a string.
+            </summary>
+    </member>
+    <member name="M:WebLimitEditor.Templates.EmptyLimitTemplateBase.ToStringInstanceHelper.ToStringWithCulture(System.Object)">
+      <summary>
+            This is called from the compile/run appdomain to convert objects within an expression block to a string
+            </summary>
+    </member>
+    <member name="P:WebLimitEditor.Templates.EmptyLimitTemplateBase.ToStringInstanceHelper.FormatProvider">
+      <summary>
+            Gets or sets format provider to be used by ToStringWithCulture method.
+            </summary>
+    </member>
+    <member name="M:WebLimitEditor.Templates.EmptyLimitTemplate.TransformText">
+      <summary>
+            Create the template output
+            </summary>
+    </member>
+    <member name="P:WebLimitEditor.Templates.EmptyLimitTemplate.TypeName">
+      <summary>
+            Название типа (с неймспейсом), которое вставляется в шаблон.
+            </summary>
+    </member>
+    <member name="T:LinqEditor.WebLimitEditor">
+      <summary>
+            Расширенный редактор ограничений.
+            </summary>
+    </member>
+    <member name="F:LinqEditor.WebLimitEditor.ribbon">
+      <summary>
+            Риббон, на котором располагаются элементы меню.
+            </summary>
+    </member>
+    <member name="M:LinqEditor.WebLimitEditor.InitRibbon">
+      <summary>
+            Инициализация риббона: настройка вкладок и зон, добавление кнопок.
+            </summary>
+    </member>
+    <member name="P:LinqEditor.WebLimitEditor.View">
+      <summary>
+            Представление для редактора ограничений.
+            </summary>
+    </member>
+    <member name="P:LinqEditor.WebLimitEditor.Expression">
+      <summary>
+            Ограничение в виде выражения.
+            </summary>
+    </member>
+    <member name="P:LinqEditor.WebLimitEditor.LimitName">
+      <summary>
+            Имя редактируемого ограничения.
+            </summary>
+    </member>
+    <member name="P:LinqEditor.WebLimitEditor.Published">
+      <summary>
+            Опубликовано ли ограничение (для использования другими пользователями).
+            </summary>
+    </member>
+    <member name="P:LinqEditor.WebLimitEditor.Parameters">
+      <summary>
+            Параметры редактируемого ограничения.
+            </summary>
+    </member>
+    <member name="P:LinqEditor.WebLimitEditor.ResolvingViews">
+      <summary>
+            Дополнительные представления для linq преобразований.
+            </summary>
+    </member>
+    <member name="T:LinqEditor.Utils">
+      <summary>
+            Вспомогательные методы для расширенного редактора ограничений (в основном помогают формировать его первоначальный вид).
+            </summary>
+    </member>
+    <member name="M:LinqEditor.Utils.RegStdExpressions(System.Type,System.Type,OfficeWebUI.OfficeRibbon,System.Collections.Generic.List{System.Linq.Expressions.LambdaExpression},System.String)">
+      <summary>
+            Формирование выражений для стандартных операций и заполнение ими риббона в верхней части расширенного редактора ограничений.
+            </summary>
+      <param name="classType"> Тип, на объекты которого и накладывается формируемое ограничение. </param>
+      <param name="controlType"> Тип контрола, для которое формируется риббон (с помощью него идёт доступ к картинкам из ресурсов). </param>
+      <param name="ribbon"> Сам риббон, который будет заполняться операциями. </param>
+      <param name="lambdas"> Сформированные лямбды (видимо сюда записываются все доступные лямбды для всех элементов и операций). </param>
+      <param name="limitEditorId"> Id контрола редактора ограничений (используется, чтобы на кнопку "применить" навесить логику получения нужного сформированного фильтра). </param>
+    </member>
+    <member name="M:LinqEditor.Utils.CreateDetailGroupOnRibbon(System.Collections.Generic.List{System.Linq.Expressions.LambdaExpression},System.String,System.Linq.Expressions.ParameterExpression)">
+      <summary>
+            Создание группы на риббоне, которая будет содержать операции для детейлов.
+            </summary>
+      <param name="reg"> Набор лямбд, ассоциированных с различными выражениями. </param>
+      <param name="imgUrl"> Путь к картинке для создаваемых элементов на риббоне. </param>
+      <returns> Сформированная группа. </returns>
+    </member>
+    <member name="M:LinqEditor.Utils.CreateDetailRibbonItem(System.String,System.String,System.String,System.String)">
+      <summary>
+            Создать элемент для обработки детейлов, который будет помещён на риббон.
+            </summary>
+      <param name="caption"> Заголовок формируемого элемента. </param>
+      <param name="imageUrl"> Путь к картинке для формируемого элемента. </param>
+      <param name="reg"> Номер лямбды в списке лямбд, которой соответствует данная операция. </param>
+      <param name="detailMethod"> Имя детейловой операции, которой данный элемент соответствует. </param>
+      <returns> Сформированный для риббона элемент. </returns>
+    </member>
+    <member name="M:LinqEditor.Utils.CreateRibbonItem(System.String,System.String,System.String,System.Boolean,System.String)">
+      <summary>
+            Создать элемент, который будет помещён на риббон.
+            </summary>
+      <param name="caption"> Заголовок формируемого элемента. </param>
+      <param name="imageUrl"> Путь к картинке для формируемого элемента. </param>
+      <param name="reg"> Номер лямбды в списке лямбд, которой соответствует данная операция. </param>
+      <param name="replace"> Тип формируемого элемента (если true, то это заменяющие операторы, а если false - добавляющие. </param>
+      <param name="nodeType"> Определяет тип BinaryExpression. </param>
+      <returns> Сформированный для риббона элемент. </returns>
+    </member>
+    <member name="M:LinqEditor.Utils.CreateNode(System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+      <summary>
+            Быдлокод создания ноды
+            </summary>
+      <param name="id" />
+      <param name="parentId" />
+      <param name="state" />
+      <param name="syn" />
+      <param name="type" />
+      <param name="strData" />
+      <param name="isDetail" />
+      <returns />
+    </member>
+    <member name="M:LinqEditor.Utils.GetParentId(ICSSoft.STORMNET.View,ICSSoft.STORMNET.PropertyInView,System.String)">
+      <summary>
+            Получение ParentId PropertyInView во View
+            </summary>
+      <param name="view">Представление</param>
+      <param name="piv">Атрибут</param>
+      <param name="prefix">Префикс. Например, Id детейла</param>
+      <returns>ParentId</returns>
+    </member>
+    <member name="M:LinqEditor.Utils.RegObjPropertyInView(ICSSoft.STORMNET.PropertyInView,System.Collections.Generic.List{System.Linq.Expressions.LambdaExpression},System.Linq.Expressions.ParameterExpression,System.Type,System.String,System.Collections.Generic.List{System.Xml.Linq.XElement},System.Collections.Generic.ICollection{System.Collections.Generic.KeyValuePair{System.String,System.String}},ICSSoft.STORMNET.View)">
+      <summary>
+            Формируем вершину в дереве для собственного свойства или мастера.
+            </summary>
+      <param name="propertyInView"> Само свойство из представления. </param>
+      <param name="lambdas"> Список сформированных LambdaExpression. </param>
+      <param name="param"> Параметр, от которого как раз и будет браться свойство. </param>
+      <param name="classType"> Тип свойства. </param>
+      <param name="strClassType"> Строковое представление типа свойства. </param>
+      <param name="elements"> Уже существующие в дереве вершинки. </param>
+      <param name="relations"> Сформированные доступные отношения между объектами. </param>
+      <param name="view"> Представление, из которого взято свойство. </param>
+    </member>
+    <member name="M:LinqEditor.Utils.RegObjDetailInView(ICSSoft.STORMNET.DetailInView,System.Collections.Generic.List{System.Linq.Expressions.LambdaExpression},System.Linq.Expressions.ParameterExpression,System.Type,System.String,System.Collections.Generic.List{System.Xml.Linq.XElement},System.Collections.Generic.ICollection{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Int32)">
+      <summary>
+            Формируем вершину в дереве для детейла и его свойств.
+            </summary>
+      <param name="detail"> Детейл из представления. </param>
+      <param name="lambdas"> Список сформированных LambdaExpression.  </param>
+      <param name="param"> Параметр, от которого как раз и будет браться свойство.  </param>
+      <param name="classType"> Тип объекта, для которого берём свойство.  </param>
+      <param name="strClassType"> Строковое представление типа свойства.  </param>
+      <param name="elements"> Уже существующие в дереве вершинки.  </param>
+      <param name="relations"> Сформированные доступные отношения между объектами.  </param>
+      <param name="detailIndex"> Номер детейла в представлении. </param>
+    </member>
+    <member name="M:LinqEditor.Utils.CreateDetailExistsLambda(System.Linq.Expressions.Expression,System.Type,System.Type,System.Linq.Expressions.ParameterExpression)">
+      <summary>
+            Формирование условия на существование детейла.
+            </summary>
+      <param name="castMethodLevelExpression">Сформированная структура вида "x.МассивДетейлов.Cast_Детейл_()".</param>
+      <param name="agregatorType">Тип агрегатора (фактически тип, на элементы которого накладывается ограничение).</param>
+      <param name="detailType">Тип детейла.</param>
+      <param name="param">Параметр, с которого формировалась структура для ограничения. Например, "х".</param>
+      <returns>Сформированное в терминах лямбда ограничение на существование детейла. Например, "x.МассивДетейлов.Cast_Детейл_().Any(o =&gt; o.Свойство1 == "Значение1")".</returns>
+    </member>
+    <member name="M:LinqEditor.Utils.RegObjPseudoDetailInView(ICSSoft.STORMNET.PseudoDetailInExtendedView,System.String,System.Collections.Generic.List{System.Xml.Linq.XElement},System.Int32,System.Linq.Expressions.ParameterExpression,System.Type,System.Collections.Generic.List{System.Linq.Expressions.LambdaExpression},System.Collections.Generic.ICollection{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+      <summary>
+            Формируем вершину в дереве для собственного свойства или мастера.
+            </summary>
+      <param name="detail"> Псевдодетейл.  </param>
+      <param name="strClassType"> Строковое представление типа свойства. </param>
+      <param name="elements"> Уже существующие в дереве вершинки. </param>
+      <param name="detailIndex"> Номер детейла в представлении. </param>
+      <param name="param"> Параметр, от которого как раз и будет браться свойство.  </param>
+      <param name="classType"> Тип объекта, для которого берём свойство.  </param>
+      <param name="lambdas"> Список сформированных LambdaExpression.  </param>
+      <param name="relations"> Сформированные доступные отношения между объектами.  </param>
+    </member>
+    <member name="M:LinqEditor.Utils.CreatePseudoDetailPropertyLambda(ICSSoft.STORMNET.PropertyInView,ICSSoft.STORMNET.View,System.Linq.Expressions.ParameterExpression,System.Type,System.Collections.Generic.List{System.Linq.Expressions.LambdaExpression},System.Collections.Generic.ICollection{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Collections.Generic.List{System.Xml.Linq.XElement},System.String)">
+      <summary>
+            Создаём необходимые лямбды для свойства от псевдодетейла.
+            </summary>
+      <param name="propertyInView">Описание псевдодетейла.</param>
+      <param name="pseudoDetailView"> Представление, по которому зачитываются псевдодетейлы. </param>
+      <param name="pseudoDetailParameter">Параметр для задания ограничения на псевдодетейл.</param>
+      <param name="detailType">Тип детейла.</param>
+      <param name="lambdas"> Список сформированных LambdaExpression.  </param>
+      <param name="relations"> Сформированные доступные отношения между объектами.  </param>
+      <param name="elements"> Уже существующие в дереве вершинки. </param>
+      <param name="prefix">Основной префикс для создаваемых вершин в дереве. </param>
+    </member>
+    <member name="M:LinqEditor.Utils.CreatePseudoDetailLambda(System.Type,System.Type,System.Linq.Expressions.ParameterExpression,ICSSoft.STORMNET.View,ICSSoft.STORMNET.PseudoDetailInExtendedView,System.Linq.Expressions.ParameterExpression)">
+      <summary>
+            Формирование условия на существование детейла.
+            </summary>
+      <param name="agregatorType">Тип агрегатора (фактически тип, на элементы которого накладывается ограничение). </param>
+      <param name="detailType">Тип детейла.</param>
+      <param name="param"> Параметр, от которого как раз и будет браться свойство. </param>
+      <param name="pseudoDetailView"> Представление, по которому зачитываются псевдодетейлы. </param>
+      <param name="detail"> Псевдодетейл.  </param>
+      <param name="pseudoDetailParameter"> Параметр для задания ограничения на псевдодетейл.  </param>
+      <returns>Сформированное в терминах лямбда ограничение на существование детейла. Например, "creditCollection =&gt; creditCollection.Any(currentCredit =&gt; true)".</returns>
+    </member>
+    <member name="M:LinqEditor.Utils.RegObjTree(ICSSoft.STORMNET.ExtendedView,System.Collections.Generic.ICollection{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+      <summary>
+            Перевод представления в xml для treeview
+            </summary>
+      <param name="extendedView">Представление</param>
+      <param name="relations">Соответствие элементов дерева выражениям</param>
+      <returns>Xml</returns>
+    </member>
+    <member name="M:LinqEditor.Utils.CreateMemberEqualLambda(System.Linq.Expressions.LambdaExpression,System.Collections.Generic.ICollection{System.Linq.Expressions.LambdaExpression})">
+      <summary>
+            Создаётся выражение типа "x.Свойство1 = ___" в терминах лямбды (в правой части стоит значение по умолчанию для типа).
+            Данная конструкция используется, например, когда щёлкаем на свойство в дереве свойств в редакторе ограничений и появляется аналогичная структура в выражении.
+            </summary>
+      <param name="memberLambda"> Сформированное выражение типа "x.Свойство1". </param>
+      <param name="newExpressions"> Имеющийся список уже сформированных выражений для работы редактора ограничений. </param>
+    </member>
+    <member name="M:LinqEditor.Utils.CreateMemberLambda(System.String,System.Linq.Expressions.ParameterExpression,System.Type)">
+      <summary>
+            Создаём лямбду, которая возвращает свойство от переменной (то есть формируется конструкция вида "x.Свойство1" в терминах лямбда-выражений).
+            </summary>
+      <param name="propName"> Имя свойства (например, "Свойство1"). </param>
+      <param name="param"> Параметр, от которого и будем брать свойство (например, "х"). </param>
+      <param name="classType"> Тип объекта, для которого берём свойство. </param>
+      <returns> Сформированная лямбда. </returns>
+    </member>
+    <member name="M:LinqEditor.Utils.GetStdConstEditors">
+      <summary>
+            Полчение соответствия типа данных и html-разметки контрола для редактирования.
+            </summary>
+      <returns>
+            Dictionary: тип данных значния - разметка контрола.
+            </returns>
+    </member>
+    <member name="M:LinqEditor.Utils.GetEnumEditors(ICSSoft.STORMNET.ExtendedView)">
+      <summary>
+            Получение соответствия перечислимого типа и html-разметки контрола для его редактирования.
+            </summary>
+      <returns>
+            Dictionary: тип данных значния - разметка контрола.
+            </returns>
+    </member>
+    <member name="M:LinqEditor.Utils.ConstEditorsToText(System.Collections.Generic.IDictionary{System.Type,System.String},System.Collections.Generic.List{System.Linq.Expressions.LambdaExpression})">
+      <summary>
+            Получение html, в котором идет соответствие типа и используемого контрола для редактирования
+            </summary>
+      <param name="editors">Dictionary: тип данных значния - разметка контрола.</param>
+      <param name="lambdas">Список лямбд, в конторые добавятся лямбды с константными выражениями</param>
+      <returns>Html со контролами для редактирования по типу</returns>
+    </member>
+    <member name="M:LinqEditor.Utils.GetGenericAnyFunction(System.Type)">
+      <summary>
+            Получение generic-функции Any для встраивания в выражение.
+            </summary>
+      <param name="collectionType"> Тип объекта, на который будет наложена функция Any. </param>
+      <returns> Generic-функция Any. </returns>
+    </member>
+    <member name="T:WebLimitEditor.HandlerFactories.WebLimitEditorHandlerFactory">
+      <summary>
+            TODO: Update summary.
+            </summary>
+    </member>
+    <member name="M:WebLimitEditor.Forms.LimitEditor.OnLoad(System.EventArgs)">
+      <requires inheritedFrom="M:System.Web.UI.Control.OnLoad(System.EventArgs)" inheritedFromTypeName="Control" csharp="e != null" vb="e &lt;&gt; Nothing">e != null</requires>
+    </member>
+    <member name="M:LinqEditor.WebLimitEditor.OnInit(System.EventArgs)">
+      <requires inheritedFrom="M:System.Web.UI.Control.OnInit(System.EventArgs)" inheritedFromTypeName="Control" csharp="e != null" vb="e &lt;&gt; Nothing">e != null</requires>
+    </member>
+    <member name="M:LinqEditor.WebLimitEditor.OnLoad(System.EventArgs)">
+      <requires inheritedFrom="M:System.Web.UI.Control.OnLoad(System.EventArgs)" inheritedFromTypeName="Control" csharp="e != null" vb="e &lt;&gt; Nothing">e != null</requires>
+    </member>
+  </members>
+</doc>
